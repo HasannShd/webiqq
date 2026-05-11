@@ -14,7 +14,7 @@ import {
   socialLinks,
   team,
   valueCards,
-} from './data/webiqContent.js';
+} from './data/webiqqContent.js';
 
 const socialIconMap = { instagram: FiInstagram, linkedin: FiLinkedin };
 
@@ -31,7 +31,7 @@ function Navbar() {
     <header className="navbar">
       <a className="nav-logo" href="#home" onClick={(event) => scrollToSection(event, '#home')}>
         <span>W</span>
-        Webiq
+        Webiqq
       </a>
 
       <button className="mobile-menu-button" type="button" aria-label="Toggle menu" onClick={() => setOpen((value) => !value)}>
@@ -64,7 +64,7 @@ function SectionHeader({ eyebrow, title, text }) {
 
 function HeroVisual() {
   return (
-    <div className="hero-visual" role="img" aria-label="Abstract Webiq dashboard mockup with website, SEO, AI, and business cards">
+    <div className="hero-visual" role="img" aria-label="Abstract Webiqq dashboard mockup with website, SEO, AI, and business cards">
       <div className="mock-window website-preview">
         <div className="window-dots">
           <span />
@@ -131,7 +131,7 @@ function HeroSection() {
         <p className="eyebrow">Remote-first · Available worldwide</p>
         <h1>Smart Websites, SEO & AI Growth for Modern Businesses</h1>
         <p className="hero-subtitle">
-          Webiq is a remote freelance team working with clients globally — building modern websites, custom software,
+          Webiqq is a remote freelance team working with clients globally — building modern websites, custom software,
           databases, server deployments, AI automation, SEO systems, and digital marketing strategies that help
           businesses grow, wherever they are.
         </p>
@@ -160,7 +160,7 @@ function ValueStrip() {
         <p>
           We design and build digital systems that help businesses present themselves professionally, attract customers
           online, and improve daily operations. From websites and SEO to admin panels, automation, and marketing
-          support, Webiq brings the technical, server, database, and growth side together.
+          support, Webiqq brings the technical, server, database, and growth side together.
         </p>
       </div>
       <div className="value-grid">
@@ -200,7 +200,7 @@ function FeaturedCaseStudy() {
           <article>
             <h3>Solution</h3>
             <p>
-              Webiq created a responsive business platform structure with company pages, product/category organization,
+              Webiqq created a responsive business platform structure with company pages, product/category organization,
               customer inquiry flow, and a scalable foundation for admin, database, server, and e-commerce features.
             </p>
           </article>
@@ -257,7 +257,7 @@ function ShowcaseProjects() {
       <SectionHeader
         eyebrow="More Showcase Work"
         title="Full-Stack Projects With Real Product Logic"
-        text="These builds show the kind of software thinking Webiq brings into websites, dashboards, portals, and digital systems."
+        text="These builds show the kind of software thinking Webiqq brings into websites, dashboards, portals, and digital systems."
       />
       <div className="project-grid">
         {showcaseProjects.map((project) => (
@@ -292,7 +292,7 @@ function ServicesSection() {
   return (
     <section className="section-shell" id="services" aria-labelledby="services-title">
       <SectionHeader
-        title="What Webiq Can Build for Your Business"
+        title="What Webiqq Can Build for Your Business"
         text="From simple websites to smart business systems, databases, server handling, and maintenance, we create digital tools that support growth."
       />
       <div className="services-grid">
@@ -509,7 +509,7 @@ function Footer() {
       <div>
         <a className="nav-logo" href="#home" onClick={(event) => scrollToSection(event, '#home')}>
           <span>W</span>
-          Webiq
+          Webiqq
         </a>
         <p>Smart Websites, SEO & AI Growth</p>
         <p className="footer-remote">Remote-first · Available worldwide</p>
@@ -538,7 +538,7 @@ function Footer() {
           <span key={service}>{service}</span>
         ))}
       </div>
-      <p className="copyright">© 2026 Webiq. All rights reserved. · Remote freelance team, available worldwide.</p>
+      <p className="copyright">© 2026 Webiqq. All rights reserved. · Remote freelance team, available worldwide.</p>
     </footer>
   );
 }
@@ -547,8 +547,8 @@ export default function App() {
   return (
     <div className="app">
       <Seo
-        title="Webiq | Smart Websites, SEO & AI Growth"
-        description="Webiq builds modern websites, business software, database management, server handling, SEO systems, AI automation, maintenance, and digital marketing solutions for growing businesses."
+        title="Webiqq | Smart Websites, SEO & AI Growth"
+        description="Webiqq builds modern websites, business software, database management, server handling, SEO systems, AI automation, maintenance, and digital marketing solutions for growing businesses."
       />
       <Navbar />
       <main>

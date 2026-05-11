@@ -64,7 +64,7 @@ const escapeHtml = (value) =>
 
 const buildEmailHtml = (submission) => `
   <div style="font-family: Arial, sans-serif; color: #111827; line-height: 1.6;">
-    <h2 style="margin: 0 0 16px;">New Webiq project request</h2>
+    <h2 style="margin: 0 0 16px;">New Webiqq project request</h2>
     <p><strong>Name:</strong> ${escapeHtml(submission.name)}</p>
     <p><strong>Email:</strong> ${escapeHtml(submission.email)}</p>
     <p><strong>Phone:</strong> ${escapeHtml(submission.phone || 'Not provided')}</p>
@@ -117,10 +117,10 @@ export default async function handler(req, res) {
       from: SMTP_FROM,
       to,
       replyTo: submission.email,
-      subject: `New Webiq request: ${submission.service}`,
+      subject: `New Webiqq request: ${submission.service}`,
       html: buildEmailHtml(submission),
       text: [
-        'New Webiq project request',
+        'New Webiqq project request',
         `Name: ${submission.name}`,
         `Email: ${submission.email}`,
         `Phone: ${submission.phone || 'Not provided'}`,
