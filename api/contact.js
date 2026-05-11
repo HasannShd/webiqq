@@ -1,4 +1,40 @@
+import nodemailer from 'nodemailer';
+
 const requiredFields = ['name', 'email', 'service', 'message'];
+
+const {
+  SMTP_HOST,
+  SMTP_PORT,
+  SMTP_USER,
+  SMTP_PASS,
+  SMTP_FROM,
+  CONTACT_NOTIFY_EMAIL,
+  CONTACT_TO_EMAIL,
+} = process.env;
+
+const isSmtpConfigured = SMTP_HOST && SMTP_PORT && SMTP_USER && SMTP_PASS && SMTP_FROM;
+
+let transporter = null;
+
+const getTransporter = () => {
+  if (!isSmtpConfigured) {
+    return null;
+  }
+
+  if (!transporter) {
+    transporter = nodemailer.createTransport({
+      host: SMTP_HOST,
+      port: Number(SMTP_PORT),
+      secure: Number(SMTP_PORT) === 465,
+      auth: {
+        user: SMTP_USER,
+        pass: SMTP_PASS,
+      },
+    });
+  }
+
+  return transporter;
+};
 
 const parseBody = (body) => {
   if (!body) {
@@ -65,46 +101,35 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: `Missing required field: ${missingField}` });
   }
 
-  if (!process.env.RESEND_API_KEY) {
+  const mailer = getTransporter();
+
+  if (!mailer) {
     return res.status(500).json({ error: 'Email service is not configured' });
   }
 
-  const to = (process.env.CONTACT_TO_EMAIL || 'webbiqq@gmail.com')
+  const to = (CONTACT_NOTIFY_EMAIL || CONTACT_TO_EMAIL || 'webbiqq@gmail.com')
     .split(',')
     .map((email) => email.trim())
     .filter(Boolean);
 
   try {
-    const response = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: process.env.CONTACT_FROM_EMAIL || 'Webiq Website <onboarding@resend.dev>',
-        to,
-        replyTo: submission.email,
-        subject: `New Webiq request: ${submission.service}`,
-        html: buildEmailHtml(submission),
-        text: [
-          'New Webiq project request',
-          `Name: ${submission.name}`,
-          `Email: ${submission.email}`,
-          `Phone: ${submission.phone || 'Not provided'}`,
-          `Business: ${submission.business || 'Not provided'}`,
-          `Service: ${submission.service}`,
-          '',
-          submission.message,
-        ].join('\n'),
-      }),
+    await mailer.sendMail({
+      from: SMTP_FROM,
+      to,
+      replyTo: submission.email,
+      subject: `New Webiq request: ${submission.service}`,
+      html: buildEmailHtml(submission),
+      text: [
+        'New Webiq project request',
+        `Name: ${submission.name}`,
+        `Email: ${submission.email}`,
+        `Phone: ${submission.phone || 'Not provided'}`,
+        `Business: ${submission.business || 'Not provided'}`,
+        `Service: ${submission.service}`,
+        '',
+        submission.message,
+      ].join('\n'),
     });
-
-    if (!response.ok) {
-      const errorBody = await response.text();
-      console.error('Resend email error:', errorBody);
-      return res.status(502).json({ error: 'Unable to send email right now' });
-    }
   } catch (error) {
     console.error('Contact email error:', error);
     return res.status(502).json({ error: 'Unable to send email right now' });

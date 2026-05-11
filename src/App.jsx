@@ -405,7 +405,8 @@ function ContactSection() {
       });
 
       if (!response.ok) {
-        throw new Error('Unable to send your request right now.');
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || 'Unable to send your request right now.');
       }
 
       form.reset();
