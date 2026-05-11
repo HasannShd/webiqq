@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { FiActivity, FiArrowRight, FiBarChart2, FiBriefcase, FiCode, FiCpu, FiExternalLink, FiGlobe, FiGrid, FiInstagram, FiLayers, FiLinkedin, FiMenu, FiSearch, FiShoppingCart, FiTarget, FiTrendingUp, FiX, FiZap } from 'react-icons/fi';
+import { FiActivity, FiArrowRight, FiBarChart2, FiBriefcase, FiCode, FiCpu, FiDatabase, FiExternalLink, FiGlobe, FiGrid, FiInstagram, FiLayers, FiLinkedin, FiMenu, FiSearch, FiServer, FiShoppingCart, FiTarget, FiTrendingUp, FiX, FiZap } from 'react-icons/fi';
 import BackToTop from './components/Common/BackToTop.jsx';
 import Seo from './components/Common/Seo.jsx';
 import {
@@ -115,7 +115,8 @@ function HeroSection() {
         <h1>Smart Websites, SEO & AI Growth for Modern Businesses</h1>
         <p className="hero-subtitle">
           Webiq is a remote freelance team working with clients globally — building modern websites, custom software,
-          AI automation, SEO systems, and digital marketing strategies that help businesses grow, wherever they are.
+          databases, server deployments, AI automation, SEO systems, and digital marketing strategies that help
+          businesses grow, wherever they are.
         </p>
         <div className="hero-actions">
           <a className="primary-button" href="#showcase" onClick={(event) => scrollToSection(event, '#showcase')}>
@@ -126,7 +127,7 @@ function HeroSection() {
             Start a Project
           </a>
         </div>
-        <p className="service-tags">Websites • Software • SEO • AI • Marketing • Worldwide</p>
+        <p className="service-tags">Websites • Software • SEO • AI • Databases • Servers • Marketing</p>
       </div>
       <HeroVisual />
     </section>
@@ -142,7 +143,7 @@ function ValueStrip() {
         <p>
           We design and build digital systems that help businesses present themselves professionally, attract customers
           online, and improve daily operations. From websites and SEO to admin panels, automation, and marketing
-          support, Webiq brings the technical and growth side together.
+          support, Webiq brings the technical, server, database, and growth side together.
         </p>
       </div>
       <div className="value-grid">
@@ -183,7 +184,7 @@ function FeaturedCaseStudy() {
             <h3>Solution</h3>
             <p>
               Webiq created a responsive business platform structure with company pages, product/category organization,
-              customer inquiry flow, and a scalable foundation for admin and e-commerce features.
+              customer inquiry flow, and a scalable foundation for admin, database, server, and e-commerce features.
             </p>
           </article>
           <article>
@@ -240,6 +241,8 @@ const serviceIcons = {
   'AI Automation': FiZap,
   'Digital Marketing': FiTarget,
   'E-Commerce Setup': FiShoppingCart,
+  'Database Management': FiDatabase,
+  'Server & Maintenance': FiServer,
 };
 
 function ServicesSection() {
@@ -247,7 +250,7 @@ function ServicesSection() {
     <section className="section-shell" id="services" aria-labelledby="services-title">
       <SectionHeader
         title="What Webiq Can Build for Your Business"
-        text="From simple websites to smart business systems, we create digital tools that support growth."
+        text="From simple websites to smart business systems, databases, server handling, and maintenance, we create digital tools that support growth."
       />
       <div className="services-grid">
         {services.map((service) => {
@@ -323,7 +326,7 @@ function FinalCta() {
       <h2 id="cta-title">Let's Build Something Great — Wherever You Are.</h2>
       <p>
         Whether you need a professional website, SEO, AI automation, or a full digital system — our remote team is
-        ready to work with you. No borders, no timezone excuses, just clean work delivered.
+        ready to work with you. We can also help with database management, server handling, and maintenance after launch.
       </p>
       <div className="hero-actions">
         <a className="primary-button" href="#contact" onClick={(event) => scrollToSection(event, '#contact')}>
@@ -442,7 +445,7 @@ function Footer() {
       </div>
       <div>
         <h3>Services</h3>
-        {['Websites', 'Software', 'SEO', 'AI', 'Marketing'].map((service) => (
+        {['Websites', 'Software', 'SEO', 'AI', 'Databases', 'Servers'].map((service) => (
           <span key={service}>{service}</span>
         ))}
       </div>
@@ -456,7 +459,7 @@ export default function App() {
     <div className="app">
       <Seo
         title="Webiq | Smart Websites, SEO & AI Growth"
-        description="Webiq builds modern websites, business software, SEO systems, AI automation, and digital marketing solutions for growing businesses."
+        description="Webiq builds modern websites, business software, database management, server handling, SEO systems, AI automation, maintenance, and digital marketing solutions for growing businesses."
       />
       <Navbar />
       <main>

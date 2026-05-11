@@ -10,8 +10,8 @@ export const navLinks = [
 export const team = [
   {
     role: 'Full Stack Development',
-    description: 'React frontends, Node.js APIs, databases, and full deployment pipelines — built end-to-end in-house.',
-    skills: ['React', 'Node.js', 'REST APIs', 'PostgreSQL', 'Cloud Deploy'],
+    description: 'React frontends, Node.js APIs, database design, server setup, and deployment pipelines — built end-to-end in-house.',
+    skills: ['React', 'Node.js', 'REST APIs', 'Databases', 'Server Deploy'],
   },
   {
     role: 'AI & Automation',
@@ -36,10 +36,10 @@ export const team = [
 ];
 
 export const valueCards = [
-  { title: 'Build', text: 'Modern websites and software foundations.' },
+  { title: 'Build', text: 'Modern websites, software, databases, and server foundations.' },
   { title: 'Rank', text: 'SEO structure that helps people find you.' },
   { title: 'Automate', text: 'AI tools that reduce repetitive work.' },
-  { title: 'Grow', text: 'Marketing systems that support momentum.' },
+  { title: 'Grow', text: 'Marketing, maintenance, and support systems that keep momentum.' },
 ];
 
 export const caseStudyFeatures = [
@@ -50,6 +50,8 @@ export const caseStudyFeatures = [
   'SEO-friendly structure',
   'Future-ready e-commerce concept',
   'Admin panel direction',
+  'Database-ready planning',
+  'Server and deployment direction',
   'Scalable full-stack architecture',
 ];
 
@@ -78,6 +80,14 @@ export const services = [
     title: 'E-Commerce Setup',
     text: 'Product pages, category systems, inquiry-based ordering, and future-ready online shop structures.',
   },
+  {
+    title: 'Database Management',
+    text: 'Database planning, content structure, backups, data organization, and clean storage flows for business systems.',
+  },
+  {
+    title: 'Server & Maintenance',
+    text: 'Server setup, deployment handling, updates, monitoring direction, and ongoing maintenance support after launch.',
+  },
 ];
 
 export const reasons = [
@@ -86,6 +96,8 @@ export const reasons = [
   'AI-powered workflow',
   'Clean modern user experience',
   'Scalable structure for future growth',
+  'Database and server management awareness',
+  'Maintenance-ready project delivery',
   'Practical solutions for real businesses',
   'Remote-first, globally available',
   'Freelance flexibility, agency-level quality',
@@ -98,7 +110,7 @@ export const processSteps = [
   },
   {
     title: 'Plan',
-    text: 'We map the website structure, software features, SEO direction, and content flow.',
+    text: 'We map the website structure, software features, database needs, SEO direction, and content flow.',
   },
   {
     title: 'Build',
@@ -110,7 +122,7 @@ export const processSteps = [
   },
   {
     title: 'Grow',
-    text: 'We support future improvements through marketing, AI tools, content, and system upgrades.',
+    text: 'We support future improvements through marketing, AI tools, content, maintenance, and system upgrades.',
   },
 ];
 
@@ -119,7 +131,9 @@ export const projectTypes = [
   { title: 'Product Catalogue Website', tag: 'Website', text: 'Organized product categories built for browsing, search, and inquiries.' },
   { title: 'Booking Form System', tag: 'Software', text: 'Smart forms that capture requests and route them into a manageable workflow.' },
   { title: 'Admin Dashboard', tag: 'Dashboard', text: 'Internal panels for managing content, leads, products, users, and reports.' },
+  { title: 'Database-Backed System', tag: 'Software', text: 'Structured data flows for products, leads, users, inquiries, and operations.' },
   { title: 'E-Commerce Structure', tag: 'E-Commerce', text: 'Product pages, category logic, order intent, and future-ready checkout planning.' },
+  { title: 'Server Deployment Setup', tag: 'Maintenance', text: 'Launch-ready hosting, deployment handling, and ongoing technical maintenance direction.' },
   { title: 'AI Chatbot Concept', tag: 'AI', text: 'Guided AI assistance for answering questions, qualifying leads, or supporting teams.' },
   { title: 'SEO Landing Page', tag: 'SEO', text: 'Focused service pages designed around search intent and conversion.' },
   { title: 'Digital Marketing Content System', tag: 'Marketing', text: 'Reusable content structure for campaigns, social media, and visibility growth.' },
@@ -143,6 +157,8 @@ export const serviceOptions = [
   'AI Automation',
   'Digital Marketing',
   'E-Commerce',
+  'Database Management',
+  'Server & Maintenance',
   'Full Digital Package',
   'Other',
 ];
