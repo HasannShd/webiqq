@@ -140,7 +140,7 @@ export const projectTypes = [
 ];
 
 export const contactDetails = [
-  { label: 'Email', value: 'hello@webiq.com' },
+  { label: 'Email', value: 'webbiqq@gmail.com' },
   { label: 'Available', value: 'Remote · Worldwide' },
   { label: 'Response time', value: 'Within 24 hours' },
 ];
