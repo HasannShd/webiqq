@@ -175,7 +175,7 @@ export const contactDetails = [
 ];
 
 export const socialLinks = [
-  { label: 'Instagram', handle: '@webiqq', href: 'https://www.instagram.com/webiqq', icon: 'instagram' },
+  { label: 'Instagram', handle: '@webiqq.build', href: 'https://www.instagram.com/webiqq.build/', icon: 'instagram' },
   { label: 'LinkedIn', handle: 'Webiqq', href: 'https://www.linkedin.com/company/webiqq', icon: 'linkedin' },
 ];
 
