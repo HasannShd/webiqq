@@ -55,6 +55,35 @@ export const caseStudyFeatures = [
   'Scalable full-stack architecture',
 ];
 
+export const showcaseProjects = [
+  {
+    title: 'Evently Event Platform',
+    label: 'MERN Event App',
+    text: 'A full-stack event management platform where users can sign up, create events, browse event details, join or leave attendance lists, and manage their own event posts.',
+    highlights: [
+      'React + Vite frontend',
+      'Node/Express API',
+      'MongoDB data models',
+      'JWT authentication',
+      'Event attendance flow',
+      'Google Maps and image upload planning',
+    ],
+  },
+  {
+    title: 'Engineering Toolbox',
+    label: 'Engineering Community System',
+    text: 'A MERN platform for engineers and students with calculator tools, engineering formulas, calculation history, community posts, comments, profiles, and private messaging.',
+    highlights: [
+      'Formula calculator system',
+      'Calculation history',
+      'Posts and comments',
+      'Private chat',
+      'Profile management',
+      'MongoDB formula seeding',
+    ],
+  },
+];
+
 export const services = [
   {
     title: 'Website Development',

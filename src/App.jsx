@@ -8,6 +8,7 @@ import {
   contactDetails,
   navLinks,
   processSteps,
+  showcaseProjects,
   serviceOptions,
   services,
   socialLinks,
@@ -229,6 +230,32 @@ function FeaturedCaseStudy() {
             <li key={feature}>{feature}</li>
           ))}
         </ul>
+      </div>
+    </section>
+  );
+}
+
+function ShowcaseProjects() {
+  return (
+    <section className="section-shell" aria-labelledby="showcase-projects-title">
+      <SectionHeader
+        eyebrow="More Showcase Work"
+        title="Full-Stack Projects With Real Product Logic"
+        text="These builds show the kind of software thinking Webiq brings into websites, dashboards, portals, and digital systems."
+      />
+      <div className="project-grid">
+        {showcaseProjects.map((project) => (
+          <article className="project-card" key={project.title}>
+            <span>{project.label}</span>
+            <h3>{project.title}</h3>
+            <p>{project.text}</p>
+            <div className="team-skills">
+              {project.highlights.map((highlight) => (
+                <span key={highlight}>{highlight}</span>
+              ))}
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
@@ -468,6 +495,7 @@ export default function App() {
         <ServicesSection />
         <ProcessSection />
         <FeaturedCaseStudy />
+        <ShowcaseProjects />
         <TeamSection />
         <FinalCta />
         <ContactSection />
