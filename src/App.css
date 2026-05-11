@@ -144,7 +144,6 @@
 .section-header p,
 .value-strip > div > p,
 .case-copy > p,
-.why-section > div > p,
 .final-cta p,
 .contact-copy > p {
   max-width: 680px;
@@ -273,9 +272,87 @@
 }
 
 .preview-hero {
+  display: grid;
+  align-content: space-between;
+  gap: 12px;
   height: 110px;
+  padding: 14px;
   border-radius: 8px;
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.5), rgba(232, 121, 249, 0.38));
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(56, 213, 255, 0.55), transparent 26%),
+    linear-gradient(135deg, rgba(124, 58, 237, 0.72), rgba(232, 121, 249, 0.4));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.preview-nav,
+.preview-stats {
+  display: flex;
+  align-items: center;
+}
+
+.preview-nav {
+  gap: 6px;
+}
+
+.preview-nav span {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.preview-nav span:nth-child(1) {
+  width: 34px;
+}
+
+.preview-nav span:nth-child(2) {
+  width: 24px;
+}
+
+.preview-nav span:nth-child(3) {
+  width: 44px;
+  margin-left: auto;
+  background: rgba(56, 213, 255, 0.72);
+}
+
+.preview-copy {
+  display: grid;
+  gap: 3px;
+  max-width: 270px;
+}
+
+.preview-kicker {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.preview-copy strong {
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.05;
+}
+
+.preview-copy small {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.64rem;
+  line-height: 1.25;
+}
+
+.preview-stats {
+  gap: 6px;
+}
+
+.preview-stats span {
+  padding: 4px 7px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.86);
+  background: rgba(5, 10, 26, 0.28);
+  font-size: 0.58rem;
+  font-weight: 800;
 }
 
 .preview-lines {
@@ -404,7 +481,6 @@
 /* ─── Two-column sections ─── */
 .value-strip,
 .case-study,
-.why-section,
 .contact-section {
   display: grid;
   grid-template-columns: 0.88fr 1.12fr;
@@ -415,9 +491,7 @@
 /* ─── Grid systems ─── */
 .value-grid,
 .services-grid,
-.reason-grid,
 .process-grid,
-.project-grid,
 .case-points,
 .contact-details {
   display: grid;
@@ -557,6 +631,8 @@
 
 /* ─── Services ─── */
 .services-grid {
+  display: grid;
+  gap: 12px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -571,6 +647,43 @@
   margin-bottom: 8px;
 }
 
+/* ─── Process ─── */
+.process-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.process-card {
+  position: relative;
+  min-height: 222px;
+}
+
+.process-card span,
+.project-card span {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 22px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: var(--accent);
+  background: rgba(167, 139, 250, 0.14);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+/* ─── Project types ─── */
+.project-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.project-card span {
+  margin-bottom: 14px;
+}
+
 /* ─── Team ─── */
 .team-grid {
   display: grid;
@@ -581,7 +694,6 @@
 .team-card {
   display: grid;
   align-content: start;
-  gap: 0;
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -641,67 +753,6 @@
   font-weight: 600;
 }
 
-/* ─── Why Webiq ─── */
-.reason-grid {
-  grid-template-columns: 1fr 1fr;
-}
-
-.reason-grid span {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  padding: 12px 16px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  color: var(--ink);
-  background: rgba(255, 255, 255, 0.04);
-  font-size: 0.92rem;
-}
-
-.reason-grid span::before {
-  content: "";
-  display: block;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-  flex-shrink: 0;
-  box-shadow: 0 0 10px rgba(167, 139, 250, 0.7);
-}
-
-/* ─── Process ─── */
-.process-grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.process-card {
-  position: relative;
-  min-height: 222px;
-}
-
-.process-card span,
-.project-card span {
-  display: inline-flex;
-  width: fit-content;
-  margin-bottom: 22px;
-  padding: 5px 10px;
-  border-radius: 8px;
-  color: var(--accent);
-  background: rgba(167, 139, 250, 0.14);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-}
-
-/* ─── Project types ─── */
-.project-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.project-card span {
-  margin-bottom: 14px;
-}
-
 /* ─── Final CTA ─── */
 .final-cta {
   align-items: center;
@@ -723,6 +774,8 @@
 
 .contact-details {
   margin-top: 20px;
+  display: grid;
+  gap: 12px;
 }
 
 .contact-details div {
@@ -739,6 +792,40 @@
 .contact-details strong {
   color: var(--ink);
   font-weight: 650;
+}
+
+/* ─── Contact socials ─── */
+.contact-socials {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.contact-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 150ms ease, border-color 150ms ease, background 150ms ease;
+}
+
+.contact-socials a:hover {
+  color: var(--accent);
+  border-color: rgba(167, 139, 250, 0.38);
+  background: rgba(167, 139, 250, 0.08);
+}
+
+.contact-socials svg {
+  width: 18px;
+  height: 18px;
 }
 
 .contact-form {
@@ -794,40 +881,6 @@
   border: 0;
   cursor: pointer;
   font-size: 0.95rem;
-}
-
-/* ─── Contact socials ─── */
-.contact-socials {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-
-.contact-socials a {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  padding: 10px 16px;
-  border: 1px solid var(--line);
-  border-radius: 9px;
-  color: var(--muted);
-  background: rgba(255, 255, 255, 0.04);
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 150ms ease, border-color 150ms ease, background 150ms ease;
-}
-
-.contact-socials a:hover {
-  color: var(--accent);
-  border-color: rgba(167, 139, 250, 0.38);
-  background: rgba(167, 139, 250, 0.08);
-}
-
-.contact-socials svg {
-  width: 18px;
-  height: 18px;
 }
 
 /* ─── Footer ─── */
@@ -942,7 +995,6 @@
   .hero,
   .value-strip,
   .case-study,
-  .why-section,
   .contact-section {
     grid-template-columns: 1fr;
   }
@@ -1005,7 +1057,6 @@
   }
 
   .value-grid,
-  .reason-grid,
   .feature-list,
   .contact-form,
   .footer {

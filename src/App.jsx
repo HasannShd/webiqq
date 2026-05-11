@@ -71,7 +71,23 @@ function HeroVisual() {
           <span />
           <span />
         </div>
-        <div className="preview-hero" />
+        <div className="preview-hero">
+          <div className="preview-nav">
+            <span />
+            <span />
+            <span />
+          </div>
+          <div className="preview-copy">
+            <span className="preview-kicker">Digital system</span>
+            <strong>Growth-ready website</strong>
+            <small>SEO, AI workflows, dashboard and lead capture in one clean build.</small>
+          </div>
+          <div className="preview-stats">
+            <span>SEO</span>
+            <span>Leads</span>
+            <span>AI</span>
+          </div>
+        </div>
         <div className="preview-lines">
           <span />
           <span />
