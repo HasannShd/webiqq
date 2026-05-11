@@ -385,6 +385,42 @@ function FinalCta() {
 }
 
 function ContactSection() {
+  const [formStatus, setFormStatus] = useState({ type: 'idle', message: '' });
+  const isSubmitting = formStatus.type === 'submitting';
+
+  const handleContactSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const payload = Object.fromEntries(new FormData(form).entries());
+
+    setFormStatus({ type: 'submitting', message: 'Sending your request...' });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error('Unable to send your request right now.');
+      }
+
+      form.reset();
+      setFormStatus({
+        type: 'success',
+        message: 'Your request was sent. We will reply within 24 hours.',
+      });
+    } catch (error) {
+      setFormStatus({
+        type: 'error',
+        message: error.message || 'Unable to send your request right now.',
+      });
+    }
+  };
+
   return (
     <section className="section-shell contact-section" id="contact" aria-labelledby="contact-title">
       <div className="contact-copy">
@@ -414,14 +450,18 @@ function ContactSection() {
           })}
         </div>
       </div>
-      <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
+      <form className="contact-form" onSubmit={handleContactSubmit}>
+        <label className="honeypot" aria-hidden="true">
+          Website
+          <input type="text" name="website" tabIndex="-1" autoComplete="off" />
+        </label>
         <label>
           Name
-          <input type="text" name="name" placeholder="Your name" autoComplete="name" />
+          <input type="text" name="name" placeholder="Your name" autoComplete="name" required />
         </label>
         <label>
           Email
-          <input type="email" name="email" placeholder="you@example.com" autoComplete="email" />
+          <input type="email" name="email" placeholder="you@example.com" autoComplete="email" required />
         </label>
         <label>
           Phone number
@@ -433,7 +473,7 @@ function ContactSection() {
         </label>
         <label className="full-field">
           Service needed
-          <select name="service" defaultValue="">
+          <select name="service" defaultValue="" required>
             <option value="" disabled>
               Select a service
             </option>
@@ -446,12 +486,17 @@ function ContactSection() {
         </label>
         <label className="full-field">
           Message
-          <textarea name="message" rows="5" placeholder="Tell us what you want to build." />
+          <textarea name="message" rows="5" placeholder="Tell us what you want to build." required />
         </label>
-        <button className="primary-button full-field" type="submit">
-          Send Project Request
+        <button className="primary-button full-field" type="submit" disabled={isSubmitting}>
+          {isSubmitting ? 'Sending...' : 'Send Project Request'}
           <FiArrowRight aria-hidden="true" />
         </button>
+        {formStatus.message ? (
+          <p className={`form-status full-field ${formStatus.type === 'error' ? 'is-error' : ''}`} role="status">
+            {formStatus.message}
+          </p>
+        ) : null}
       </form>
     </section>
   );
