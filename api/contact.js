@@ -84,7 +84,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         from: process.env.CONTACT_FROM_EMAIL || 'Webiq Website <onboarding@resend.dev>',
         to,
-        reply_to: submission.email,
+        replyTo: submission.email,
         subject: `New Webiq request: ${submission.service}`,
         html: buildEmailHtml(submission),
         text: [
