@@ -677,6 +677,31 @@
 }
 
 /* ─── Project types ─── */
+.showcase-groups {
+  display: grid;
+  gap: 34px;
+}
+
+.showcase-group {
+  display: grid;
+  gap: 16px;
+}
+
+.showcase-group-head {
+  display: grid;
+  gap: 8px;
+  max-width: 760px;
+}
+
+.showcase-group-head h3 {
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+}
+
+.showcase-group-head p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .project-grid {
   display: grid;
   gap: 12px;

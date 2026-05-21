@@ -4,11 +4,12 @@ import { FiActivity, FiArrowRight, FiBarChart2, FiBriefcase, FiCode, FiCpu, FiDa
 import BackToTop from './components/Common/BackToTop.jsx';
 import Seo from './components/Common/Seo.jsx';
 import {
+  businessWebsiteProjects,
   caseStudyFeatures,
   contactDetails,
   navLinks,
+  passionProjects,
   processSteps,
-  showcaseProjects,
   serviceOptions,
   services,
   socialLinks,
@@ -252,31 +253,54 @@ function FeaturedCaseStudy() {
 }
 
 function ShowcaseProjects() {
+  const projectGroups = [
+    {
+      title: 'Business Website',
+      text: 'Live client website work built for presentation, service discovery, SEO, and lead generation.',
+      projects: businessWebsiteProjects,
+    },
+    {
+      title: 'Passion Projects',
+      text: 'Independent full-stack builds that show product thinking, authentication flows, databases, and interactive app logic.',
+      projects: passionProjects,
+    },
+  ];
+
   return (
     <section className="section-shell" aria-labelledby="showcase-projects-title">
       <SectionHeader
         eyebrow="More Showcase Work"
-        title="Client Projects With Real Business Value"
-        text="These builds show how Webiqq turns business needs into websites, software platforms, lead flows, SEO foundations, and scalable digital systems."
+        title="Business Work and Passion Projects"
+        text="Client projects are separated from independent product builds so each type of work is clear."
       />
-      <div className="project-grid">
-        {showcaseProjects.map((project) => (
-          <article className="project-card" key={project.title}>
-            <span>{project.label}</span>
-            <h3>{project.title}</h3>
-            <p>{project.text}</p>
-            <div className="team-skills">
-              {project.highlights.map((highlight) => (
-                <span key={highlight}>{highlight}</span>
+      <div className="showcase-groups">
+        {projectGroups.map((group) => (
+          <div className="showcase-group" key={group.title}>
+            <div className="showcase-group-head">
+              <h3>{group.title}</h3>
+              <p>{group.text}</p>
+            </div>
+            <div className="project-grid">
+              {group.projects.map((project) => (
+                <article className="project-card" key={project.title}>
+                  <span>{project.label}</span>
+                  <h3>{project.title}</h3>
+                  <p>{project.text}</p>
+                  <div className="team-skills">
+                    {project.highlights.map((highlight) => (
+                      <span key={highlight}>{highlight}</span>
+                    ))}
+                  </div>
+                  {project.href ? (
+                    <a className="project-link" href={project.href} target="_blank" rel="noopener noreferrer">
+                      View Live Site
+                      <FiExternalLink aria-hidden="true" />
+                    </a>
+                  ) : null}
+                </article>
               ))}
             </div>
-            {project.href ? (
-              <a className="project-link" href={project.href} target="_blank" rel="noopener noreferrer">
-                View Live Site
-                <FiExternalLink aria-hidden="true" />
-              </a>
-            ) : null}
-          </article>
+          </div>
         ))}
       </div>
     </section>

@@ -55,21 +55,7 @@ export const caseStudyFeatures = [
   'Scalable full-stack architecture',
 ];
 
-export const showcaseProjects = [
-  {
-    title: 'Leading Trading Est.',
-    label: 'Business Software',
-    href: 'https://www.lte-bh.com',
-    text: 'A business software platform for a Bahrain supplier, built around product discovery, customer inquiries, SEO structure, and future-ready admin and e-commerce workflows.',
-    highlights: [
-      'Product catalogue system',
-      'Category and product pages',
-      'Quote and contact flow',
-      'Admin and staff portal direction',
-      'SEO landing pages and sitemap',
-      'Database-backed growth planning',
-    ],
-  },
+export const businessWebsiteProjects = [
   {
     title: 'VIEL Gebäudeservice',
     label: 'Business Website',
@@ -84,9 +70,12 @@ export const showcaseProjects = [
       'Optimized service imagery',
     ],
   },
+];
+
+export const passionProjects = [
   {
     title: 'Evently Event Platform',
-    label: 'MERN Event App',
+    label: 'Passion Project',
     text: 'A full-stack event management platform where users can sign up, create events, browse event details, join or leave attendance lists, and manage their own event posts.',
     highlights: [
       'React + Vite frontend',
@@ -99,7 +88,7 @@ export const showcaseProjects = [
   },
   {
     title: 'Engineering Toolbox',
-    label: 'Engineering Community System',
+    label: 'Passion Project',
     text: 'A MERN platform for engineers and students with calculator tools, engineering formulas, calculation history, community posts, comments, profiles, and private messaging.',
     highlights: [
       'Formula calculator system',
