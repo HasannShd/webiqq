@@ -82,6 +82,19 @@ export const showcaseProjects = [
       'MongoDB formula seeding',
     ],
   },
+  {
+    title: 'Viel Client App',
+    label: 'Client Management App',
+    text: 'A client-facing application built to organize customer workflows, keep project information clear, and make service communication easier from one responsive interface.',
+    highlights: [
+      'Client app experience',
+      'Responsive interface',
+      'Project information flow',
+      'Customer workflow planning',
+      'Service communication structure',
+      'Scalable app foundation',
+    ],
+  },
 ];
 
 export const services = [
