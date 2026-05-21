@@ -256,8 +256,8 @@ function ShowcaseProjects() {
     <section className="section-shell" aria-labelledby="showcase-projects-title">
       <SectionHeader
         eyebrow="More Showcase Work"
-        title="Full-Stack Projects With Real Product Logic"
-        text="These builds show the kind of software thinking Webiqq brings into websites, dashboards, portals, and digital systems."
+        title="Client Projects With Real Business Value"
+        text="These builds show how Webiqq turns business needs into websites, software platforms, lead flows, SEO foundations, and scalable digital systems."
       />
       <div className="project-grid">
         {showcaseProjects.map((project) => (
@@ -270,6 +270,12 @@ function ShowcaseProjects() {
                 <span key={highlight}>{highlight}</span>
               ))}
             </div>
+            {project.href ? (
+              <a className="project-link" href={project.href} target="_blank" rel="noopener noreferrer">
+                View Live Site
+                <FiExternalLink aria-hidden="true" />
+              </a>
+            ) : null}
           </article>
         ))}
       </div>

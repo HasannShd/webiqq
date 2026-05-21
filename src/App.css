@@ -507,6 +507,9 @@
 .service-card,
 .process-card,
 .project-card {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
   padding: 22px;
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
 }
@@ -682,6 +685,29 @@
 
 .project-card span {
   margin-bottom: 14px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 18px;
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.project-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.project-link:hover {
+  color: var(--accent);
 }
 
 /* ─── Team ─── */

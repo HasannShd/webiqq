@@ -57,6 +57,34 @@ export const caseStudyFeatures = [
 
 export const showcaseProjects = [
   {
+    title: 'Leading Trading Est.',
+    label: 'Business Software',
+    href: 'https://www.lte-bh.com',
+    text: 'A business software platform for a Bahrain supplier, built around product discovery, customer inquiries, SEO structure, and future-ready admin and e-commerce workflows.',
+    highlights: [
+      'Product catalogue system',
+      'Category and product pages',
+      'Quote and contact flow',
+      'Admin and staff portal direction',
+      'SEO landing pages and sitemap',
+      'Database-backed growth planning',
+    ],
+  },
+  {
+    title: 'VIEL Gebäudeservice',
+    label: 'Business Website',
+    href: 'https://www.viel-gs.de',
+    text: 'A polished business website for a Berlin facilities service company, designed to present cleaning, winter service, and security services with clear lead-generation paths.',
+    highlights: [
+      'Responsive German website',
+      'Cleaning, winter, and security pages',
+      'Instant quote calculator',
+      'Contact and newsletter forms',
+      'SEO metadata and structured data',
+      'Optimized service imagery',
+    ],
+  },
+  {
     title: 'Evently Event Platform',
     label: 'MERN Event App',
     text: 'A full-stack event management platform where users can sign up, create events, browse event details, join or leave attendance lists, and manage their own event posts.',
@@ -80,19 +108,6 @@ export const showcaseProjects = [
       'Private chat',
       'Profile management',
       'MongoDB formula seeding',
-    ],
-  },
-  {
-    title: 'Viel Client App',
-    label: 'Client Management App',
-    text: 'A client-facing application built to organize customer workflows, keep project information clear, and make service communication easier from one responsive interface.',
-    highlights: [
-      'Client app experience',
-      'Responsive interface',
-      'Project information flow',
-      'Customer workflow planning',
-      'Service communication structure',
-      'Scalable app foundation',
     ],
   },
 ];
