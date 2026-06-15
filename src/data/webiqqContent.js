@@ -70,6 +70,20 @@ export const businessWebsiteProjects = [
       'Optimized service imagery',
     ],
   },
+  {
+    title: 'PEAK ELITE W.L.L',
+    label: 'Business Website',
+    href: 'https://www.peakelitebh.com',
+    text: 'A premium service website for a Bahrain facility support and hospitality company, built to present its services clearly and turn visitors into direct enquiries.',
+    highlights: [
+      'Responsive React website',
+      'Cleaning and facility service pages',
+      'Hospitality and event support',
+      'WhatsApp enquiry flow',
+      'Google Maps location integration',
+      'SEO metadata and service messaging',
+    ],
+  },
 ];
 
 export const passionProjects = [
