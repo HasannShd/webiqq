@@ -45,15 +45,15 @@ export const valueCards = [
 ];
 
 export const caseStudyFeatures = [
-  'Responsive business website',
-  'Product and category structure',
-  'Contact and inquiry form',
-  'Company profile pages',
-  'SEO-friendly structure',
-  'Future-ready e-commerce concept',
-  'Admin panel direction',
-  'Database-ready planning',
-  'Server and deployment direction',
+  'SEO product & category pages',
+  'RFQ and quote capture flow',
+  'Customer sign-in and ordering',
+  'Searchable product catalogue',
+  'Staff field operations portal',
+  'Admin office management system',
+  'Role-based auth (3 user types)',
+  'Messaging and notifications',
+  'Data exports and backup infrastructure',
   'Scalable full-stack architecture',
 ];
 

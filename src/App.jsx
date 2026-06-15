@@ -158,21 +158,22 @@ function HeroSection() {
 function ValueStrip() {
   return (
     <section className="section-shell value-strip" aria-labelledby="value-title">
-      <div>
+      <div className="value-intro">
         <p className="eyebrow">Digital growth systems</p>
         <h2 id="value-title">More Than a Website. A Smarter Business System.</h2>
         <p>
           We design and build digital systems that help businesses present themselves professionally, attract customers
-          online, and improve daily operations. From website development and SEO optimization to admin dashboards,
-          automation, databases, server setup, and marketing support, Webiqq brings the technical and growth side together.
+          online, and improve daily operations. From website development and SEO to admin dashboards, automation, databases,
+          and marketing support — Webiqq brings the technical and growth side together.
         </p>
       </div>
-      <div className="value-grid">
-        {valueCards.map((card) => (
-          <article className="compact-card" key={card.title}>
+      <div className="value-pillars">
+        {valueCards.map((card, i) => (
+          <div className="value-pillar" key={card.title}>
+            <span className="value-pillar-num" aria-hidden="true">0{i + 1}</span>
             <h3>{card.title}</h3>
             <p>{card.text}</p>
-          </article>
+          </div>
         ))}
       </div>
     </section>
@@ -185,33 +186,31 @@ function FeaturedCaseStudy() {
       <div className="case-copy">
         <div className="case-eyebrow-row">
           <p className="eyebrow">Featured Showcase</p>
-          {['React', 'Node.js', 'MongoDB', 'SEO'].map((t) => (
+          {['React 19', 'Node.js', 'MongoDB', 'SEO', 'PWA'].map((t) => (
             <span className="case-tech-tag" key={t}>{t}</span>
           ))}
         </div>
-        <h2 id="case-title">Leading Trading Est. Digital Platform</h2>
+        <h2 id="case-title">Leading Trading Est. — Complete Business Platform</h2>
         <p className="section-lead">
-          A complete digital platform for a Bahrain-based medical and industrial supply company — built to present, organise, and grow.
+          A full digital platform for a Bahrain medical and industrial supply company — public SEO website, product catalogue, RFQ lead capture, customer ordering, staff field operations, and admin office system, all in one connected build.
         </p>
         <div className="case-points">
           <article className="case-point case-point--problem">
-            <h3>Problem</h3>
+            <h3>Challenge</h3>
             <p>
-              The business needed a stronger digital presence, a cleaner way to present products and services, and a
-              platform that could support future digital expansion.
+              The business needed more than a website — a professional online presence, a way to capture RFQ leads from clients, support customer ordering, and manage internal team operations from one connected platform.
             </p>
           </article>
           <article className="case-point case-point--solution">
-            <h3>Solution</h3>
+            <h3>Build</h3>
             <p>
-              Webiqq built a responsive business platform with company pages, product/category organisation,
-              customer inquiry flow, and a scalable foundation for admin, database, server, and e-commerce.
+              Webiqq delivered a full-stack platform: a public SEO site with product catalogue, RFQ and quote capture, customer ordering, a staff field-operations portal, and a complete admin office management system — all running through one API.
             </p>
           </article>
           <article className="case-point case-point--result">
-            <h3>Result</h3>
+            <h3>Outcome</h3>
             <p>
-              A stronger digital foundation — improved presentation, customer communication, and full readiness for future online growth.
+              A live business platform that handles digital presentation, lead generation, ordering, internal operations, messaging, exports, and backup infrastructure — searchable, scalable, and built to grow.
             </p>
           </article>
         </div>
@@ -251,7 +250,7 @@ function FeaturedCaseStudy() {
                 </div>
               </div>
               <div className="case-mini-cats">
-                {['Medical', 'Dental', 'Industrial', 'Safety'].map((cat) => (
+                {['Medical', 'Dental', 'Lab', 'Safety', 'Industrial', 'PPE'].map((cat) => (
                   <span key={cat}>{cat}</span>
                 ))}
               </div>
@@ -273,11 +272,11 @@ function FeaturedCaseStudy() {
           </div>
           <div className="case-stat case-stat--cats" aria-hidden="true">
             <FiGrid aria-hidden="true" />
-            <div><strong>6</strong><span>Categories</span></div>
+            <div><strong>12+</strong><span>Categories</span></div>
           </div>
           <div className="case-stat case-stat--admin" aria-hidden="true">
             <FiLayers aria-hidden="true" />
-            <div><strong>Admin</strong><span>Panel</span></div>
+            <div><strong>3</strong><span>Auth Roles</span></div>
           </div>
         </div>
 
@@ -378,15 +377,18 @@ function ServicesSection() {
         title="Website Development, Business Software, SEO, AI & Digital Growth"
         text="From business websites to smart internal systems, databases, server handling, and maintenance, we create digital tools that search engines can understand and customers can act on."
       />
-      <div className="services-grid">
-        {services.map((service) => {
+      <div className="services-list">
+        {services.map((service, i) => {
           const Icon = serviceIcons[service.title] ?? FiSearch;
           return (
-            <article className="service-card" key={service.title}>
-              <Icon aria-hidden="true" />
-              <h3>{service.title}</h3>
-              <p>{service.text}</p>
-            </article>
+            <div className="service-row" key={service.title}>
+              <div className="service-row-icon"><Icon aria-hidden="true" /></div>
+              <div className="service-row-body">
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+              </div>
+              <span className="service-row-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            </div>
           );
         })}
       </div>
@@ -403,31 +405,37 @@ function CapabilitiesSection() {
           title="Full-Service Digital Build Capabilities"
           text="Webiqq helps businesses move from a basic online presence to a complete digital foundation with searchable pages, practical software, automation, and post-launch support."
         />
-        <div className="keyword-panel" aria-label="SEO keyword focus">
-          <span>SEO focus</span>
-          <div>
-            {seoKeywords.map((keyword) => (
-              <strong key={keyword}>{keyword}</strong>
-            ))}
+      </div>
+      <div className="capabilities-body">
+        <div className="capability-type-list">
+          {projectTypes.map((pt) => (
+            <div className="capability-type-row" key={pt.title}>
+              <span className="capability-type-tag">{pt.tag}</span>
+              <div className="capability-type-info">
+                <h3>{pt.title}</h3>
+                <p>{pt.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="capabilities-aside">
+          <div className="keyword-panel" aria-label="SEO keyword focus">
+            <span>SEO focus</span>
+            <div>
+              {seoKeywords.map((keyword) => (
+                <strong key={keyword}>{keyword}</strong>
+              ))}
+            </div>
+          </div>
+          <div className="reasons-panel">
+            <h3>Why businesses choose Webiqq</h3>
+            <ul>
+              {reasons.map((reason) => (
+                <li key={reason}>{reason}</li>
+              ))}
+            </ul>
           </div>
         </div>
-      </div>
-      <div className="capability-grid">
-        {projectTypes.map((project) => (
-          <article className="capability-card" key={project.title}>
-            <span>{project.tag}</span>
-            <h3>{project.title}</h3>
-            <p>{project.text}</p>
-          </article>
-        ))}
-      </div>
-      <div className="reasons-panel">
-        <h3>Why businesses choose Webiqq</h3>
-        <ul>
-          {reasons.map((reason) => (
-            <li key={reason}>{reason}</li>
-          ))}
-        </ul>
       </div>
     </section>
   );
@@ -443,22 +451,22 @@ function TeamSection() {
         title="The Expertise Behind Every Project."
         text="A cross-functional team of specialists covering every layer of digital delivery — engineering, AI, strategy, and marketing, working as one."
       />
-      <div className="team-grid">
-        {team.map((member, index) => {
-          const Icon = teamIcons[index];
+      <div className="team-list">
+        {team.map((member, i) => {
+          const Icon = teamIcons[i];
           return (
-            <article className="team-card" key={member.role}>
-              <div className="team-icon">
-                <Icon aria-hidden="true" />
+            <div className="team-row" key={member.role}>
+              <div className="team-row-icon"><Icon aria-hidden="true" /></div>
+              <div className="team-row-main">
+                <h3>{member.role}</h3>
+                <p>{member.description}</p>
               </div>
-              <h3>{member.role}</h3>
-              <p>{member.description}</p>
-              <div className="team-skills">
+              <div className="team-row-skills">
                 {member.skills.map((skill) => (
                   <span key={skill}>{skill}</span>
                 ))}
               </div>
-            </article>
+            </div>
           );
         })}
       </div>
@@ -471,13 +479,18 @@ function ProcessSection() {
   return (
     <section className="section-shell" id="process" aria-labelledby="process-title">
       <SectionHeader title="How We Turn Ideas Into Digital Systems" />
-      <div className="process-grid">
-        {processSteps.map((step, index) => (
-          <article className="process-card" key={step.title}>
-            <span>{String(index + 1).padStart(2, '0')}</span>
-            <h3>{step.title}</h3>
-            <p>{step.text}</p>
-          </article>
+      <div className="process-timeline">
+        {processSteps.map((step, i) => (
+          <div className="process-node" key={step.title}>
+            <div className="process-node-head">
+              <div className="process-node-dot">{String(i + 1).padStart(2, '0')}</div>
+              {i < processSteps.length - 1 && <div className="process-node-line" />}
+            </div>
+            <div className="process-node-body">
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </div>
+          </div>
         ))}
       </div>
     </section>
@@ -507,6 +520,8 @@ function FinalCta() {
 }
 
 function FaqSection() {
+  const [openIndex, setOpenIndex] = useState(null);
+
   return (
     <section className="section-shell faq-section" id="faq" aria-labelledby="faq-title">
       <SectionHeader
@@ -514,12 +529,22 @@ function FaqSection() {
         title="Questions Businesses Search Before Hiring Website Developers"
         text="Clear answers for companies comparing website developers, business software teams, SEO support, and automation partners."
       />
-      <div className="faq-grid">
-        {faqItems.map((item) => (
-          <article className="faq-card" key={item.question}>
-            <h3>{item.question}</h3>
-            <p>{item.answer}</p>
-          </article>
+      <div className="faq-accordion">
+        {faqItems.map((item, i) => (
+          <div className={`faq-item${openIndex === i ? ' is-open' : ''}`} key={item.question}>
+            <button
+              className="faq-trigger"
+              type="button"
+              aria-expanded={openIndex === i}
+              onClick={() => setOpenIndex(openIndex === i ? null : i)}
+            >
+              <span>{item.question}</span>
+              <FiArrowRight className="faq-arrow" aria-hidden="true" />
+            </button>
+            <div className="faq-body">
+              <p>{item.answer}</p>
+            </div>
+          </div>
         ))}
       </div>
     </section>
