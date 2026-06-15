@@ -120,35 +120,43 @@ export const passionProjects = [
 export const services = [
   {
     title: 'Website Development',
-    text: 'Modern responsive business websites built by website developers who focus on trust, speed, mobile experience, SEO structure, and clear contact paths.',
+    text: 'Modern responsive business websites built with trust, speed, mobile experience, SEO structure, and clear contact and inquiry paths.',
   },
   {
     title: 'Business Software',
-    text: 'Custom business software, admin panels, booking systems, inquiry workflows, dashboards, and internal tools built around real operations.',
+    text: 'Custom admin dashboards, internal management tools, booking systems, and office software built around real day-to-day operations.',
   },
   {
     title: 'SEO Optimization',
-    text: 'Technical SEO, keyword structure, HTML metadata, schema, sitemap setup, page optimization, and content improvements for stronger search visibility.',
+    text: 'Technical SEO, keyword structure, metadata, schema markup, sitemap setup, page optimization, and content improvements for stronger search visibility.',
   },
   {
     title: 'AI Automation',
-    text: 'AI chatbots, smart forms, workflow automation, lead routing, and AI-assisted content tools that reduce repetitive work.',
+    text: 'AI chatbots, smart forms, workflow automation, lead routing, and AI-assisted content and data tools that reduce repetitive work.',
   },
   {
-    title: 'Digital Marketing',
-    text: 'Social media strategy, content direction, campaign planning, and online visibility support.',
+    title: 'E-Commerce & Ordering',
+    text: 'Product pages, category systems, B2B inquiry-based ordering, catalogue websites, customer accounts, cart, checkout, and order history.',
   },
   {
-    title: 'E-Commerce Setup',
-    text: 'Product pages, category systems, inquiry-based ordering, catalogue websites, and future-ready online shop structures.',
+    title: 'RFQ & Lead Capture',
+    text: 'Request-for-quote systems, product-context inquiry forms, document upload flows, and structured lead delivery to your inbox or CRM.',
+  },
+  {
+    title: 'Customer & Staff Portals',
+    text: 'Multi-role web platforms with separate customer, staff, and admin access — login, dashboards, records, reports, messaging, and notifications.',
   },
   {
     title: 'Database Management',
-    text: 'Database planning, content structure, backups, data organization, and clean storage flows for business systems.',
+    text: 'Database planning, content structure, data imports and exports, backups, and clean storage flows for business systems.',
+  },
+  {
+    title: 'Digital Marketing',
+    text: 'Social media strategy, content direction, campaign planning, and online visibility support across search and social platforms.',
   },
   {
     title: 'Server & Maintenance',
-    text: 'Server setup, deployment handling, updates, monitoring direction, and ongoing maintenance support after launch.',
+    text: 'Server setup, deployment handling, monitoring, updates, and ongoing post-launch technical maintenance and support.',
   },
 ];
 
@@ -191,14 +199,14 @@ export const processSteps = [
 export const projectTypes = [
   { title: 'Business Website Development', tag: 'Website', text: 'A premium company presence with service pages, trust messaging, mobile-first layout, and conversion-focused contact flow.' },
   { title: 'Product Catalogue Website', tag: 'Website', text: 'Organized product categories built for browsing, search visibility, inquiry capture, and future e-commerce expansion.' },
-  { title: 'Booking Form System', tag: 'Software', text: 'Smart forms that capture service requests and route them into a manageable business workflow.' },
-  { title: 'Admin Dashboard Development', tag: 'Dashboard', text: 'Internal panels for managing content, leads, products, users, reports, and daily operations.' },
-  { title: 'Database-Backed Business System', tag: 'Software', text: 'Structured data flows for products, leads, users, inquiries, orders, and operational records.' },
-  { title: 'E-Commerce Website Structure', tag: 'E-Commerce', text: 'Product pages, category logic, order intent, inquiry-based purchasing, and future-ready checkout planning.' },
-  { title: 'Server Deployment & Maintenance', tag: 'Maintenance', text: 'Launch-ready hosting, deployment handling, monitoring direction, updates, and ongoing technical maintenance.' },
-  { title: 'AI Chatbot & Automation', tag: 'AI', text: 'Guided AI assistance for answering questions, qualifying leads, routing requests, and supporting teams.' },
-  { title: 'SEO Landing Page', tag: 'SEO', text: 'Focused website pages designed around search intent, keyword relevance, internal linking, and conversion.' },
-  { title: 'Digital Marketing Content System', tag: 'Marketing', text: 'Reusable content structure for campaigns, social media, local visibility, and long-term growth.' },
+  { title: 'Admin Dashboard Development', tag: 'Dashboard', text: 'Internal panels for managing content, leads, products, users, reports, orders, and daily operations.' },
+  { title: 'Customer & Staff Portal System', tag: 'Portal', text: 'Multi-role platforms with separate customer, staff, and admin layers — each with their own dashboard, records, and workflows.' },
+  { title: 'RFQ & Quote Capture System', tag: 'Lead', text: 'B2B inquiry systems with product context, document upload, lead storage, and structured email delivery to your inbox.' },
+  { title: 'E-Commerce & Ordering Flow', tag: 'E-Commerce', text: 'Customer accounts, cart, B2B ordering, checkout, order history, invoice support, and inquiry-based purchasing.' },
+  { title: 'Database-Backed Business System', tag: 'Software', text: 'Structured data flows for products, leads, users, orders, reports, and operational records with export support.' },
+  { title: 'AI Chatbot & Automation', tag: 'AI', text: 'AI-guided assistance for answering questions, qualifying leads, routing requests, and reducing team workload.' },
+  { title: 'SEO Landing & Content Pages', tag: 'SEO', text: 'Search-focused pages built around keyword intent, structured data, internal linking, and conversion paths.' },
+  { title: 'Server Deployment & Maintenance', tag: 'Infra', text: 'Launch-ready hosting, deployment pipelines, monitoring direction, backups, updates, and post-launch maintenance.' },
 ];
 
 export const contactDetails = [
@@ -217,8 +225,10 @@ export const serviceOptions = [
   'SEO Optimization',
   'Business Software',
   'AI Automation',
+  'E-Commerce & Ordering',
+  'RFQ & Lead Capture System',
+  'Customer or Staff Portal',
   'Digital Marketing',
-  'E-Commerce',
   'Database Management',
   'Server & Maintenance',
   'Full Digital Package',

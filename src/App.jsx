@@ -363,9 +363,11 @@ const serviceIcons = {
   'Business Software': FiCode,
   'SEO Optimization': FiSearch,
   'AI Automation': FiZap,
-  'Digital Marketing': FiTarget,
-  'E-Commerce Setup': FiShoppingCart,
+  'E-Commerce & Ordering': FiShoppingCart,
+  'RFQ & Lead Capture': FiActivity,
+  'Customer & Staff Portals': FiBriefcase,
   'Database Management': FiDatabase,
+  'Digital Marketing': FiTarget,
   'Server & Maintenance': FiServer,
 };
 
