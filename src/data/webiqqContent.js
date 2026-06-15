@@ -3,6 +3,8 @@ export const navLinks = [
   { label: 'Services', href: '#services' },
   { label: 'Process', href: '#process' },
   { label: 'Showcase', href: '#showcase' },
+  { label: 'Capabilities', href: '#capabilities' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'Team', href: '#team' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -36,10 +38,10 @@ export const team = [
 ];
 
 export const valueCards = [
-  { title: 'Build', text: 'Modern websites, software, databases, and server foundations.' },
-  { title: 'Rank', text: 'SEO structure that helps people find you.' },
-  { title: 'Automate', text: 'AI tools that reduce repetitive work.' },
-  { title: 'Grow', text: 'Marketing, maintenance, and support systems that keep momentum.' },
+  { title: 'Build', text: 'Modern business websites, custom software, databases, and server foundations.' },
+  { title: 'Rank', text: 'SEO structure, metadata, schema, and search-focused content that helps people find you.' },
+  { title: 'Automate', text: 'AI tools, smart forms, and workflows that reduce repetitive business work.' },
+  { title: 'Grow', text: 'Marketing, maintenance, analytics-ready content, and support systems that keep momentum.' },
 ];
 
 export const caseStudyFeatures = [
@@ -118,19 +120,19 @@ export const passionProjects = [
 export const services = [
   {
     title: 'Website Development',
-    text: 'Modern responsive websites designed to make businesses look professional, trustworthy, and easy to contact.',
+    text: 'Modern responsive business websites built by website developers who focus on trust, speed, mobile experience, SEO structure, and clear contact paths.',
   },
   {
     title: 'Business Software',
-    text: 'Custom admin panels, booking systems, inquiry systems, dashboards, and internal tools built around real business needs.',
+    text: 'Custom business software, admin panels, booking systems, inquiry workflows, dashboards, and internal tools built around real operations.',
   },
   {
     title: 'SEO Optimization',
-    text: 'Technical SEO, keyword structure, page optimization, and content improvements to help businesses become more visible online.',
+    text: 'Technical SEO, keyword structure, HTML metadata, schema, sitemap setup, page optimization, and content improvements for stronger search visibility.',
   },
   {
     title: 'AI Automation',
-    text: 'AI chatbots, smart forms, workflow automation, and AI-assisted content tools that reduce repetitive work.',
+    text: 'AI chatbots, smart forms, workflow automation, lead routing, and AI-assisted content tools that reduce repetitive work.',
   },
   {
     title: 'Digital Marketing',
@@ -138,7 +140,7 @@ export const services = [
   },
   {
     title: 'E-Commerce Setup',
-    text: 'Product pages, category systems, inquiry-based ordering, and future-ready online shop structures.',
+    text: 'Product pages, category systems, inquiry-based ordering, catalogue websites, and future-ready online shop structures.',
   },
   {
     title: 'Database Management',
@@ -187,16 +189,16 @@ export const processSteps = [
 ];
 
 export const projectTypes = [
-  { title: 'Business Website', tag: 'Website', text: 'A premium company presence with clear pages, service messaging, and contact flow.' },
-  { title: 'Product Catalogue Website', tag: 'Website', text: 'Organized product categories built for browsing, search, and inquiries.' },
-  { title: 'Booking Form System', tag: 'Software', text: 'Smart forms that capture requests and route them into a manageable workflow.' },
-  { title: 'Admin Dashboard', tag: 'Dashboard', text: 'Internal panels for managing content, leads, products, users, and reports.' },
-  { title: 'Database-Backed System', tag: 'Software', text: 'Structured data flows for products, leads, users, inquiries, and operations.' },
-  { title: 'E-Commerce Structure', tag: 'E-Commerce', text: 'Product pages, category logic, order intent, and future-ready checkout planning.' },
-  { title: 'Server Deployment Setup', tag: 'Maintenance', text: 'Launch-ready hosting, deployment handling, and ongoing technical maintenance direction.' },
-  { title: 'AI Chatbot Concept', tag: 'AI', text: 'Guided AI assistance for answering questions, qualifying leads, or supporting teams.' },
-  { title: 'SEO Landing Page', tag: 'SEO', text: 'Focused service pages designed around search intent and conversion.' },
-  { title: 'Digital Marketing Content System', tag: 'Marketing', text: 'Reusable content structure for campaigns, social media, and visibility growth.' },
+  { title: 'Business Website Development', tag: 'Website', text: 'A premium company presence with service pages, trust messaging, mobile-first layout, and conversion-focused contact flow.' },
+  { title: 'Product Catalogue Website', tag: 'Website', text: 'Organized product categories built for browsing, search visibility, inquiry capture, and future e-commerce expansion.' },
+  { title: 'Booking Form System', tag: 'Software', text: 'Smart forms that capture service requests and route them into a manageable business workflow.' },
+  { title: 'Admin Dashboard Development', tag: 'Dashboard', text: 'Internal panels for managing content, leads, products, users, reports, and daily operations.' },
+  { title: 'Database-Backed Business System', tag: 'Software', text: 'Structured data flows for products, leads, users, inquiries, orders, and operational records.' },
+  { title: 'E-Commerce Website Structure', tag: 'E-Commerce', text: 'Product pages, category logic, order intent, inquiry-based purchasing, and future-ready checkout planning.' },
+  { title: 'Server Deployment & Maintenance', tag: 'Maintenance', text: 'Launch-ready hosting, deployment handling, monitoring direction, updates, and ongoing technical maintenance.' },
+  { title: 'AI Chatbot & Automation', tag: 'AI', text: 'Guided AI assistance for answering questions, qualifying leads, routing requests, and supporting teams.' },
+  { title: 'SEO Landing Page', tag: 'SEO', text: 'Focused website pages designed around search intent, keyword relevance, internal linking, and conversion.' },
+  { title: 'Digital Marketing Content System', tag: 'Marketing', text: 'Reusable content structure for campaigns, social media, local visibility, and long-term growth.' },
 ];
 
 export const contactDetails = [

@@ -10,12 +10,15 @@ import {
   navLinks,
   passionProjects,
   processSteps,
+  projectTypes,
+  reasons,
   serviceOptions,
   services,
   socialLinks,
   team,
   valueCards,
 } from './data/webiqqContent.js';
+import { SITE_DESCRIPTION, SITE_URL, faqItems, seoKeywords, siteSchemas } from './data/seo.js';
 
 const socialIconMap = { instagram: FiInstagram, linkedin: FiLinkedin };
 
@@ -129,12 +132,12 @@ function HeroSection() {
   return (
     <section className="hero section-shell" id="home">
       <div className="hero-content">
-        <p className="eyebrow">Remote-first · Available worldwide</p>
-        <h1>Smart Websites, SEO & AI Growth for Modern Businesses</h1>
+        <p className="eyebrow">Website developers · Business software · SEO</p>
+        <h1>Website Developers for Business Websites, Software, SEO & AI Automation</h1>
         <p className="hero-subtitle">
-          Webiqq is a remote freelance team working with clients globally — building modern websites, custom software,
-          databases, server deployments, AI automation, SEO systems, and digital marketing strategies that help
-          businesses grow, wherever they are.
+          Webiqq is a remote freelance website development team working with clients globally. We build modern
+          business websites, custom business software, databases, server deployments, AI automation, SEO systems,
+          e-commerce structures, and digital marketing foundations that help companies grow.
         </p>
         <div className="hero-actions">
           <a className="primary-button" href="#showcase" onClick={(event) => scrollToSection(event, '#showcase')}>
@@ -145,7 +148,7 @@ function HeroSection() {
             Start a Project
           </a>
         </div>
-        <p className="service-tags">Websites • Software • SEO • AI • Databases • Servers • Marketing</p>
+        <p className="service-tags">Website developers • Business software • SEO optimization • AI automation • E-commerce • Databases • Servers • Marketing</p>
       </div>
       <HeroVisual />
     </section>
@@ -157,11 +160,11 @@ function ValueStrip() {
     <section className="section-shell value-strip" aria-labelledby="value-title">
       <div>
         <p className="eyebrow">Digital growth systems</p>
-        <h2 id="value-title">More Than a Website. A Smarter Digital Presence.</h2>
+        <h2 id="value-title">More Than a Website. A Smarter Business System.</h2>
         <p>
           We design and build digital systems that help businesses present themselves professionally, attract customers
-          online, and improve daily operations. From websites and SEO to admin panels, automation, and marketing
-          support, Webiqq brings the technical, server, database, and growth side together.
+          online, and improve daily operations. From website development and SEO optimization to admin dashboards,
+          automation, databases, server setup, and marketing support, Webiqq brings the technical and growth side together.
         </p>
       </div>
       <div className="value-grid">
@@ -283,7 +286,7 @@ function ShowcaseProjects() {
         <p>Client projects are separated from independent product builds so each type of work is clear.</p>
       </div>
       <div className="showcase-groups">
-        {projectGroups.map((group, groupIndex) => (
+        {projectGroups.map((group) => (
           <div className="showcase-group" key={group.title}>
             <div className="showcase-category-header">
               <div className={`showcase-category-rule accent-rule--${group.accent}`} />
@@ -342,8 +345,9 @@ function ServicesSection() {
   return (
     <section className="section-shell" id="services" aria-labelledby="services-title">
       <SectionHeader
-        title="What Webiqq Can Build for Your Business"
-        text="From simple websites to smart business systems, databases, server handling, and maintenance, we create digital tools that support growth."
+        eyebrow="Search-ready services"
+        title="Website Development, Business Software, SEO, AI & Digital Growth"
+        text="From business websites to smart internal systems, databases, server handling, and maintenance, we create digital tools that search engines can understand and customers can act on."
       />
       <div className="services-grid">
         {services.map((service) => {
@@ -356,6 +360,45 @@ function ServicesSection() {
             </article>
           );
         })}
+      </div>
+    </section>
+  );
+}
+
+function CapabilitiesSection() {
+  return (
+    <section className="section-shell capabilities-section" id="capabilities" aria-labelledby="capabilities-title">
+      <div className="capabilities-head">
+        <SectionHeader
+          eyebrow="What we can provide"
+          title="Full-Service Digital Build Capabilities"
+          text="Webiqq helps businesses move from a basic online presence to a complete digital foundation with searchable pages, practical software, automation, and post-launch support."
+        />
+        <div className="keyword-panel" aria-label="SEO keyword focus">
+          <span>SEO focus</span>
+          <div>
+            {seoKeywords.map((keyword) => (
+              <strong key={keyword}>{keyword}</strong>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="capability-grid">
+        {projectTypes.map((project) => (
+          <article className="capability-card" key={project.title}>
+            <span>{project.tag}</span>
+            <h3>{project.title}</h3>
+            <p>{project.text}</p>
+          </article>
+        ))}
+      </div>
+      <div className="reasons-panel">
+        <h3>Why businesses choose Webiqq</h3>
+        <ul>
+          {reasons.map((reason) => (
+            <li key={reason}>{reason}</li>
+          ))}
+        </ul>
       </div>
     </section>
   );
@@ -429,6 +472,26 @@ function FinalCta() {
         <a className="secondary-button" href="#contact" onClick={(event) => scrollToSection(event, '#contact')}>
           Get in Touch
         </a>
+      </div>
+    </section>
+  );
+}
+
+function FaqSection() {
+  return (
+    <section className="section-shell faq-section" id="faq" aria-labelledby="faq-title">
+      <SectionHeader
+        eyebrow="FAQ"
+        title="Questions Businesses Search Before Hiring Website Developers"
+        text="Clear answers for companies comparing website developers, business software teams, SEO support, and automation partners."
+      />
+      <div className="faq-grid">
+        {faqItems.map((item) => (
+          <article className="faq-card" key={item.question}>
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
       </div>
     </section>
   );
@@ -597,8 +660,11 @@ export default function App() {
   return (
     <div className="app">
       <Seo
-        title="Webiqq | Smart Websites, SEO & AI Growth"
-        description="Webiqq builds modern websites, business software, database management, server handling, SEO systems, AI automation, maintenance, and digital marketing solutions for growing businesses."
+        title="Webiqq | Website Developers, Business Software, SEO & AI Automation"
+        description={SITE_DESCRIPTION}
+        canonical={`${SITE_URL}/`}
+        image={`${SITE_URL}/webiqq-logo.svg`}
+        jsonLd={siteSchemas}
       />
       <Navbar />
       <main>
@@ -606,8 +672,10 @@ export default function App() {
         <ValueStrip />
         <ServicesSection />
         <ProcessSection />
+        <CapabilitiesSection />
         <FeaturedCaseStudy />
         <ShowcaseProjects />
+        <FaqSection />
         <TeamSection />
         <FinalCta />
         <ContactSection />

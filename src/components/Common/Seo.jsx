@@ -1,9 +1,17 @@
 import { useEffect } from 'react';
 
-const DEFAULT_TITLE = 'Collab';
-const DEFAULT_DESCRIPTION = 'A collaborative project workspace built with the same frontend flow as Leading Trading Est.';
+const DEFAULT_TITLE = 'Webiqq | Website Developers, Business Software, SEO & AI Automation';
+const DEFAULT_DESCRIPTION = 'Webiqq builds business websites, custom business software, SEO systems, AI automation, e-commerce structures, databases, server setup, maintenance, and digital marketing for growing companies.';
 
-export default function Seo({ title = DEFAULT_TITLE, description = DEFAULT_DESCRIPTION, robots }) {
+export default function Seo({
+  title = DEFAULT_TITLE,
+  description = DEFAULT_DESCRIPTION,
+  robots = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1',
+  canonical,
+  image,
+  type = 'website',
+  jsonLd = [],
+}) {
   useEffect(() => {
     document.title = title;
 
@@ -19,12 +27,60 @@ export default function Seo({ title = DEFAULT_TITLE, description = DEFAULT_DESCR
       return tag;
     };
 
-    ensureMeta('description').setAttribute('content', description);
+    const ensurePropertyMeta = (property) => {
+      let tag = document.head.querySelector(`meta[property="${property}"]`);
 
-    if (robots) {
-      ensureMeta('robots').setAttribute('content', robots);
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute('property', property);
+        document.head.appendChild(tag);
+      }
+
+      return tag;
+    };
+
+    const ensureLink = (rel) => {
+      let tag = document.head.querySelector(`link[rel="${rel}"]`);
+
+      if (!tag) {
+        tag = document.createElement('link');
+        tag.setAttribute('rel', rel);
+        document.head.appendChild(tag);
+      }
+
+      return tag;
+    };
+
+    ensureMeta('description').setAttribute('content', description);
+    ensureMeta('robots').setAttribute('content', robots);
+    ensureMeta('twitter:card').setAttribute('content', 'summary_large_image');
+    ensureMeta('twitter:title').setAttribute('content', title);
+    ensureMeta('twitter:description').setAttribute('content', description);
+
+    ensurePropertyMeta('og:title').setAttribute('content', title);
+    ensurePropertyMeta('og:description').setAttribute('content', description);
+    ensurePropertyMeta('og:type').setAttribute('content', type);
+
+    if (canonical) {
+      ensureLink('canonical').setAttribute('href', canonical);
+      ensurePropertyMeta('og:url').setAttribute('content', canonical);
     }
-  }, [description, robots, title]);
+
+    if (image) {
+      ensureMeta('twitter:image').setAttribute('content', image);
+      ensurePropertyMeta('og:image').setAttribute('content', image);
+    }
+
+    document.head.querySelectorAll('script[data-seo-json-ld="true"]').forEach((script) => script.remove());
+
+    jsonLd.forEach((schema) => {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.dataset.seoJsonLd = 'true';
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+    });
+  }, [canonical, description, image, jsonLd, robots, title, type]);
 
   return null;
 }
