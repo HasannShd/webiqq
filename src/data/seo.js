@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://collab-chi-three.vercel.app';
+export const SITE_URL = 'https://www.webiqq.com';
 export const SITE_NAME = 'Webiqq';
 export const SITE_DESCRIPTION =
   'Webiqq builds business websites, custom business software, SEO systems, AI automation, e-commerce structures, databases, server setup, maintenance, and digital marketing for growing companies.';

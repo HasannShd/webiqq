@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://collab-chi-three.vercel.app/sitemap.xml
+Sitemap: https://www.webiqq.com/sitemap.xml
