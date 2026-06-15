@@ -186,7 +186,7 @@ function FeaturedCaseStudy() {
           A complete digital platform concept for a Bahrain-based medical and industrial supply company.
         </p>
         <p>
-          For Leading Trading Est., we developed a professional digital platform designed to strengthen the company’s
+          For Leading Trading Est., we developed a professional digital platform designed to strengthen the company's
           online presence, organize its product categories, support customer inquiries, and prepare the business for
           future e-commerce and internal management features.
         </p>
@@ -225,10 +225,17 @@ function FeaturedCaseStudy() {
       </div>
       <div className="case-visual" aria-label="Leading Trading Est. platform feature mockup">
         <div className="case-browser">
-          <div className="window-dots">
-            <span />
-            <span />
-            <span />
+          <div className="case-browser-bar">
+            <div className="window-dots">
+              <span />
+              <span />
+              <span />
+            </div>
+            <div className="case-url-bar">
+              <FiGlobe aria-hidden="true" />
+              <span>lte-bh.com</span>
+              <span className="case-url-live">Live</span>
+            </div>
           </div>
           <div className="case-screen">
             <div className="case-screen-header">
@@ -255,48 +262,61 @@ function FeaturedCaseStudy() {
 function ShowcaseProjects() {
   const projectGroups = [
     {
-      title: 'Business Website',
-      text: 'Live client website work built for presentation, service discovery, SEO, and lead generation.',
+      title: 'Business Websites',
+      subtitle: 'Live client website work built for presentation, service discovery, SEO, and lead generation.',
+      accent: 'business',
       projects: businessWebsiteProjects,
     },
     {
       title: 'Passion Projects',
-      text: 'Independent full-stack builds that show product thinking, authentication flows, databases, and interactive app logic.',
+      subtitle: 'Independent full-stack builds showing product thinking, authentication flows, databases, and interactive app logic.',
+      accent: 'passion',
       projects: passionProjects,
     },
   ];
 
   return (
     <section className="section-shell" aria-labelledby="showcase-projects-title">
-      <SectionHeader
-        eyebrow="More Showcase Work"
-        title="Business Work and Passion Projects"
-        text="Client projects are separated from independent product builds so each type of work is clear."
-      />
+      <div className="showcase-intro">
+        <p className="eyebrow">More Showcase Work</p>
+        <h2 id="showcase-projects-title">Business Work & Passion Projects</h2>
+        <p>Client projects are separated from independent product builds so each type of work is clear.</p>
+      </div>
       <div className="showcase-groups">
-        {projectGroups.map((group) => (
+        {projectGroups.map((group, groupIndex) => (
           <div className="showcase-group" key={group.title}>
-            <div className="showcase-group-head">
-              <h3>{group.title}</h3>
-              <p>{group.text}</p>
+            <div className="showcase-category-header">
+              <div className={`showcase-category-rule accent-rule--${group.accent}`} />
+              <div className="showcase-category-meta">
+                <span className={`showcase-category-badge accent-badge--${group.accent}`}>{group.title}</span>
+                <span className="showcase-category-count">{group.projects.length} project{group.projects.length !== 1 ? 's' : ''}</span>
+              </div>
+              <p className="showcase-category-desc">{group.subtitle}</p>
             </div>
-            <div className="project-grid">
-              {group.projects.map((project) => (
-                <article className="project-card" key={project.title}>
-                  <span>{project.label}</span>
-                  <h3>{project.title}</h3>
-                  <p>{project.text}</p>
-                  <div className="team-skills">
+            <div className="showcase-project-grid">
+              {group.projects.map((project, projectIndex) => (
+                <article className={`project-card project-card--${group.accent}`} key={project.title}>
+                  <div className="project-card-top">
+                    <span className={`project-type-badge badge--${group.accent}`}>{project.label}</span>
+                    <span className="project-number">0{projectIndex + 1}</span>
+                  </div>
+                  <h3 className="project-card-title">{project.title}</h3>
+                  <p className="project-card-desc">{project.text}</p>
+                  <div className="project-highlights">
                     {project.highlights.map((highlight) => (
                       <span key={highlight}>{highlight}</span>
                     ))}
                   </div>
                   {project.href ? (
-                    <a className="project-link" href={project.href} target="_blank" rel="noopener noreferrer">
-                      View Live Site
+                    <a className={`project-cta project-cta--${group.accent}`} href={project.href} target="_blank" rel="noopener noreferrer">
+                      <span>View Live Site</span>
                       <FiExternalLink aria-hidden="true" />
                     </a>
-                  ) : null}
+                  ) : (
+                    <div className="project-cta project-cta--muted">
+                      <span>In Development</span>
+                    </div>
+                  )}
                 </article>
               ))}
             </div>
@@ -456,9 +476,9 @@ function ContactSection() {
     <section className="section-shell contact-section" id="contact" aria-labelledby="contact-title">
       <div className="contact-copy">
         <p className="eyebrow">Contact</p>
-        <h2 id="contact-title">Let’s Build Something Great Together</h2>
+        <h2 id="contact-title">Let's Build Something Great Together</h2>
         <p>
-          We work remotely with clients worldwide. Tell us about your project and we’ll get back to you within 24 hours
+          We work remotely with clients worldwide. Tell us about your project and we'll get back to you within 24 hours
           — no matter where you are.
         </p>
         <div className="contact-details">
