@@ -183,36 +183,35 @@ function FeaturedCaseStudy() {
   return (
     <section className="section-shell case-study" id="showcase" aria-labelledby="case-title">
       <div className="case-copy">
-        <p className="eyebrow">Featured Showcase</p>
+        <div className="case-eyebrow-row">
+          <p className="eyebrow">Featured Showcase</p>
+          {['React', 'Node.js', 'MongoDB', 'SEO'].map((t) => (
+            <span className="case-tech-tag" key={t}>{t}</span>
+          ))}
+        </div>
         <h2 id="case-title">Leading Trading Est. Digital Platform</h2>
         <p className="section-lead">
-          A complete digital platform concept for a Bahrain-based medical and industrial supply company.
-        </p>
-        <p>
-          For Leading Trading Est., we developed a professional digital platform designed to strengthen the company's
-          online presence, organize its product categories, support customer inquiries, and prepare the business for
-          future e-commerce and internal management features.
+          A complete digital platform for a Bahrain-based medical and industrial supply company — built to present, organise, and grow.
         </p>
         <div className="case-points">
-          <article>
+          <article className="case-point case-point--problem">
             <h3>Problem</h3>
             <p>
               The business needed a stronger digital presence, a cleaner way to present products and services, and a
               platform that could support future digital expansion.
             </p>
           </article>
-          <article>
+          <article className="case-point case-point--solution">
             <h3>Solution</h3>
             <p>
-              Webiqq created a responsive business platform structure with company pages, product/category organization,
-              customer inquiry flow, and a scalable foundation for admin, database, server, and e-commerce features.
+              Webiqq built a responsive business platform with company pages, product/category organisation,
+              customer inquiry flow, and a scalable foundation for admin, database, server, and e-commerce.
             </p>
           </article>
-          <article>
+          <article className="case-point case-point--result">
             <h3>Result</h3>
             <p>
-              The project created a stronger digital foundation for the business, improving presentation, customer
-              communication, and readiness for future online growth.
+              A stronger digital foundation — improved presentation, customer communication, and full readiness for future online growth.
             </p>
           </article>
         </div>
@@ -226,32 +225,62 @@ function FeaturedCaseStudy() {
           </a>
         </div>
       </div>
+
       <div className="case-visual" aria-label="Leading Trading Est. platform feature mockup">
-        <div className="case-browser">
-          <div className="case-browser-bar">
-            <div className="window-dots">
-              <span />
-              <span />
-              <span />
+        <div className="case-browser-wrap">
+          <div className="case-browser">
+            <div className="case-browser-bar">
+              <div className="window-dots"><span /><span /><span /></div>
+              <div className="case-url-bar">
+                <FiGlobe aria-hidden="true" />
+                <span>lte-bh.com</span>
+                <span className="case-url-live">Live</span>
+              </div>
             </div>
-            <div className="case-url-bar">
-              <FiGlobe aria-hidden="true" />
-              <span>lte-bh.com</span>
-              <span className="case-url-live">Live</span>
+            <div className="case-screen">
+              <div className="case-mini-hero">
+                <div className="case-mini-nav">
+                  <span /><span /><span />
+                  <div className="case-mini-nav-cta" />
+                </div>
+                <div className="case-mini-copy">
+                  <div className="case-skel case-skel--tag" />
+                  <div className="case-skel case-skel--h1" />
+                  <div className="case-skel case-skel--p" />
+                  <div className="case-skel case-skel--p case-skel--short" />
+                </div>
+              </div>
+              <div className="case-mini-cats">
+                {['Medical', 'Dental', 'Industrial', 'Safety'].map((cat) => (
+                  <span key={cat}>{cat}</span>
+                ))}
+              </div>
+              <div className="case-mini-products">
+                {[1, 2, 3].map((i) => (
+                  <div className="case-mini-product" key={i}>
+                    <div className="case-mini-product-img" />
+                    <div className="case-skel case-skel--line" />
+                    <div className="case-skel case-skel--line case-skel--short" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-          <div className="case-screen">
-            <div className="case-screen-header">
-              <strong>Business website</strong>
-              <span>SEO-ready</span>
-            </div>
-            <div className="case-screen-grid">
-              {['Product categories', 'Inquiry form', 'Admin panel concept', 'SEO-ready structure'].map((item) => (
-                <span key={item}>{item}</span>
-              ))}
-            </div>
+
+          <div className="case-stat case-stat--products" aria-hidden="true">
+            <FiDatabase aria-hidden="true" />
+            <div><strong>200+</strong><span>Products</span></div>
+          </div>
+          <div className="case-stat case-stat--cats" aria-hidden="true">
+            <FiGrid aria-hidden="true" />
+            <div><strong>6</strong><span>Categories</span></div>
+          </div>
+          <div className="case-stat case-stat--admin" aria-hidden="true">
+            <FiLayers aria-hidden="true" />
+            <div><strong>Admin</strong><span>Panel</span></div>
           </div>
         </div>
+
         <ul className="feature-list">
           {caseStudyFeatures.map((feature) => (
             <li key={feature}>{feature}</li>
