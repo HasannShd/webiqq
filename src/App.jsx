@@ -379,17 +379,14 @@ function ServicesSection() {
         title="Website Development, Business Software, SEO, AI & Digital Growth"
         text="From business websites to smart internal systems, databases, server handling, and maintenance, we create digital tools that search engines can understand and customers can act on."
       />
-      <div className="services-list">
-        {services.map((service, i) => {
+      <div className="services-matrix">
+        {services.map((service) => {
           const Icon = serviceIcons[service.title] ?? FiSearch;
           return (
-            <div className="service-row" key={service.title}>
-              <div className="service-row-icon"><Icon aria-hidden="true" /></div>
-              <div className="service-row-body">
-                <h3>{service.title}</h3>
-                <p>{service.text}</p>
-              </div>
-              <span className="service-row-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            <div className="service-tile" key={service.title}>
+              <div className="service-tile-icon"><Icon aria-hidden="true" /></div>
+              <h3>{service.title}</h3>
+              <p>{service.text}</p>
             </div>
           );
         })}
@@ -408,35 +405,31 @@ function CapabilitiesSection() {
           text="Webiqq helps businesses move from a basic online presence to a complete digital foundation with searchable pages, practical software, automation, and post-launch support."
         />
       </div>
-      <div className="capabilities-body">
-        <div className="capability-type-list">
-          {projectTypes.map((pt) => (
-            <div className="capability-type-row" key={pt.title}>
-              <span className="capability-type-tag">{pt.tag}</span>
-              <div className="capability-type-info">
-                <h3>{pt.title}</h3>
-                <p>{pt.text}</p>
-              </div>
-            </div>
-          ))}
+      <div className="capabilities-tiles">
+        {projectTypes.map((pt) => (
+          <div className="capability-tile" key={pt.title}>
+            <span className="capability-tile-tag">{pt.tag}</span>
+            <h3>{pt.title}</h3>
+            <p>{pt.text}</p>
+          </div>
+        ))}
+      </div>
+      <div className="capabilities-bottom">
+        <div className="keyword-panel" aria-label="SEO keyword focus">
+          <span>SEO focus</span>
+          <div>
+            {seoKeywords.map((keyword) => (
+              <strong key={keyword}>{keyword}</strong>
+            ))}
+          </div>
         </div>
-        <div className="capabilities-aside">
-          <div className="keyword-panel" aria-label="SEO keyword focus">
-            <span>SEO focus</span>
-            <div>
-              {seoKeywords.map((keyword) => (
-                <strong key={keyword}>{keyword}</strong>
-              ))}
-            </div>
-          </div>
-          <div className="reasons-panel">
-            <h3>Why businesses choose Webiqq</h3>
-            <ul>
-              {reasons.map((reason) => (
-                <li key={reason}>{reason}</li>
-              ))}
-            </ul>
-          </div>
+        <div className="reasons-panel">
+          <h3>Why businesses choose Webiqq</h3>
+          <ul>
+            {reasons.map((reason) => (
+              <li key={reason}>{reason}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
