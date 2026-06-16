@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FiActivity, FiArrowRight, FiBarChart2, FiBriefcase, FiCode, FiCpu, FiDatabase, FiExternalLink, FiGlobe, FiGrid, FiInstagram, FiLayers, FiLinkedin, FiMenu, FiSearch, FiServer, FiShoppingCart, FiTarget, FiTrendingUp, FiX, FiZap } from 'react-icons/fi';
 import BackToTop from './components/Common/BackToTop.jsx';
 import Seo from './components/Common/Seo.jsx';
@@ -132,6 +132,12 @@ function HeroSection() {
   return (
     <section className="hero section-shell" id="home">
       <div className="hero-content">
+        <div className="hero-available">
+          <span className="hero-available-dot" aria-hidden="true" />
+          <span>Available for new projects</span>
+          <span className="hero-available-sep" aria-hidden="true">·</span>
+          <span>Remote worldwide</span>
+        </div>
         <p className="eyebrow">Website developers · Business software · SEO</p>
         <h1>Website Developers for Business Websites, Software, SEO & AI Automation</h1>
         <p className="hero-subtitle">
@@ -148,7 +154,11 @@ function HeroSection() {
             Start a Project
           </a>
         </div>
-        <p className="service-tags">Website developers • Business software • SEO optimization • AI automation • E-commerce • Databases • Servers • Marketing</p>
+        <div className="hero-stack">
+          {['React', 'Node.js', 'MongoDB', 'PostgreSQL', 'SEO', 'AI', 'PWA'].map((t) => (
+            <span key={t}>{t}</span>
+          ))}
+        </div>
       </div>
       <HeroVisual />
     </section>
@@ -158,7 +168,7 @@ function HeroSection() {
 function ValueStrip() {
   return (
     <section className="section-shell value-strip" aria-labelledby="value-title">
-      <div className="value-intro">
+      <div className="value-intro reveal">
         <p className="eyebrow">Digital growth systems</p>
         <h2 id="value-title">More Than a Website. A Smarter Business System.</h2>
         <p>
@@ -167,7 +177,7 @@ function ValueStrip() {
           and marketing support — Webiqq brings the technical and growth side together.
         </p>
       </div>
-      <div className="value-pillars">
+      <div className="value-pillars reveal" style={{transitionDelay:'120ms'}}>
         {valueCards.map((card, i) => (
           <div className="value-pillar" key={card.title}>
             <span className="value-pillar-num" aria-hidden="true">0{i + 1}</span>
@@ -313,7 +323,7 @@ function ShowcaseProjects() {
         <h2 id="showcase-projects-title">Business Work & Passion Projects</h2>
         <p>Client projects are separated from independent product builds so each type of work is clear.</p>
       </div>
-      <div className="showcase-groups">
+      <div className="showcase-groups reveal">
         {projectGroups.map((group) => (
           <div className="showcase-group" key={group.title}>
             <div className="showcase-category-header">
@@ -379,7 +389,7 @@ function ServicesSection() {
         title="Website Development, Business Software, SEO, AI & Digital Growth"
         text="From business websites to smart internal systems, databases, server handling, and maintenance, we create digital tools that search engines can understand and customers can act on."
       />
-      <div className="services-matrix">
+      <div className="services-matrix reveal">
         {services.map((service) => {
           const Icon = serviceIcons[service.title] ?? FiSearch;
           return (
@@ -405,7 +415,7 @@ function CapabilitiesSection() {
           text="Webiqq helps businesses move from a basic online presence to a complete digital foundation with searchable pages, practical software, automation, and post-launch support."
         />
       </div>
-      <div className="capabilities-tiles">
+      <div className="capabilities-tiles reveal">
         {projectTypes.map((pt) => (
           <div className="capability-tile" key={pt.title}>
             <span className="capability-tile-tag">{pt.tag}</span>
@@ -414,7 +424,7 @@ function CapabilitiesSection() {
           </div>
         ))}
       </div>
-      <div className="capabilities-bottom">
+      <div className="capabilities-bottom reveal" style={{transitionDelay:'120ms'}}>
         <div className="keyword-panel" aria-label="SEO keyword focus">
           <span>SEO focus</span>
           <div>
@@ -446,7 +456,7 @@ function TeamSection() {
         title="The Expertise Behind Every Project."
         text="A cross-functional team of specialists covering every layer of digital delivery — engineering, AI, strategy, and marketing, working as one."
       />
-      <div className="team-list">
+      <div className="team-list reveal">
         {team.map((member, i) => {
           const Icon = teamIcons[i];
           return (
@@ -474,7 +484,7 @@ function ProcessSection() {
   return (
     <section className="section-shell" id="process" aria-labelledby="process-title">
       <SectionHeader title="How We Turn Ideas Into Digital Systems" />
-      <div className="process-timeline">
+      <div className="process-timeline reveal">
         {processSteps.map((step, i) => (
           <div className="process-node" key={step.title}>
             <div className="process-node-head">
@@ -524,7 +534,7 @@ function FaqSection() {
         title="Questions Businesses Search Before Hiring Website Developers"
         text="Clear answers for companies comparing website developers, business software teams, SEO support, and automation partners."
       />
-      <div className="faq-accordion">
+      <div className="faq-accordion reveal">
         {faqItems.map((item, i) => (
           <div className={`faq-item${openIndex === i ? ' is-open' : ''}`} key={item.question}>
             <button
@@ -706,8 +716,22 @@ function Footer() {
 }
 
 export default function App() {
+  useEffect(() => {
+    const nodes = document.querySelectorAll('.reveal');
+    if (!nodes.length) return;
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } }),
+      { threshold: 0.07, rootMargin: '0px 0px -40px 0px' }
+    );
+    nodes.forEach((n) => io.observe(n));
+    return () => io.disconnect();
+  }, []);
+
   return (
     <div className="app">
+      <div className="app-orb app-orb--1" aria-hidden="true" />
+      <div className="app-orb app-orb--2" aria-hidden="true" />
+      <div className="app-orb app-orb--3" aria-hidden="true" />
       <Seo
         title="Webiqq | Website Developers, Business Software, SEO & AI Automation"
         description={SITE_DESCRIPTION}

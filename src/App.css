@@ -2,16 +2,71 @@
    App.css — Webiqq UI
    ================================================================= */
 
+/* ─── Scroll reveal ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 640ms cubic-bezier(0.16, 1, 0.3, 1), transform 640ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Animated background orbs ─── */
+@keyframes orb-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(40px, -30px) scale(1.08); }
+  50% { transform: translate(-20px, 20px) scale(0.92); }
+  75% { transform: translate(25px, 35px) scale(1.04); }
+}
+
+.app-orb {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(100px);
+  animation: orb-drift ease-in-out infinite;
+}
+
+.app-orb--1 {
+  width: 700px;
+  height: 700px;
+  top: -200px;
+  left: -180px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.16), transparent 70%);
+  animation-duration: 22s;
+  animation-delay: 0s;
+}
+
+.app-orb--2 {
+  width: 600px;
+  height: 600px;
+  top: 30%;
+  right: -200px;
+  background: radial-gradient(circle, rgba(232, 121, 249, 0.1), transparent 70%);
+  animation-duration: 28s;
+  animation-delay: -8s;
+}
+
+.app-orb--3 {
+  width: 500px;
+  height: 500px;
+  bottom: 10%;
+  left: 30%;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.08), transparent 70%);
+  animation-duration: 35s;
+  animation-delay: -15s;
+}
+
 /* ─── App shell ─── */
 .app {
   position: relative;
   min-height: 100svh;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse 80% 45% at 15% -8%, rgba(124, 58, 237, 0.22), transparent),
-    radial-gradient(ellipse 55% 38% at 88% 6%, rgba(232, 121, 249, 0.11), transparent),
-    radial-gradient(ellipse 45% 32% at 55% 92%, rgba(167, 139, 250, 0.08), transparent),
-    var(--bg);
+  background: var(--bg);
 }
 
 .app::before {
@@ -19,11 +74,23 @@
   position: fixed;
   inset: 0;
   pointer-events: none;
+  z-index: 0;
   background-image:
-    linear-gradient(rgba(167, 139, 250, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(167, 139, 250, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(167, 139, 250, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167, 139, 250, 0.035) 1px, transparent 1px);
   background-size: 72px 72px;
-  mask-image: linear-gradient(to bottom, black 0%, transparent 68%);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
+}
+
+.app::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.038;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 220px 220px;
 }
 
 /* ─── Shared layout shell ─── */
@@ -122,6 +189,11 @@
 }
 
 /* ─── Hero ─── */
+@keyframes text-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.75fr);
@@ -131,6 +203,19 @@
   padding: 120px 0 90px;
 }
 
+.hero h1 {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: 860;
+  line-height: 1.13;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 35%, rgba(167, 139, 250, 0.92) 55%, #ffffff 75%, #ffffff 100%);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: text-shimmer 7s ease-in-out infinite;
+}
+
 .hero-content,
 .section-header,
 .case-copy,
@@ -138,6 +223,66 @@
 .final-cta {
   display: grid;
   gap: 22px;
+}
+
+/* ─── Hero availability badge ─── */
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(74, 222, 128, 0); }
+}
+
+.hero-available {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border: 1px solid rgba(74, 222, 128, 0.28);
+  border-radius: 999px;
+  background: rgba(74, 222, 128, 0.07);
+  color: rgba(74, 222, 128, 0.9);
+  font-size: 0.8rem;
+  font-weight: 650;
+  width: fit-content;
+}
+
+.hero-available-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  flex-shrink: 0;
+  animation: pulse-dot 2.2s ease-in-out infinite;
+}
+
+.hero-available-sep {
+  opacity: 0.5;
+}
+
+/* ─── Hero tech stack bar ─── */
+.hero-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.hero-stack span {
+  padding: 5px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: rgba(250, 250, 250, 0.55);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.76rem;
+  font-weight: 700;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  letter-spacing: 0.04em;
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.hero-stack span:hover {
+  color: var(--accent);
+  border-color: rgba(167, 139, 250, 0.36);
+  background: rgba(167, 139, 250, 0.08);
 }
 
 .hero-subtitle,
@@ -217,13 +362,17 @@
 .hero-visual {
   position: relative;
   min-height: 510px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
+  border: 1px solid rgba(167, 139, 250, 0.18);
+  border-radius: 20px;
   background:
-    linear-gradient(160deg, rgba(167, 139, 250, 0.1), rgba(232, 121, 249, 0.06)),
-    rgba(9, 9, 11, 0.72);
-  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(20px);
+    linear-gradient(160deg, rgba(167, 139, 250, 0.12), rgba(232, 121, 249, 0.07), transparent),
+    rgba(9, 9, 11, 0.78);
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.03),
+    inset 0 1px 0 rgba(167, 139, 250, 0.12),
+    0 0 80px rgba(124, 58, 237, 0.08);
+  backdrop-filter: blur(24px);
 }
 
 .mock-window,
@@ -480,6 +629,8 @@
 .section-shell {
   padding: 96px 0;
   scroll-margin-top: 100px;
+  position: relative;
+  z-index: 1;
 }
 
 /* ─── Two-column sections ─── */
@@ -610,12 +761,30 @@
 
 /* ─── Featured case study ─── */
 .case-study {
-  padding: 34px;
-  border: 1px solid rgba(167, 139, 250, 0.2);
-  border-radius: 16px;
+  padding: 40px;
+  border: 1px solid rgba(167, 139, 250, 0.22);
+  border-radius: 20px;
   background:
-    linear-gradient(135deg, rgba(124, 58, 237, 0.11), transparent 60%),
+    radial-gradient(ellipse 70% 60% at 0% 0%, rgba(124, 58, 237, 0.14), transparent),
+    linear-gradient(135deg, rgba(124, 58, 237, 0.08), transparent 55%),
     rgba(255, 255, 255, 0.025);
+  box-shadow:
+    0 0 0 1px rgba(167, 139, 250, 0.08),
+    0 40px 80px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.case-study::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(167, 139, 250, 0.6), rgba(232, 121, 249, 0.4), transparent);
+  pointer-events: none;
 }
 
 .section-lead {
@@ -1567,14 +1736,37 @@
 .final-cta {
   align-items: center;
   justify-items: center;
-  padding: 76px 32px;
-  border: 1px solid rgba(167, 139, 250, 0.22);
-  border-radius: 16px;
+  padding: 90px 40px;
+  border: 1px solid rgba(167, 139, 250, 0.24);
+  border-radius: 20px;
   text-align: center;
   background:
-    radial-gradient(ellipse 65% 55% at 50% 50%, rgba(124, 58, 237, 0.18), transparent),
-    linear-gradient(135deg, rgba(124, 58, 237, 0.13), rgba(232, 121, 249, 0.07)),
+    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(124, 58, 237, 0.2), transparent),
+    linear-gradient(135deg, rgba(124, 58, 237, 0.14), rgba(232, 121, 249, 0.08)),
     rgba(255, 255, 255, 0.025);
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(167, 139, 250, 0.1),
+    0 40px 80px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.final-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(167, 139, 250, 0.7), rgba(232, 121, 249, 0.5), transparent);
+  pointer-events: none;
+}
+
+.final-cta h2 {
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  font-weight: 820;
+  letter-spacing: -0.025em;
 }
 
 /* ─── FAQ ─── */
