@@ -154,11 +154,6 @@ function HeroSection() {
             Start a Project
           </a>
         </div>
-        <div className="hero-stack">
-          {['React', 'Node.js', 'MongoDB', 'PostgreSQL', 'SEO', 'AI', 'PWA'].map((t) => (
-            <span key={t}>{t}</span>
-          ))}
-        </div>
       </div>
       <HeroVisual />
     </section>
