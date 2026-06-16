@@ -627,7 +627,7 @@
 
 /* ─── Section shell ─── */
 .section-shell {
-  padding: 96px 0;
+  padding: 64px 0;
   scroll-margin-top: 100px;
   position: relative;
   z-index: 1;
@@ -2219,7 +2219,7 @@
   }
 
   .section-shell {
-    padding: 68px 0;
+    padding: 48px 0;
   }
 
   .hero {
