@@ -1,5 +1,6 @@
 import './App.css';
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FiActivity, FiArrowRight, FiBarChart2, FiBriefcase, FiCode, FiCpu, FiDatabase, FiExternalLink, FiGlobe, FiGrid, FiInstagram, FiLayers, FiLinkedin, FiMapPin, FiMenu, FiSearch, FiServer, FiShoppingCart, FiTarget, FiTrendingUp, FiX, FiZap } from 'react-icons/fi';
 
 const WHATSAPP_NUMBER = '97333290109';
@@ -20,6 +21,7 @@ import {
   valueCards,
 } from './data/webiqqContent.js';
 import { SITE_DESCRIPTION, SITE_URL, faqItems, seoKeywords, siteSchemas } from './data/seo.js';
+import { blogPosts } from './data/blogContent.js';
 
 const SEO_KEYWORDS = seoKeywords.join(', ');
 
@@ -198,6 +200,10 @@ function FeaturedCaseStudy() {
             <span className="case-tech-tag" key={t}>{t}</span>
           ))}
         </div>
+        <a className="parent-org-badge" href="https://www.lte-bh.com" target="_blank" rel="noopener noreferrer">
+          <span>Parent Company</span>
+          <strong>Leading Trading Est.</strong>
+        </a>
         <h2 id="case-title">Leading Trading Est. — Complete Business Platform</h2>
         <p className="section-lead">
           A full digital platform for a Bahrain medical and industrial supply company — public SEO website, product catalogue, RFQ lead capture, customer ordering, staff field operations, and admin office system, all in one connected build.
@@ -466,6 +472,31 @@ function ProcessSection() {
               <p>{step.text}</p>
             </div>
           </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function BlogSection() {
+  return (
+    <section className="section-shell" aria-labelledby="blog-title">
+      <SectionHeader
+        eyebrow="Insights"
+        title="Website, SEO & Digital Growth for Bahrain Businesses"
+        text="Practical guides on website development, Google Business Profile setup, and SEO — written for businesses in Bahrain and the GCC."
+      />
+      <div className="blog-cards reveal">
+        {blogPosts.map((post) => (
+          <Link key={post.slug} className="blog-card" to={`/blog/${post.slug}`}>
+            <span className="blog-card-cat">{post.category}</span>
+            <h3>{post.title}</h3>
+            <p>{post.description}</p>
+            <span className="blog-card-read">
+              Read article
+              <FiArrowRight aria-hidden="true" />
+            </span>
+          </Link>
         ))}
       </div>
     </section>
@@ -814,6 +845,7 @@ export default function App() {
         <ShowcaseProjects />
         <FaqSection />
         <TeamSection />
+        <BlogSection />
         <FinalCta />
         <ContactSection />
       </main>

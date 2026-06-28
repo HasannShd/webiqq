@@ -2673,3 +2673,99 @@
 .footer-legal-btn:hover {
   opacity: 1;
 }
+
+/* ─── Blog cards (homepage) ─── */
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+  border: 1px solid rgba(167, 139, 250, 0.12);
+  border-radius: 14px;
+  background: rgba(167, 139, 250, 0.03);
+  text-decoration: none;
+  transition: border-color 180ms, background 180ms;
+}
+
+.blog-card:hover {
+  border-color: rgba(167, 139, 250, 0.28);
+  background: rgba(167, 139, 250, 0.07);
+}
+
+.blog-card-cat {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.blog-card h3 {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: #f1f0ff;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.blog-card p {
+  font-size: 0.83rem;
+  color: rgba(241, 240, 255, 0.55);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.blog-card-read {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 650;
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+/* ─── Parent company badge ─── */
+.parent-org-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 10px;
+  background: rgba(167, 139, 250, 0.05);
+  text-decoration: none;
+  width: fit-content;
+  transition: border-color 150ms;
+}
+
+.parent-org-badge:hover {
+  border-color: rgba(167, 139, 250, 0.4);
+}
+
+.parent-org-badge span {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(241, 240, 255, 0.45);
+}
+
+.parent-org-badge strong {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #f1f0ff;
+}
+
+@media (max-width: 860px) {
+  .blog-cards {
+    grid-template-columns: 1fr;
+  }
+}
