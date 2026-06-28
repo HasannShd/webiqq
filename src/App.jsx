@@ -12,7 +12,6 @@ import {
   navLinks,
   passionProjects,
   processSteps,
-  projectTypes,
   reasons,
   serviceOptions,
   services,
@@ -402,30 +401,7 @@ function ServicesSection() {
           );
         })}
       </div>
-    </section>
-  );
-}
-
-function CapabilitiesSection() {
-  return (
-    <section className="section-shell capabilities-section" id="capabilities" aria-labelledby="capabilities-title">
-      <div className="capabilities-head">
-        <SectionHeader
-          eyebrow="What we can provide"
-          title="Full-Service Digital Build Capabilities"
-          text="Webiqq helps businesses move from a basic online presence to a complete digital foundation with searchable pages, practical software, automation, and post-launch support."
-        />
-      </div>
-      <div className="capabilities-tiles reveal">
-        {projectTypes.map((pt) => (
-          <div className="capability-tile" key={pt.title}>
-            <span className="capability-tile-tag">{pt.tag}</span>
-            <h3>{pt.title}</h3>
-            <p>{pt.text}</p>
-          </div>
-        ))}
-      </div>
-      <div className="capabilities-bottom reveal" style={{transitionDelay:'120ms'}}>
+      <div className="reveal" style={{transitionDelay:'120ms'}}>
         <div className="reasons-panel reasons-panel--full">
           <h3>Why businesses choose Webiqq</h3>
           <ul>
@@ -438,6 +414,7 @@ function CapabilitiesSection() {
     </section>
   );
 }
+
 
 const teamIcons = [FiLayers, FiCpu, FiBriefcase, FiActivity, FiTrendingUp];
 
@@ -834,7 +811,6 @@ export default function App() {
         <ValueStrip />
         <ServicesSection />
         <ProcessSection />
-        <CapabilitiesSection />
         <FeaturedCaseStudy />
         <ShowcaseProjects />
         <FaqSection />
