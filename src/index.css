@@ -76,10 +76,7 @@ h1 {
   line-height: 0.96;
   font-weight: 800;
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, var(--ink) 40%, var(--accent) 78%, var(--purple) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--ink);
 }
 
 h2 {

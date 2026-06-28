@@ -38,10 +38,15 @@ function Navbar() {
 
   return (
     <header className="navbar">
-      <a className="nav-logo" href="#home" onClick={(event) => scrollToSection(event, '#home')}>
-        <span>W</span>
-        Webiqq
-      </a>
+      <div className="nav-brand">
+        <a className="nav-logo" href="#home" onClick={(event) => scrollToSection(event, '#home')}>
+          <span>W</span>
+          Webiqq
+        </a>
+        <a className="nav-parent" href="https://www.lte-bh.com" target="_blank" rel="noopener noreferrer">
+          A Leading Trading Est. Company
+        </a>
+      </div>
 
       <button className="mobile-menu-button" type="button" aria-label="Toggle menu" onClick={() => setOpen((value) => !value)}>
         {open ? <FiX aria-hidden="true" /> : <FiMenu aria-hidden="true" />}
@@ -71,63 +76,41 @@ function SectionHeader({ eyebrow, title, text }) {
   );
 }
 
-function HeroVisual() {
+function ClientBoard() {
+  const clients = [
+    { name: 'Leading Trading Est.', location: 'Manama, Bahrain', tag: 'Parent Company', tagClass: 'tag--parent' },
+    { name: 'VIEL Gebäudeservice', location: 'Berlin, Germany', tag: 'Live', tagClass: 'tag--live' },
+    { name: 'PEAK ELITE W.L.L.', location: 'Bahrain', tag: 'Live', tagClass: 'tag--live' },
+    { name: 'AlBourshaid Global Est.', location: 'Bahrain', tag: 'Live', tagClass: 'tag--live' },
+  ];
+
   return (
-    <div className="hero-visual" role="img" aria-label="Abstract Webiqq dashboard mockup with website, SEO, AI, and business cards">
-      <div className="mock-window website-preview">
-        <div className="window-dots">
-          <span />
-          <span />
-          <span />
-        </div>
-        <div className="preview-hero">
-          <div className="preview-nav">
-            <span />
-            <span />
-            <span />
-          </div>
-          <div className="preview-copy">
-            <span className="preview-kicker">Digital system</span>
-            <strong>Growth-ready website</strong>
-            <small>SEO, AI workflows, dashboard and lead capture in one clean build.</small>
-          </div>
-          <div className="preview-stats">
-            <span>SEO</span>
-            <span>Leads</span>
-            <span>AI</span>
-          </div>
-        </div>
-        <div className="preview-lines">
-          <span />
-          <span />
-          <span />
-        </div>
+    <div className="client-board" aria-label="Active client platforms built by Webiqq">
+      <div className="client-board-header">
+        <span className="client-board-dot" aria-hidden="true" />
+        <span>Live Platforms</span>
+        <span className="client-board-count">4 active</span>
       </div>
-      <div className="mock-card seo-card">
-        <FiBarChart2 aria-hidden="true" />
-        <div>
-          <strong>SEO Growth</strong>
-          <span className="chart-bars">
-            <i />
-            <i />
-            <i />
-            <i />
-          </span>
-        </div>
+      <div className="client-board-list">
+        {clients.map((client) => (
+          <div className="client-board-row" key={client.name}>
+            <div className="client-board-info">
+              <strong>{client.name}</strong>
+              <span>
+                <FiMapPin aria-hidden="true" />
+                {client.location}
+              </span>
+            </div>
+            <span className={`client-board-tag ${client.tagClass}`}>{client.tag}</span>
+          </div>
+        ))}
       </div>
-      <div className="mock-card ai-card">
-        <FiCpu aria-hidden="true" />
-        <div>
-          <strong>AI Automation</strong>
-          <small>Lead routing ready</small>
-        </div>
-      </div>
-      <div className="mock-card dashboard-card">
-        <FiGrid aria-hidden="true" />
-        <div>
-          <strong>Dashboard</strong>
-          <small>Projects, leads, reports</small>
-        </div>
+      <div className="client-board-footer">
+        <span>
+          <FiGlobe aria-hidden="true" />
+          webiqq.com
+        </span>
+        <span>Bahrain · Germany · Worldwide</span>
       </div>
     </div>
   );
@@ -143,7 +126,7 @@ function HeroSection() {
           <span className="hero-available-sep" aria-hidden="true">·</span>
           <span>Based in Bahrain · Worldwide</span>
         </div>
-        <p className="eyebrow">Website developers · Bahrain · Europe · Worldwide</p>
+        <p className="eyebrow">Software Hub · A Leading Trading Est. Company</p>
         <h1>Website Developers for Business Websites, Software, SEO & AI Automation</h1>
         <p className="hero-subtitle">
           Webiqq is a web development agency based in Bahrain, working with clients worldwide. We build modern
@@ -160,7 +143,7 @@ function HeroSection() {
           </a>
         </div>
       </div>
-      <HeroVisual />
+      <ClientBoard />
     </section>
   );
 }
@@ -770,7 +753,8 @@ function Footer({ onPrivacy, onTerms }) {
           <span>W</span>
           Webiqq
         </a>
-        <p>Smart Websites, SEO & AI Growth</p>
+        <p>Software &amp; Web Development</p>
+        <p className="footer-parent-link">Part of <a href="https://www.lte-bh.com" target="_blank" rel="noopener noreferrer">Leading Trading Est.</a></p>
         <p className="footer-remote">Based in Bahrain · Available worldwide</p>
         <div className="footer-social">
           {socialLinks.map((link) => {
@@ -824,9 +808,6 @@ export default function App() {
 
   return (
     <div className="app">
-      <div className="app-orb app-orb--1" aria-hidden="true" />
-      <div className="app-orb app-orb--2" aria-hidden="true" />
-      <div className="app-orb app-orb--3" aria-hidden="true" />
       <Seo
         title="Webiqq | Website Developers, Business Software, SEO & AI Automation"
         description={SITE_DESCRIPTION}
