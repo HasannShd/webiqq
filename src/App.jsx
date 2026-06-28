@@ -22,6 +22,8 @@ import {
 } from './data/webiqqContent.js';
 import { SITE_DESCRIPTION, SITE_URL, faqItems, seoKeywords, siteSchemas } from './data/seo.js';
 
+const SEO_KEYWORDS = seoKeywords.join(', ');
+
 const socialIconMap = { instagram: FiInstagram, linkedin: FiLinkedin };
 
 const scrollToSection = (event, href, closeMenu) => {
@@ -424,15 +426,7 @@ function CapabilitiesSection() {
         ))}
       </div>
       <div className="capabilities-bottom reveal" style={{transitionDelay:'120ms'}}>
-        <div className="keyword-panel" aria-label="SEO keyword focus">
-          <span>SEO focus</span>
-          <div>
-            {seoKeywords.map((keyword) => (
-              <strong key={keyword}>{keyword}</strong>
-            ))}
-          </div>
-        </div>
-        <div className="reasons-panel">
+        <div className="reasons-panel reasons-panel--full">
           <h3>Why businesses choose Webiqq</h3>
           <ul>
             {reasons.map((reason) => (
@@ -831,6 +825,7 @@ export default function App() {
         description={SITE_DESCRIPTION}
         canonical={`${SITE_URL}/`}
         image={`${SITE_URL}/webiqq-logo.svg`}
+        keywords={SEO_KEYWORDS}
         jsonLd={siteSchemas}
       />
       <Navbar />

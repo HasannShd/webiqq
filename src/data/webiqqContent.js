@@ -183,16 +183,16 @@ export const services = [
 ];
 
 export const reasons = [
-  'Software engineering mindset',
-  'SEO and marketing awareness',
-  'AI-powered workflow',
-  'Clean modern user experience',
-  'Scalable structure for future growth',
-  'Database and server management awareness',
-  'Maintenance-ready project delivery',
-  'Practical solutions for real businesses',
-  'Remote-first, globally available',
-  'Freelance flexibility, agency-level quality',
+  'Website developers who think in software — not just templates',
+  'SEO optimization built into every page from day one',
+  'Custom business software for real daily operations',
+  'AI-powered workflow and automation for growing businesses',
+  'Business website development with clean, modern UX',
+  'Admin dashboard development and customer portal builds',
+  'E-commerce website setup with ordering and account flows',
+  'Database management and server deployment included',
+  'Social media management and Google Business Profile setup',
+  'Remote freelance web development team — available worldwide',
 ];
 
 export const processSteps = [

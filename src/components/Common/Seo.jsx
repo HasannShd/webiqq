@@ -9,6 +9,7 @@ export default function Seo({
   robots = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1',
   canonical,
   image,
+  keywords,
   type = 'website',
   jsonLd = [],
 }) {
@@ -53,6 +54,7 @@ export default function Seo({
 
     ensureMeta('description').setAttribute('content', description);
     ensureMeta('robots').setAttribute('content', robots);
+    if (keywords) ensureMeta('keywords').setAttribute('content', keywords);
     ensureMeta('twitter:card').setAttribute('content', 'summary_large_image');
     ensureMeta('twitter:title').setAttribute('content', title);
     ensureMeta('twitter:description').setAttribute('content', description);
