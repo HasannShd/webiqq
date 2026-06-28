@@ -86,6 +86,20 @@ export const businessWebsiteProjects = [
       'SEO metadata and service messaging',
     ],
   },
+  {
+    title: 'AlBourshaid Global Establishment',
+    label: 'Business Website',
+    href: 'https://www.albourshaid.com',
+    text: 'A multilingual corporate website for a Bahrain international holding group established in 1974, covering 9 business verticals including trading, travel, hospitality, investment, and consultancy.',
+    highlights: [
+      'Multilingual: EN / AR / FR / ZH',
+      '9 service verticals',
+      'Cloudinary media management',
+      'React Router multi-page build',
+      'Structured data & SEO metadata',
+      'Corporate brand system',
+    ],
+  },
 ];
 
 export const passionProjects = [
@@ -158,6 +172,14 @@ export const services = [
     title: 'Server & Maintenance',
     text: 'Server setup, deployment handling, monitoring, updates, and ongoing post-launch technical maintenance and support.',
   },
+  {
+    title: 'Social Media Management',
+    text: 'Content planning, post creation, scheduling, caption writing, and consistent brand presence across Instagram, LinkedIn, and other key platforms.',
+  },
+  {
+    title: 'Google Business Profile Setup',
+    text: 'Full Google Business Profile creation and optimization — verified listing, category setup, service descriptions, photos, and local SEO signals to help customers find you on Google Maps and Search.',
+  },
 ];
 
 export const reasons = [
@@ -229,6 +251,8 @@ export const serviceOptions = [
   'RFQ & Lead Capture System',
   'Customer or Staff Portal',
   'Digital Marketing',
+  'Social Media Management',
+  'Google Business Profile Setup',
   'Database Management',
   'Server & Maintenance',
   'Full Digital Package',

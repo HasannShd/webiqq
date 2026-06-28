@@ -1,6 +1,8 @@
 import './App.css';
-import { useEffect, useState } from 'react';
-import { FiActivity, FiArrowRight, FiBarChart2, FiBriefcase, FiCode, FiCpu, FiDatabase, FiExternalLink, FiGlobe, FiGrid, FiInstagram, FiLayers, FiLinkedin, FiMenu, FiSearch, FiServer, FiShoppingCart, FiTarget, FiTrendingUp, FiX, FiZap } from 'react-icons/fi';
+import { useEffect, useRef, useState } from 'react';
+import { FiActivity, FiArrowRight, FiBarChart2, FiBriefcase, FiCode, FiCpu, FiDatabase, FiExternalLink, FiGlobe, FiGrid, FiInstagram, FiLayers, FiLinkedin, FiMapPin, FiMenu, FiSearch, FiServer, FiShoppingCart, FiTarget, FiTrendingUp, FiX, FiZap } from 'react-icons/fi';
+
+const WHATSAPP_NUMBER = '97333290109';
 import BackToTop from './components/Common/BackToTop.jsx';
 import Seo from './components/Common/Seo.jsx';
 import {
@@ -374,6 +376,8 @@ const serviceIcons = {
   'Database Management': FiDatabase,
   'Digital Marketing': FiTarget,
   'Server & Maintenance': FiServer,
+  'Social Media Management': FiInstagram,
+  'Google Business Profile Setup': FiMapPin,
 };
 
 function ServicesSection() {
@@ -381,8 +385,8 @@ function ServicesSection() {
     <section className="section-shell" id="services" aria-labelledby="services-title">
       <SectionHeader
         eyebrow="Search-ready services"
-        title="Website Development, Business Software, SEO, AI & Digital Growth"
-        text="From business websites to smart internal systems, databases, server handling, and maintenance, we create digital tools that search engines can understand and customers can act on."
+        title="Website Development, Business Software, SEO, Social Media, Google Business & AI"
+        text="From business websites to smart internal systems, social media management, Google Business Profile setup, databases, server handling, and maintenance — we build and manage the digital presence that search engines and customers rely on."
       />
       <div className="services-matrix reveal">
         {services.map((service) => {
@@ -670,7 +674,94 @@ function ContactSection() {
   );
 }
 
-function Footer() {
+function WhatsAppButton() {
+  return (
+    <a
+      className="whatsapp-float"
+      href={`https://wa.me/${WHATSAPP_NUMBER}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="22" height="22">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.558 4.133 1.535 5.87L0 24l6.29-1.515A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.785 9.785 0 01-5.032-1.388l-.36-.214-3.733.899.934-3.622-.235-.372A9.792 9.792 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+      </svg>
+    </a>
+  );
+}
+
+function LegalModal({ type, onClose }) {
+  const overlayRef = useRef(null);
+
+  useEffect(() => {
+    const handleKey = (e) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', handleKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handleKey);
+      document.body.style.overflow = '';
+    };
+  }, [onClose]);
+
+  const handleOverlayClick = (e) => { if (e.target === overlayRef.current) onClose(); };
+
+  const isPrivacy = type === 'privacy';
+
+  return (
+    <div className="legal-overlay" ref={overlayRef} onClick={handleOverlayClick} role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
+      <div className="legal-modal">
+        <div className="legal-modal-header">
+          <h2 id="legal-modal-title">{isPrivacy ? 'Privacy Policy' : 'Terms & Conditions'}</h2>
+          <button className="legal-close" type="button" aria-label="Close" onClick={onClose}><FiX aria-hidden="true" /></button>
+        </div>
+        <div className="legal-modal-body">
+          {isPrivacy ? (
+            <>
+              <p><strong>Last updated: June 2026</strong></p>
+              <h3>1. Information We Collect</h3>
+              <p>When you submit our contact form, we collect your name, email address, phone number (optional), business name (optional), and the message you provide. We do not collect any information automatically beyond standard server logs.</p>
+              <h3>2. How We Use Your Information</h3>
+              <p>We use the information you submit solely to respond to your project enquiry. We do not sell, rent, or share your personal data with third parties. Your details are used only for communication related to your request.</p>
+              <h3>3. Data Storage</h3>
+              <p>Contact form submissions are sent directly to our business email and are not stored in any third-party database. We retain correspondence only for as long as necessary to fulfil your request or maintain business records.</p>
+              <h3>4. Cookies</h3>
+              <p>This website does not use tracking or advertising cookies. We may use essential session-related cookies required for the site to function correctly.</p>
+              <h3>5. Third-Party Services</h3>
+              <p>Our website is hosted on Vercel. Standard server and access logs may be maintained by our hosting provider in accordance with their own privacy policy.</p>
+              <h3>6. Your Rights</h3>
+              <p>You have the right to request access to, correction of, or deletion of any personal data we hold about you. To exercise these rights, contact us at <a href="mailto:webbiqq@gmail.com">webbiqq@gmail.com</a>.</p>
+              <h3>7. Contact</h3>
+              <p>For any privacy-related questions, email us at <a href="mailto:webbiqq@gmail.com">webbiqq@gmail.com</a>.</p>
+            </>
+          ) : (
+            <>
+              <p><strong>Last updated: June 2026</strong></p>
+              <h3>1. Services</h3>
+              <p>Webiqq provides website development, business software, SEO, AI automation, and digital marketing services to clients on a project or retainer basis. All work is defined by a separate project agreement or proposal agreed upon before work begins.</p>
+              <h3>2. Enquiries & Proposals</h3>
+              <p>Submitting a contact form or enquiry does not constitute a binding agreement. Work only begins after both parties have agreed to a formal proposal, scope of work, and payment terms in writing.</p>
+              <h3>3. Intellectual Property</h3>
+              <p>Upon full payment, the client receives full ownership of the deliverables specified in the agreed project scope. Webiqq retains the right to display completed work in its portfolio unless otherwise agreed in writing.</p>
+              <h3>4. Payment</h3>
+              <p>Payment terms are outlined in the project proposal. Work may be paused or terminated if payments are not made in accordance with agreed terms. Deposits are non-refundable once work has commenced.</p>
+              <h3>5. Revisions</h3>
+              <p>The number of revision rounds is defined in each project agreement. Requests outside the agreed scope may incur additional charges.</p>
+              <h3>6. Limitation of Liability</h3>
+              <p>Webiqq is not liable for indirect, incidental, or consequential damages arising from the use of delivered work. Our total liability is limited to the amount paid for the specific service in question.</p>
+              <h3>7. Governing Law</h3>
+              <p>These terms are governed by applicable laws. Disputes will be resolved through good-faith negotiation before any formal proceedings.</p>
+              <h3>8. Contact</h3>
+              <p>Questions about these terms? Email us at <a href="mailto:webbiqq@gmail.com">webbiqq@gmail.com</a>.</p>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Footer({ onPrivacy, onTerms }) {
   return (
     <footer className="footer">
       <div>
@@ -701,16 +792,24 @@ function Footer() {
       </div>
       <div>
         <h3>Services</h3>
-        {['Websites', 'Software', 'SEO', 'AI', 'Databases', 'Servers'].map((service) => (
-          <span key={service}>{service}</span>
+        {['Websites', 'Software', 'SEO', 'AI', 'Social Media', 'Google Business', 'Databases', 'Servers'].map((service) => (
+          <a key={service} href="#services" onClick={(event) => scrollToSection(event, '#services')}>{service}</a>
         ))}
       </div>
-      <p className="copyright">© 2026 Webiqq. All rights reserved. · Remote freelance team, available worldwide.</p>
+      <p className="copyright">
+        © 2026 Webiqq. All rights reserved. · Remote freelance team, available worldwide.
+        {' · '}
+        <button type="button" className="footer-legal-btn" onClick={onPrivacy}>Privacy Policy</button>
+        {' · '}
+        <button type="button" className="footer-legal-btn" onClick={onTerms}>Terms & Conditions</button>
+      </p>
     </footer>
   );
 }
 
 export default function App() {
+  const [legalModal, setLegalModal] = useState(null);
+
   useEffect(() => {
     const nodes = document.querySelectorAll('.reveal');
     if (!nodes.length) return;
@@ -748,8 +847,10 @@ export default function App() {
         <FinalCta />
         <ContactSection />
       </main>
-      <Footer />
+      <Footer onPrivacy={() => setLegalModal('privacy')} onTerms={() => setLegalModal('terms')} />
       <BackToTop />
+      <WhatsAppButton />
+      {legalModal && <LegalModal type={legalModal} onClose={() => setLegalModal(null)} />}
     </div>
   );
 }
