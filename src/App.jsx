@@ -143,7 +143,7 @@ function HeroSection() {
           <span className="hero-available-sep" aria-hidden="true">·</span>
           <span>Based in Bahrain · Worldwide</span>
         </div>
-        <p className="eyebrow">Website developers · Business software · SEO</p>
+        <p className="eyebrow">Website developers · Bahrain · Europe · Worldwide</p>
         <h1>Website Developers for Business Websites, Software, SEO & AI Automation</h1>
         <p className="hero-subtitle">
           Webiqq is a web development agency based in Bahrain, working with clients worldwide. We build modern

@@ -21,6 +21,8 @@ export const seoKeywords = [
   'web development agency Bahrain',
   'website development services',
   'business website development Bahrain',
+  'web development agency Germany',
+  'website developer Berlin',
   'custom business software',
   'business software developers',
   'admin dashboard development',
@@ -33,6 +35,7 @@ export const seoKeywords = [
   'server deployment',
   'website maintenance',
   'digital marketing Bahrain',
+  'international web development agency',
 ];
 
 export const faqItems = [
@@ -117,6 +120,9 @@ export const siteSchemas = [
       { '@type': 'Country', name: 'Saudi Arabia' },
       { '@type': 'Country', name: 'United Arab Emirates' },
       { '@type': 'Country', name: 'Kuwait' },
+      { '@type': 'Country', name: 'Germany' },
+      { '@type': 'Country', name: 'United Kingdom' },
+      { '@type': 'Country', name: 'France' },
       'Worldwide',
     ],
     serviceType: serviceNames,
