@@ -724,9 +724,9 @@ function LegalModal({ type, onClose }) {
               <h3>5. Third-Party Services</h3>
               <p>Our website is hosted on Vercel. Standard server and access logs may be maintained by our hosting provider in accordance with their own privacy policy.</p>
               <h3>6. Your Rights</h3>
-              <p>You have the right to request access to, correction of, or deletion of any personal data we hold about you. To exercise these rights, contact us at <a href="mailto:webbiqq@gmail.com">webbiqq@gmail.com</a>.</p>
+              <p>You have the right to request access to, correction of, or deletion of any personal data we hold about you. To exercise these rights, contact us at <a href="mailto:contact@webiqq.com">contact@webiqq.com</a>.</p>
               <h3>7. Contact</h3>
-              <p>For any privacy-related questions, email us at <a href="mailto:webbiqq@gmail.com">webbiqq@gmail.com</a>.</p>
+              <p>For any privacy-related questions, email us at <a href="mailto:contact@webiqq.com">contact@webiqq.com</a>.</p>
             </>
           ) : (
             <>
@@ -746,7 +746,7 @@ function LegalModal({ type, onClose }) {
               <h3>7. Governing Law</h3>
               <p>These terms are governed by applicable laws. Disputes will be resolved through good-faith negotiation before any formal proceedings.</p>
               <h3>8. Contact</h3>
-              <p>Questions about these terms? Email us at <a href="mailto:webbiqq@gmail.com">webbiqq@gmail.com</a>.</p>
+              <p>Questions about these terms? Email us at <a href="mailto:contact@webiqq.com">contact@webiqq.com</a>.</p>
             </>
           )}
         </div>

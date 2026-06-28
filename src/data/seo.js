@@ -68,7 +68,7 @@ export const siteSchemas = [
     url: SITE_URL,
     logo: `${SITE_URL}/webiqq-logo.svg`,
     description: SITE_DESCRIPTION,
-    email: 'webbiqq@gmail.com',
+    email: 'contact@webiqq.com',
     sameAs: ['https://www.instagram.com/webiqq.build/', 'https://www.linkedin.com/company/webiqq'],
   },
   {
@@ -78,7 +78,7 @@ export const siteSchemas = [
     name: SITE_NAME,
     url: SITE_URL,
     description: SITE_DESCRIPTION,
-    email: 'webbiqq@gmail.com',
+    email: 'contact@webiqq.com',
     areaServed: 'Worldwide',
     serviceType: serviceNames,
     hasOfferCatalog: {

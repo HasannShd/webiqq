@@ -107,7 +107,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Email service is not configured' });
   }
 
-  const to = (CONTACT_NOTIFY_EMAIL || CONTACT_TO_EMAIL || 'webbiqq@gmail.com')
+  const to = (CONTACT_NOTIFY_EMAIL || CONTACT_TO_EMAIL || 'contact@webiqq.com')
     .split(',')
     .map((email) => email.trim())
     .filter(Boolean);
