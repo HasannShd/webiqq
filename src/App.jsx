@@ -139,12 +139,12 @@ function HeroSection() {
           <span className="hero-available-dot" aria-hidden="true" />
           <span>Available for new projects</span>
           <span className="hero-available-sep" aria-hidden="true">·</span>
-          <span>Remote worldwide</span>
+          <span>Based in Bahrain · Worldwide</span>
         </div>
         <p className="eyebrow">Website developers · Business software · SEO</p>
         <h1>Website Developers for Business Websites, Software, SEO & AI Automation</h1>
         <p className="hero-subtitle">
-          Webiqq is a remote web development agency working with clients globally. We build modern
+          Webiqq is a web development agency based in Bahrain, working with clients worldwide. We build modern
           business websites, custom business software, databases, server deployments, AI automation, SEO systems,
           e-commerce structures, and digital marketing foundations that help companies grow.
         </p>
@@ -475,10 +475,10 @@ function ProcessSection() {
 function FinalCta() {
   return (
     <section className="section-shell final-cta" aria-labelledby="cta-title">
-      <p className="eyebrow">Remote · Worldwide · Ready</p>
+      <p className="eyebrow">Based in Bahrain · Working Worldwide</p>
       <h2 id="cta-title">Let's Build Something Great — Wherever You Are.</h2>
       <p>
-        Whether you need a professional website, SEO, AI automation, or a full digital system — our remote team is
+        Whether you need a professional website, SEO, AI automation, or a full digital system — our team is
         ready to work with you. We can also help with database management, server handling, and maintenance after launch.
       </p>
       <div className="hero-actions">
@@ -570,8 +570,7 @@ function ContactSection() {
         <p className="eyebrow">Contact</p>
         <h2 id="contact-title">Let's Build Something Great Together</h2>
         <p>
-          We work remotely with clients worldwide. Tell us about your project and we'll get back to you within 24 hours
-          — no matter where you are.
+          We work with clients worldwide from our base in Bahrain. Tell us about your project and we'll get back to you within 24 hours — no matter where you are.
         </p>
         <div className="contact-details">
           {contactDetails.map((detail) => (
@@ -741,7 +740,7 @@ function Footer({ onPrivacy, onTerms }) {
           Webiqq
         </a>
         <p>Smart Websites, SEO & AI Growth</p>
-        <p className="footer-remote">Remote-first · Available worldwide</p>
+        <p className="footer-remote">Based in Bahrain · Available worldwide</p>
         <div className="footer-social">
           {socialLinks.map((link) => {
             const Icon = socialIconMap[link.icon];
@@ -768,7 +767,7 @@ function Footer({ onPrivacy, onTerms }) {
         ))}
       </div>
       <p className="copyright">
-        © 2026 Webiqq. All rights reserved. · Remote digital agency, available worldwide.
+        © 2026 Webiqq. All rights reserved. · Web development agency based in Bahrain, serving clients worldwide.
         {' · '}
         <button type="button" className="footer-legal-btn" onClick={onPrivacy}>Privacy Policy</button>
         {' · '}

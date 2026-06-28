@@ -191,7 +191,7 @@ export const reasons = [
   'E-commerce website setup with ordering and account flows',
   'Database management and server deployment included',
   'Social media management and Google Business Profile setup',
-  'Remote web development agency — available worldwide',
+  'Based in Bahrain — serving clients worldwide',
 ];
 
 export const processSteps = [
@@ -233,7 +233,7 @@ export const projectTypes = [
 export const contactDetails = [
   { label: 'Email', value: 'contact@webiqq.com' },
   { label: 'Info', value: 'info@webiqq.com' },
-  { label: 'Available', value: 'Remote · Worldwide' },
+  { label: 'Based in', value: 'Bahrain · Serving worldwide' },
   { label: 'Response time', value: 'Within 24 hours' },
 ];
 

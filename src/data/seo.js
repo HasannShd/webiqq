@@ -44,7 +44,7 @@ export const faqItems = [
   {
     question: 'Do you work with clients outside your location?',
     answer:
-      'Yes. Webiqq is remote-first and works with businesses worldwide on websites, software, SEO, automation, databases, server setup, and maintenance.',
+      'Yes. Webiqq is a web development agency based in Bahrain working with businesses worldwide on websites, software, SEO, automation, databases, server setup, and maintenance.',
   },
 ];
 
