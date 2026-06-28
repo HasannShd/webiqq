@@ -23,16 +23,37 @@ export default function BlogPost() {
         description={post.description}
         canonical={`${SITE_URL}/blog/${post.slug}`}
         image={`${SITE_URL}/webiqq-logo.svg`}
-        jsonLd={[{
-          '@context': 'https://schema.org',
-          '@type': 'Article',
-          headline: post.title,
-          description: post.description,
-          datePublished: post.date,
-          author: { '@type': 'Organization', name: 'Webiqq', url: SITE_URL },
-          publisher: { '@type': 'Organization', name: 'Webiqq', logo: `${SITE_URL}/webiqq-logo.svg` },
-          url: `${SITE_URL}/blog/${post.slug}`,
-        }]}
+        keywords={post.keywords}
+        type="article"
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            '@id': `${SITE_URL}/blog/${post.slug}#article`,
+            headline: post.title,
+            description: post.description,
+            datePublished: post.date,
+            dateModified: post.date,
+            keywords: post.keywords,
+            author: { '@type': 'Organization', name: 'Webiqq', url: SITE_URL },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Webiqq',
+              logo: { '@type': 'ImageObject', url: `${SITE_URL}/webiqq-logo.svg` },
+            },
+            mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${post.slug}` },
+            url: `${SITE_URL}/blog/${post.slug}`,
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Webiqq', item: SITE_URL },
+              { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
+              { '@type': 'ListItem', position: 3, name: post.title, item: `${SITE_URL}/blog/${post.slug}` },
+            ],
+          },
+        ]}
       />
       <div className="blog-shell">
         <header className="blog-navbar">

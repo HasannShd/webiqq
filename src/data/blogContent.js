@@ -7,6 +7,7 @@ export const blogPosts = [
     date: '2026-06-01',
     readTime: '5 min read',
     category: 'Website Development',
+    keywords: 'website development Bahrain, web development agency Bahrain, business website Bahrain, professional website Bahrain, website cost Bahrain, Bahrain web developer, Webiqq',
     sections: [
       {
         heading: 'Why Bahrain Businesses Need a Professional Website in 2026',
@@ -38,6 +39,7 @@ export const blogPosts = [
     date: '2026-06-10',
     readTime: '6 min read',
     category: 'Local SEO',
+    keywords: 'Google Business Profile Bahrain, Google Maps Bahrain, local SEO Bahrain, Google Business setup Bahrain, Bahrain business listing, Google My Business Bahrain, Webiqq',
     sections: [
       {
         heading: 'What Is Google Business Profile and Why Does It Matter in Bahrain?',
@@ -73,6 +75,7 @@ export const blogPosts = [
     date: '2026-06-20',
     readTime: '7 min read',
     category: 'SEO',
+    keywords: 'SEO Bahrain, SEO optimization Bahrain, rank on Google Bahrain, local SEO Bahrain, Bahrain search engine optimization, website SEO Bahrain 2026, Webiqq',
     sections: [
       {
         heading: 'Why SEO Matters More Than Ever for Bahrain Businesses',

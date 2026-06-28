@@ -310,35 +310,37 @@
 .client-board-header {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
   padding: 14px 18px;
   border-bottom: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.03);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 700;
   color: var(--muted);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-.client-board-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #4ade80;
-  flex-shrink: 0;
-  animation: pulse-dot 2.2s ease-in-out infinite;
-}
-
-.client-board-count {
-  margin-left: auto;
-  padding: 2px 9px;
-  border-radius: 999px;
-  background: rgba(167, 139, 250, 0.12);
-  border: 1px solid rgba(167, 139, 250, 0.22);
-  color: var(--accent);
+.client-board-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-size: 0.68rem;
   font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 150ms ease;
+}
+
+.client-board-more:hover {
+  color: #ffffff;
+}
+
+.client-board-more svg {
+  width: 11px;
+  height: 11px;
 }
 
 .client-board-list {
@@ -390,24 +392,24 @@
 
 .client-board-tag {
   padding: 3px 10px;
-  border-radius: 999px;
-  font-size: 0.66rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  border-radius: 6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   flex-shrink: 0;
+  text-align: right;
 }
 
-.tag--parent {
-  background: rgba(167, 139, 250, 0.12);
-  border: 1px solid rgba(167, 139, 250, 0.28);
+.tag--featured {
+  background: rgba(167, 139, 250, 0.1);
+  border: 1px solid rgba(167, 139, 250, 0.22);
   color: var(--accent);
 }
 
-.tag--live {
-  background: rgba(74, 222, 128, 0.1);
-  border: 1px solid rgba(74, 222, 128, 0.24);
-  color: #4ade80;
+.tag--done {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  color: var(--muted);
 }
 
 .client-board-footer {
@@ -431,6 +433,11 @@
   width: 12px;
   height: 12px;
   color: var(--accent);
+}
+
+.client-board-note {
+  font-style: italic;
+  opacity: 0.7;
 }
 
 .case-browser,

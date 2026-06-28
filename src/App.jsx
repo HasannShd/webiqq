@@ -77,40 +77,41 @@ function SectionHeader({ eyebrow, title, text }) {
 }
 
 function ClientBoard() {
-  const clients = [
-    { name: 'Leading Trading Est.', location: 'Manama, Bahrain', tag: 'Parent Company', tagClass: 'tag--parent' },
-    { name: 'VIEL Gebäudeservice', location: 'Berlin, Germany', tag: 'Live', tagClass: 'tag--live' },
-    { name: 'PEAK ELITE W.L.L.', location: 'Bahrain', tag: 'Live', tagClass: 'tag--live' },
-    { name: 'AlBourshaid Global Est.', location: 'Bahrain', tag: 'Live', tagClass: 'tag--live' },
+  const projects = [
+    { name: 'Leading Trading Est.', location: 'Manama, Bahrain', type: 'Full Business Platform', tagClass: 'tag--featured' },
+    { name: 'VIEL Gebäudeservice', location: 'Berlin, Germany', type: 'Business Website', tagClass: 'tag--done' },
+    { name: 'PEAK ELITE W.L.L.', location: 'Bahrain', type: 'Business Website', tagClass: 'tag--done' },
+    { name: 'AlBourshaid Global Est.', location: 'Bahrain', type: 'Multilingual Corporate Site', tagClass: 'tag--done' },
   ];
 
   return (
-    <div className="client-board" aria-label="Active client platforms built by Webiqq">
+    <div className="client-board" aria-label="Selected client work by Webiqq">
       <div className="client-board-header">
-        <span className="client-board-dot" aria-hidden="true" />
-        <span>Live Platforms</span>
-        <span className="client-board-count">4 active</span>
+        <span>Some of Our Work</span>
+        <a className="client-board-more" href="#showcase" onClick={(e) => scrollToSection(e, '#showcase')}>
+          See all projects <FiArrowRight aria-hidden="true" />
+        </a>
       </div>
       <div className="client-board-list">
-        {clients.map((client) => (
-          <div className="client-board-row" key={client.name}>
+        {projects.map((project) => (
+          <div className="client-board-row" key={project.name}>
             <div className="client-board-info">
-              <strong>{client.name}</strong>
+              <strong>{project.name}</strong>
               <span>
                 <FiMapPin aria-hidden="true" />
-                {client.location}
+                {project.location}
               </span>
             </div>
-            <span className={`client-board-tag ${client.tagClass}`}>{client.tag}</span>
+            <span className={`client-board-tag ${project.tagClass}`}>{project.type}</span>
           </div>
         ))}
       </div>
       <div className="client-board-footer">
         <span>
           <FiGlobe aria-hidden="true" />
-          webiqq.com
+          Bahrain · Germany · Worldwide
         </span>
-        <span>Bahrain · Germany · Worldwide</span>
+        <span className="client-board-note">& more projects delivered</span>
       </div>
     </div>
   );
