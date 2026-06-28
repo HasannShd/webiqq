@@ -191,7 +191,7 @@ export const reasons = [
   'E-commerce website setup with ordering and account flows',
   'Database management and server deployment included',
   'Social media management and Google Business Profile setup',
-  'Remote freelance web development team — available worldwide',
+  'Remote web development agency — available worldwide',
 ];
 
 export const processSteps = [

@@ -17,7 +17,7 @@ export const seoKeywords = [
   'server deployment',
   'website maintenance',
   'digital marketing support',
-  'remote freelance web development team',
+  'web development agency',
 ];
 
 export const faqItems = [

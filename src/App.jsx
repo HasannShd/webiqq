@@ -144,7 +144,7 @@ function HeroSection() {
         <p className="eyebrow">Website developers · Business software · SEO</p>
         <h1>Website Developers for Business Websites, Software, SEO & AI Automation</h1>
         <p className="hero-subtitle">
-          Webiqq is a remote freelance website development team working with clients globally. We build modern
+          Webiqq is a remote web development agency working with clients globally. We build modern
           business websites, custom business software, databases, server deployments, AI automation, SEO systems,
           e-commerce structures, and digital marketing foundations that help companies grow.
         </p>
@@ -768,7 +768,7 @@ function Footer({ onPrivacy, onTerms }) {
         ))}
       </div>
       <p className="copyright">
-        © 2026 Webiqq. All rights reserved. · Remote freelance team, available worldwide.
+        © 2026 Webiqq. All rights reserved. · Remote digital agency, available worldwide.
         {' · '}
         <button type="button" className="footer-legal-btn" onClick={onPrivacy}>Privacy Policy</button>
         {' · '}
