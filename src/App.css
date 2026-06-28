@@ -199,8 +199,7 @@
   grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.75fr);
   gap: 52px;
   align-items: center;
-  min-height: 100svh;
-  padding: 120px 0 90px;
+  padding: 110px 0 64px;
 }
 
 .hero h1 {
@@ -625,7 +624,7 @@
 
 /* ─── Section shell ─── */
 .section-shell {
-  padding: 64px 0;
+  padding: 52px 0;
   scroll-margin-top: 100px;
   position: relative;
   z-index: 1;
@@ -2104,10 +2103,6 @@
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    min-height: auto;
-  }
-
   .value-pillars {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2201,7 +2196,7 @@
   }
 
   .section-shell {
-    padding: 48px 0;
+    padding: 40px 0;
   }
 
   .hero {
