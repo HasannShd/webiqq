@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiActivity, FiArrowRight, FiBriefcase, FiCode, FiCpu, FiDatabase, FiExternalLink, FiGlobe, FiGrid, FiInstagram, FiLayers, FiLinkedin, FiMapPin, FiMenu, FiSearch, FiServer, FiShoppingCart, FiTarget, FiTrendingUp, FiX, FiZap } from 'react-icons/fi';
 
@@ -26,6 +26,7 @@ import { blogPosts } from './data/blogContent.js';
 const SEO_KEYWORDS = seoKeywords.join(', ');
 
 const socialIconMap = { instagram: FiInstagram, linkedin: FiLinkedin };
+const LegalModal = lazy(() => import('./components/Common/LegalModal.jsx'));
 
 const scrollToSection = (event, href, closeMenu) => {
   event.preventDefault();
@@ -128,7 +129,7 @@ function HeroSection() {
           <span>Based in the Middle East · Working internationally</span>
         </div>
         <p className="eyebrow">Website development and digital growth systems</p>
-        <h1>Webiqq Builds Business Websites, Custom Website Development, SEO & Software Systems</h1>
+        <h1>Webiqq Builds Business Websites, <em>Custom Website Development</em>, SEO & Software Systems</h1>
         <p className="hero-subtitle">
           Webiqq is a software and web development company based in the Middle East, serving Bahrain and clients
           internationally. We build modern business websites, custom website development projects, custom business
@@ -153,12 +154,26 @@ function HeroSection() {
   );
 }
 
+function ServicesMarquee() {
+  const items = services.map((service) => service.title);
+
+  return (
+    <div className="marquee" aria-hidden="true">
+      <div className="marquee-track">
+        {[...items, ...items].map((item, i) => (
+          <span className="marquee-item" key={`${item}-${i}`}>{item}</span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function ValueStrip() {
   return (
     <section className="section-shell value-strip" aria-labelledby="value-title">
       <div className="value-intro reveal">
         <p className="eyebrow">Digital growth systems</p>
-        <h2 id="value-title">Website Development First. Then the Full Business System.</h2>
+        <h2 id="value-title">Website Development First. <em>Then the Full Business System.</em></h2>
         <p>
           We design and build digital systems that help businesses present themselves professionally, attract customers
           online, and improve daily operations. Webiqq brings website development, SEO, admin dashboards, automation,
@@ -183,7 +198,7 @@ function AboutSection() {
     <section className="section-shell about-section" id="about" aria-labelledby="about-title">
       <div className="section-header">
         <p className="eyebrow">About Webiqq</p>
-        <h2 id="about-title">A Webiqq-first brand, with a clear company background.</h2>
+        <h2 id="about-title">A Webiqq-first brand, with a <em>clear company background</em>.</h2>
         <p>
           Webiqq is based in the Middle East and works with businesses in Bahrain and internationally. The brand stands
           on its own for software, websites, SEO, automation, and digital growth systems.
@@ -227,7 +242,7 @@ function FeaturedCaseStudy() {
           <span>Parent Company</span>
           <strong>Leading Trading Est.</strong>
         </a>
-        <h2 id="case-title">Leading Trading Est. — Complete Business Platform</h2>
+        <h2 id="case-title">Leading Trading Est. — <em>Complete Business Platform</em></h2>
         <p className="section-lead">
           A full digital platform for a Bahrain medical and industrial supply company — public SEO website, product
           catalogue, RFQ lead capture, customer ordering, staff field operations, and admin office system, all in one
@@ -256,7 +271,13 @@ function FeaturedCaseStudy() {
           </article>
         </div>
         <div className="hero-actions">
-          <a className="primary-button" href="https://www.lte-bh.com" target="_blank" rel="noopener noreferrer">
+          <a
+            className="primary-button"
+            href="https://www.lte-bh.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View the live Leading Trading Est. website"
+          >
             View Live Site
             <FiExternalLink aria-hidden="true" />
           </a>
@@ -380,7 +401,13 @@ function ShowcaseProjects() {
                     ))}
                   </div>
                   {project.href ? (
-                    <a className={`project-cta project-cta--${group.accent}`} href={project.href} target="_blank" rel="noopener noreferrer">
+                    <a
+                      className={`project-cta project-cta--${group.accent}`}
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`View the live ${project.title} website`}
+                    >
                       <span>View Live Site</span>
                       <FiExternalLink aria-hidden="true" />
                     </a>
@@ -456,7 +483,7 @@ function TeamSection() {
     <section className="section-shell" id="team" aria-labelledby="team-title">
       <SectionHeader
         eyebrow="Our Team"
-        title="The Expertise Behind Every Project."
+        title={<>The <em>Expertise</em> Behind Every Project.</>}
         text="A cross-functional team of specialists covering every layer of digital delivery — engineering, AI, strategy, and marketing, working as one."
       />
       <div className="team-list reveal">
@@ -486,7 +513,7 @@ function TeamSection() {
 function ProcessSection() {
   return (
     <section className="section-shell" id="process" aria-labelledby="process-title">
-      <SectionHeader title="How We Turn Ideas Into Digital Systems" />
+      <SectionHeader eyebrow="Our Process" title={<>How We Turn <em>Ideas</em> Into Digital Systems</>} />
       <div className="process-timeline reveal">
         {processSteps.map((step, i) => (
           <div className="process-node" key={step.title}>
@@ -534,7 +561,7 @@ function FinalCta() {
   return (
     <section className="section-shell final-cta" aria-labelledby="cta-title">
       <p className="eyebrow">Based in the Middle East · Working internationally</p>
-      <h2 id="cta-title">Let's Build Something Great — Wherever You Are.</h2>
+      <h2 id="cta-title">Let's Build Something <em>Great</em> — Wherever You Are.</h2>
       <p>
         Whether you need a professional website, SEO, social media support, AI automation, or a full digital system,
         our team is ready to work with you. We also help with database management, Google Business optimization, server
@@ -720,76 +747,6 @@ function WhatsAppButton() {
   );
 }
 
-function LegalModal({ type, onClose }) {
-  const overlayRef = useRef(null);
-
-  useEffect(() => {
-    const handleKey = (e) => { if (e.key === 'Escape') onClose(); };
-    document.addEventListener('keydown', handleKey);
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.removeEventListener('keydown', handleKey);
-      document.body.style.overflow = '';
-    };
-  }, [onClose]);
-
-  const handleOverlayClick = (e) => { if (e.target === overlayRef.current) onClose(); };
-
-  const isPrivacy = type === 'privacy';
-
-  return (
-    <div className="legal-overlay" ref={overlayRef} onClick={handleOverlayClick} role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
-      <div className="legal-modal">
-        <div className="legal-modal-header">
-          <h2 id="legal-modal-title">{isPrivacy ? 'Privacy Policy' : 'Terms & Conditions'}</h2>
-          <button className="legal-close" type="button" aria-label="Close" onClick={onClose}><FiX aria-hidden="true" /></button>
-        </div>
-        <div className="legal-modal-body">
-          {isPrivacy ? (
-            <>
-              <p><strong>Last updated: June 2026</strong></p>
-              <h3>1. Information We Collect</h3>
-              <p>When you submit our contact form, we collect your name, email address, phone number (optional), business name (optional), and the message you provide. We do not collect any information automatically beyond standard server logs.</p>
-              <h3>2. How We Use Your Information</h3>
-              <p>We use the information you submit solely to respond to your project enquiry. We do not sell, rent, or share your personal data with third parties. Your details are used only for communication related to your request.</p>
-              <h3>3. Data Storage</h3>
-              <p>Contact form submissions are sent directly to our business email and are not stored in any third-party database. We retain correspondence only for as long as necessary to fulfil your request or maintain business records.</p>
-              <h3>4. Cookies</h3>
-              <p>This website does not use tracking or advertising cookies. We may use essential session-related cookies required for the site to function correctly.</p>
-              <h3>5. Third-Party Services</h3>
-              <p>Our website is hosted on Vercel. Standard server and access logs may be maintained by our hosting provider in accordance with their own privacy policy.</p>
-              <h3>6. Your Rights</h3>
-              <p>You have the right to request access to, correction of, or deletion of any personal data we hold about you. To exercise these rights, contact us at <a href="mailto:contact@webiqq.com">contact@webiqq.com</a>.</p>
-              <h3>7. Contact</h3>
-              <p>For any privacy-related questions, email us at <a href="mailto:contact@webiqq.com">contact@webiqq.com</a>.</p>
-            </>
-          ) : (
-            <>
-              <p><strong>Last updated: June 2026</strong></p>
-              <h3>1. Services</h3>
-              <p>Webiqq provides website development, business software, SEO, AI automation, and digital marketing services to clients on a project or retainer basis. All work is defined by a separate project agreement or proposal agreed upon before work begins.</p>
-              <h3>2. Enquiries & Proposals</h3>
-              <p>Submitting a contact form or enquiry does not constitute a binding agreement. Work only begins after both parties have agreed to a formal proposal, scope of work, and payment terms in writing.</p>
-              <h3>3. Intellectual Property</h3>
-              <p>Upon full payment, the client receives full ownership of the deliverables specified in the agreed project scope. Webiqq retains the right to display completed work in its portfolio unless otherwise agreed in writing.</p>
-              <h3>4. Payment</h3>
-              <p>Payment terms are outlined in the project proposal. Work may be paused or terminated if payments are not made in accordance with agreed terms. Deposits are non-refundable once work has commenced.</p>
-              <h3>5. Revisions</h3>
-              <p>The number of revision rounds is defined in each project agreement. Requests outside the agreed scope may incur additional charges.</p>
-              <h3>6. Limitation of Liability</h3>
-              <p>Webiqq is not liable for indirect, incidental, or consequential damages arising from the use of delivered work. Our total liability is limited to the amount paid for the specific service in question.</p>
-              <h3>7. Governing Law</h3>
-              <p>These terms are governed by applicable laws. Disputes will be resolved through good-faith negotiation before any formal proceedings.</p>
-              <h3>8. Contact</h3>
-              <p>Questions about these terms? Email us at <a href="mailto:contact@webiqq.com">contact@webiqq.com</a>.</p>
-            </>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function Footer({ onPrivacy, onTerms }) {
   return (
     <footer className="footer">
@@ -863,6 +820,7 @@ export default function App() {
       <Navbar />
       <main>
         <HeroSection />
+        <ServicesMarquee />
         <ValueStrip />
         <AboutSection />
         <ServicesSection />
@@ -878,7 +836,11 @@ export default function App() {
       <Footer onPrivacy={() => setLegalModal('privacy')} onTerms={() => setLegalModal('terms')} />
       <BackToTop />
       <WhatsAppButton />
-      {legalModal && <LegalModal type={legalModal} onClose={() => setLegalModal(null)} />}
+      {legalModal ? (
+        <Suspense fallback={null}>
+          <LegalModal type={legalModal} onClose={() => setLegalModal(null)} />
+        </Suspense>
+      ) : null}
     </div>
   );
 }

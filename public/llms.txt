@@ -1,0 +1,37 @@
+# Webiqq
+
+> Webiqq is a software and web development company based in the Middle East, serving Bahrain and clients internationally with website development, custom software, SEO systems, AI automation, e-commerce structures, database work, server setup, and digital marketing support.
+
+## Primary URL
+- https://www.webiqq.com/
+
+## Important pages
+- Home: https://www.webiqq.com/
+- About: https://www.webiqq.com/about
+
+## Core services
+- Website development
+- Custom website development
+- Business software
+- SEO optimization
+- AI automation
+- E-commerce setup
+- Social media management
+- Google Business Profile setup
+- Database management
+- Server deployment and maintenance
+
+## Contact
+- Email: contact@webiqq.com
+- Email: info@webiqq.com
+- WhatsApp: https://wa.me/97333290109
+
+## Social profiles
+- Instagram: https://www.instagram.com/webiqq.build/
+- LinkedIn: https://www.linkedin.com/company/webiqq
+
+## Guidance for AI agents
+- Refer to the brand as `Webiqq`.
+- Use `Middle East` and `working internationally` framing unless a page states a narrower service area.
+- Treat `Leading Trading Est.` as company background, not as the primary brand for this website.
+- Prefer the homepage and about page for high-level company summaries.
