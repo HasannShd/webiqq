@@ -1,7 +1,7 @@
 import './App.css';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FiActivity, FiArrowRight, FiBarChart2, FiBriefcase, FiCode, FiCpu, FiDatabase, FiExternalLink, FiGlobe, FiGrid, FiInstagram, FiLayers, FiLinkedin, FiMapPin, FiMenu, FiSearch, FiServer, FiShoppingCart, FiTarget, FiTrendingUp, FiX, FiZap } from 'react-icons/fi';
+import { FiActivity, FiArrowRight, FiBriefcase, FiCode, FiCpu, FiDatabase, FiExternalLink, FiGlobe, FiGrid, FiInstagram, FiLayers, FiLinkedin, FiMapPin, FiMenu, FiSearch, FiServer, FiShoppingCart, FiTarget, FiTrendingUp, FiX, FiZap } from 'react-icons/fi';
 
 const WHATSAPP_NUMBER = '97333290109';
 import BackToTop from './components/Common/BackToTop.jsx';
@@ -43,9 +43,6 @@ function Navbar() {
           <span>W</span>
           Webiqq
         </a>
-        <a className="nav-parent" href="https://www.lte-bh.com" target="_blank" rel="noopener noreferrer">
-          A Leading Trading Est. Company
-        </a>
       </div>
 
       <button className="mobile-menu-button" type="button" aria-label="Toggle menu" onClick={() => setOpen((value) => !value)}>
@@ -53,6 +50,9 @@ function Navbar() {
       </button>
 
       <nav className={`nav-links${open ? ' open' : ''}`} aria-label="Primary navigation">
+        <Link to="/about" onClick={() => setOpen(false)}>
+          About
+        </Link>
         {navLinks.map((link) => (
           <a key={link.href} href={link.href} onClick={(event) => scrollToSection(event, link.href, () => setOpen(false))}>
             {link.label}
@@ -125,20 +125,24 @@ function HeroSection() {
           <span className="hero-available-dot" aria-hidden="true" />
           <span>Available for new projects</span>
           <span className="hero-available-sep" aria-hidden="true">·</span>
-          <span>Based in Bahrain · Worldwide</span>
+          <span>Based in the Middle East · Working internationally</span>
         </div>
-        <p className="eyebrow">Software Hub · A Leading Trading Est. Company</p>
-        <h1>Website Developers for Business Websites, Software, SEO & AI Automation</h1>
+        <p className="eyebrow">Website development and digital growth systems</p>
+        <h1>Webiqq Builds Business Websites, Custom Website Development, SEO & Software Systems</h1>
         <p className="hero-subtitle">
-          Webiqq is a web development agency based in Bahrain, working with clients worldwide. We build modern
-          business websites, custom business software, databases, server deployments, AI automation, SEO systems,
-          e-commerce structures, and digital marketing foundations that help companies grow.
+          Webiqq is a software and web development company based in the Middle East, serving Bahrain and clients
+          internationally. We build modern business websites, custom website development projects, custom business
+          software, databases, server deployments, AI automation, SEO systems, e-commerce structures, social media
+          systems, and digital marketing foundations that help companies grow.
         </p>
         <div className="hero-actions">
           <a className="primary-button" href="#showcase" onClick={(event) => scrollToSection(event, '#showcase')}>
             View Showcase
             <FiArrowRight aria-hidden="true" />
           </a>
+          <Link className="secondary-button" to="/about">
+            About Webiqq
+          </Link>
           <a className="secondary-button" href="#contact" onClick={(event) => scrollToSection(event, '#contact')}>
             Start a Project
           </a>
@@ -154,11 +158,11 @@ function ValueStrip() {
     <section className="section-shell value-strip" aria-labelledby="value-title">
       <div className="value-intro reveal">
         <p className="eyebrow">Digital growth systems</p>
-        <h2 id="value-title">More Than a Website. A Smarter Business System.</h2>
+        <h2 id="value-title">Website Development First. Then the Full Business System.</h2>
         <p>
           We design and build digital systems that help businesses present themselves professionally, attract customers
-          online, and improve daily operations. From website development and SEO to admin dashboards, automation, databases,
-          and marketing support — Webiqq brings the technical and growth side together.
+          online, and improve daily operations. Webiqq brings website development, SEO, admin dashboards, automation,
+          databases, Google Business optimization, and marketing support together in one team.
         </p>
       </div>
       <div className="value-pillars reveal" style={{transitionDelay:'120ms'}}>
@@ -174,15 +178,50 @@ function ValueStrip() {
   );
 }
 
+function AboutSection() {
+  return (
+    <section className="section-shell about-section" id="about" aria-labelledby="about-title">
+      <div className="section-header">
+        <p className="eyebrow">About Webiqq</p>
+        <h2 id="about-title">A Webiqq-first brand, with a clear company background.</h2>
+        <p>
+          Webiqq is based in the Middle East and works with businesses in Bahrain and internationally. The brand stands
+          on its own for software, websites, SEO, automation, and digital growth systems.
+        </p>
+      </div>
+      <div className="about-grid reveal">
+        <article className="about-card">
+          <h3>What Webiqq does</h3>
+          <p>
+            We build business websites, custom website development projects, custom platforms, admin dashboards, SEO systems, AI tools, digital marketing
+            support, and the backend infrastructure that keeps those systems running.
+          </p>
+        </article>
+        <article className="about-card">
+          <h3>Where Webiqq is based</h3>
+          <p>
+            Webiqq is based in the Middle East, serves Bahrain directly, and works with international clients across
+            service industries, B2B operations, and growth-focused businesses.
+          </p>
+        </article>
+        <article className="about-card">
+          <h3>Company background</h3>
+          <p>
+            Webiqq is also connected to Leading Trading Est. as part of the company background, but Webiqq itself is
+            the brand that should be found and recognized in search and by clients.
+          </p>
+        </article>
+      </div>
+    </section>
+  );
+}
+
 function FeaturedCaseStudy() {
   return (
     <section className="section-shell case-study" id="showcase" aria-labelledby="case-title">
       <div className="case-copy">
         <div className="case-eyebrow-row">
           <p className="eyebrow">Featured Showcase</p>
-          {['React 19', 'Node.js', 'MongoDB', 'SEO', 'PWA'].map((t) => (
-            <span className="case-tech-tag" key={t}>{t}</span>
-          ))}
         </div>
         <a className="parent-org-badge" href="https://www.lte-bh.com" target="_blank" rel="noopener noreferrer">
           <span>Parent Company</span>
@@ -190,7 +229,9 @@ function FeaturedCaseStudy() {
         </a>
         <h2 id="case-title">Leading Trading Est. — Complete Business Platform</h2>
         <p className="section-lead">
-          A full digital platform for a Bahrain medical and industrial supply company — public SEO website, product catalogue, RFQ lead capture, customer ordering, staff field operations, and admin office system, all in one connected build.
+          A full digital platform for a Bahrain medical and industrial supply company — public SEO website, product
+          catalogue, RFQ lead capture, customer ordering, staff field operations, and admin office system, all in one
+          connected build by Webiqq.
         </p>
         <div className="case-points">
           <article className="case-point case-point--problem">
@@ -202,7 +243,9 @@ function FeaturedCaseStudy() {
           <article className="case-point case-point--solution">
             <h3>Build</h3>
             <p>
-              Webiqq delivered a full-stack platform: a public SEO site with product catalogue, RFQ and quote capture, customer ordering, a staff field-operations portal, and a complete admin office management system — all running through one API.
+              Webiqq delivered a full-stack platform: a public SEO site with product catalogue, RFQ and quote capture,
+              customer ordering, a staff field-operations portal, and a complete admin office management system, plus
+              the supporting SEO structure and growth-ready architecture running through one API.
             </p>
           </article>
           <article className="case-point case-point--result">
@@ -375,9 +418,9 @@ function ServicesSection() {
   return (
     <section className="section-shell" id="services" aria-labelledby="services-title">
       <SectionHeader
-        eyebrow="Search-ready services"
-        title="Website Development, Business Software, SEO, Social Media, Google Business & AI"
-        text="From business websites to smart internal systems, social media management, Google Business Profile setup, databases, server handling, and maintenance — we build and manage the digital presence that search engines and customers rely on."
+        eyebrow="Search-ready services from Webiqq"
+        title="Website Development, Custom Websites, Business Software, SEO, Social Media, Google Business & AI"
+        text="From business website development and custom websites to smart internal systems, social media management, Google Business Profile setup, databases, server handling, and maintenance, Webiqq builds the digital systems businesses need for stronger search visibility and better operations."
       />
       <div className="services-matrix reveal">
         {services.map((service) => {
@@ -467,8 +510,8 @@ function BlogSection() {
     <section className="section-shell" aria-labelledby="blog-title">
       <SectionHeader
         eyebrow="Insights"
-        title="Website, SEO & Digital Growth for Bahrain Businesses"
-        text="Practical guides on website development, Google Business Profile setup, and SEO — written for businesses in Bahrain and the GCC."
+        title="Website Development, SEO & Digital Growth for Bahrain Businesses"
+        text="Practical guides on business website development, custom website projects, Google Business Profile setup, and SEO — written for businesses in Bahrain and the GCC."
       />
       <div className="blog-cards reveal">
         {blogPosts.map((post) => (
@@ -490,11 +533,12 @@ function BlogSection() {
 function FinalCta() {
   return (
     <section className="section-shell final-cta" aria-labelledby="cta-title">
-      <p className="eyebrow">Based in Bahrain · Working Worldwide</p>
+      <p className="eyebrow">Based in the Middle East · Working internationally</p>
       <h2 id="cta-title">Let's Build Something Great — Wherever You Are.</h2>
       <p>
-        Whether you need a professional website, SEO, AI automation, or a full digital system — our team is
-        ready to work with you. We can also help with database management, server handling, and maintenance after launch.
+        Whether you need a professional website, SEO, social media support, AI automation, or a full digital system,
+        our team is ready to work with you. We also help with database management, Google Business optimization, server
+        handling, and maintenance after launch.
       </p>
       <div className="hero-actions">
         <a className="primary-button" href="#contact" onClick={(event) => scrollToSection(event, '#contact')}>
@@ -516,7 +560,7 @@ function FaqSection() {
     <section className="section-shell faq-section" id="faq" aria-labelledby="faq-title">
       <SectionHeader
         eyebrow="FAQ"
-        title="Questions Businesses Search Before Hiring Website Developers"
+        title="Questions Businesses Search Before Hiring Website Development Companies"
         text="Clear answers for companies comparing website developers, business software teams, SEO support, and automation partners."
       />
       <div className="faq-accordion reveal">
@@ -755,8 +799,7 @@ function Footer({ onPrivacy, onTerms }) {
           Webiqq
         </a>
         <p>Software &amp; Web Development</p>
-        <p className="footer-parent-link">Part of <a href="https://www.lte-bh.com" target="_blank" rel="noopener noreferrer">Leading Trading Est.</a></p>
-        <p className="footer-remote">Based in Bahrain · Available worldwide</p>
+        <p className="footer-remote">Based in the Middle East · Working internationally</p>
         <div className="footer-social">
           {socialLinks.map((link) => {
             const Icon = socialIconMap[link.icon];
@@ -810,7 +853,7 @@ export default function App() {
   return (
     <div className="app">
       <Seo
-        title="Webiqq | Website Developers, Business Software, SEO & AI Automation"
+        title="Webiqq | Websites, SEO, Software & AI Automation"
         description={SITE_DESCRIPTION}
         canonical={`${SITE_URL}/`}
         image={`${SITE_URL}/webiqq-logo.svg`}
@@ -821,6 +864,7 @@ export default function App() {
       <main>
         <HeroSection />
         <ValueStrip />
+        <AboutSection />
         <ServicesSection />
         <ProcessSection />
         <FeaturedCaseStudy />

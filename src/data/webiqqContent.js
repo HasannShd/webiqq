@@ -37,10 +37,10 @@ export const team = [
 ];
 
 export const valueCards = [
-  { title: 'Build', text: 'Modern business websites, custom software, databases, and server foundations.' },
-  { title: 'Rank', text: 'SEO structure, metadata, schema, and search-focused content that helps people find you.' },
-  { title: 'Automate', text: 'AI tools, smart forms, and workflows that reduce repetitive business work.' },
-  { title: 'Grow', text: 'Marketing, maintenance, analytics-ready content, and support systems that keep momentum.' },
+  { title: 'Build', text: 'Modern business websites, custom software, portals, databases, and server foundations.' },
+  { title: 'Rank', text: 'SEO structure, metadata, schema, local search, and content systems that help people find you.' },
+  { title: 'Automate', text: 'AI tools, smart forms, chatbots, and workflows that reduce repetitive business work.' },
+  { title: 'Grow', text: 'Marketing, Google Business optimization, maintenance, and support systems that keep momentum.' },
 ];
 
 export const caseStudyFeatures = [
@@ -69,6 +69,7 @@ export const businessWebsiteProjects = [
       'Contact and newsletter forms',
       'SEO metadata and structured data',
       'Optimized service imagery',
+      'Built by Webiqq',
     ],
   },
   {
@@ -83,6 +84,7 @@ export const businessWebsiteProjects = [
       'WhatsApp enquiry flow',
       'Google Maps location integration',
       'SEO metadata and service messaging',
+      'Built by Webiqq',
     ],
   },
   {
@@ -97,6 +99,7 @@ export const businessWebsiteProjects = [
       'React Router multi-page build',
       'Structured data & SEO metadata',
       'Corporate brand system',
+      'Built by Webiqq',
     ],
   },
 ];
@@ -137,15 +140,15 @@ export const services = [
   },
   {
     title: 'Business Software',
-    text: 'Custom admin dashboards, internal management tools, booking systems, and office software built around real day-to-day operations.',
+    text: 'Custom admin dashboards, internal management tools, booking systems, CRMs, quotation systems, and office software built around real day-to-day operations.',
   },
   {
     title: 'SEO Optimization',
-    text: 'Technical SEO, keyword structure, metadata, schema markup, sitemap setup, page optimization, and content improvements for stronger search visibility.',
+    text: 'Technical SEO, keyword structure, metadata, schema markup, sitemap setup, page optimization, internal linking, and content improvements for stronger search visibility.',
   },
   {
     title: 'AI Automation',
-    text: 'AI chatbots, smart forms, workflow automation, lead routing, and AI-assisted content and data tools that reduce repetitive work.',
+    text: 'AI chatbots, smart forms, workflow automation, lead routing, AI-assisted support systems, and data tools that reduce repetitive work.',
   },
   {
     title: 'E-Commerce & Ordering',
@@ -182,6 +185,7 @@ export const services = [
 ];
 
 export const reasons = [
+  'Brand-first websites and software built around Webiqq expertise',
   'Website developers who think in software — not just templates',
   'SEO optimization built into every page from day one',
   'Custom business software for real daily operations',
@@ -191,17 +195,17 @@ export const reasons = [
   'E-commerce website setup with ordering and account flows',
   'Database management and server deployment included',
   'Social media management and Google Business Profile setup',
-  'Based in Bahrain — serving clients worldwide',
+  'Based in the Middle East — serving clients internationally',
 ];
 
 export const processSteps = [
   {
     title: 'Discover',
-    text: 'We understand your business, goals, customers, and current online presence.',
+    text: 'We understand your business, goals, customers, current online presence, and operational workflow.',
   },
   {
     title: 'Plan',
-    text: 'We map the website structure, software features, database needs, SEO direction, and content flow.',
+    text: 'We map the website structure, software features, database needs, SEO direction, content flow, and conversion goals.',
   },
   {
     title: 'Build',
@@ -233,7 +237,7 @@ export const projectTypes = [
 export const contactDetails = [
   { label: 'Email', value: 'contact@webiqq.com' },
   { label: 'Info', value: 'info@webiqq.com' },
-  { label: 'Based in', value: 'Bahrain · Serving worldwide' },
+  { label: 'Based in', value: 'Middle East · Working internationally' },
   { label: 'Response time', value: 'Within 24 hours' },
 ];
 

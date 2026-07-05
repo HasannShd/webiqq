@@ -1,40 +1,49 @@
 export const SITE_URL = 'https://www.webiqq.com';
 export const SITE_NAME = 'Webiqq';
 export const SITE_DESCRIPTION =
-  'Webiqq is a web development agency based in Bahrain that builds business websites, custom software, SEO systems, AI automation, e-commerce, databases, server setup, and digital marketing for companies worldwide.';
+  'Webiqq is a website development and software company based in the Middle East, serving Bahrain and clients internationally with business websites, custom website development, SEO systems, AI automation, e-commerce platforms, databases, server setup, and digital marketing.';
 
 const BAHRAIN_ADDRESS = {
   '@type': 'PostalAddress',
   addressCountry: 'BH',
-  addressLocality: 'Manama',
-  addressRegion: 'Capital Governorate',
-};
-
-const PARENT_ORG = {
-  '@type': 'Organization',
-  name: 'Leading Trading Est.',
-  url: 'https://www.lte-bh.com',
 };
 
 export const seoKeywords = [
+  'Webiqq',
+  'Webiqq Bahrain',
+  'Webiqq Middle East',
+  'Webiqq global services',
+  'Webiqq website development',
   'website developers Bahrain',
+  'website development company',
   'web development agency Bahrain',
+  'global web development agency',
   'website development services',
+  'custom website development',
   'business website development Bahrain',
+  'international website development company',
+  'custom software development company',
   'web development agency Germany',
   'website developer Berlin',
   'custom business software',
   'business software developers',
+  'AI automation agency',
   'admin dashboard development',
   'SEO optimization services Bahrain',
+  'international SEO agency',
   'AI automation for business',
+  'ecommerce development company',
   'e-commerce website setup',
   'Google Business Profile setup Bahrain',
+  'social media management company',
   'social media management Bahrain',
+  'database development services',
   'database management',
+  'server maintenance company',
   'server deployment',
   'website maintenance',
   'digital marketing Bahrain',
+  'Middle East web development agency',
   'international web development agency',
 ];
 
@@ -42,7 +51,7 @@ export const faqItems = [
   {
     question: 'Does Webiqq build business websites in Bahrain?',
     answer:
-      'Yes. Webiqq is a web development agency based in Bahrain. We build responsive business websites with service pages, lead capture, SEO structure, contact flows, and fast deployment for businesses in Bahrain, the GCC, and worldwide.',
+      'Yes. Webiqq builds responsive business websites, corporate websites, service websites, landing pages, and custom website development projects for businesses in Bahrain, the GCC, and internationally.',
   },
   {
     question: 'Can Webiqq build custom business software?',
@@ -72,7 +81,7 @@ export const faqItems = [
   {
     question: 'Where is Webiqq based?',
     answer:
-      'Webiqq is a web development agency based in Bahrain, established under Leading Trading Est. We work with businesses across Bahrain, Saudi Arabia, UAE, Kuwait, and internationally.',
+      'Webiqq is based in the Middle East and serves businesses across Bahrain, Saudi Arabia, UAE, Kuwait, and international markets.',
   },
 ];
 
@@ -89,19 +98,64 @@ const serviceNames = [
   'Server & Maintenance',
 ];
 
+const serviceSchemaPages = [
+  {
+    name: 'Website Development',
+    description: 'Responsive business website development for companies in Bahrain, the Middle East, and international markets.',
+  },
+  {
+    name: 'Business Software',
+    description: 'Custom software development including dashboards, portals, CRMs, RFQ workflows, and internal business systems.',
+  },
+  {
+    name: 'SEO Optimization',
+    description: 'Technical SEO, on-page optimization, structured data, content strategy, and search visibility systems.',
+  },
+  {
+    name: 'AI Automation',
+    description: 'AI automation, chatbots, smart routing, workflow automation, and AI-assisted business systems.',
+  },
+  {
+    name: 'Social Media Management',
+    description: 'Social media strategy, content planning, publishing systems, and brand visibility support.',
+  },
+  {
+    name: 'Google Business Profile Setup',
+    description: 'Google Business Profile setup and optimization for stronger local visibility and map presence.',
+  },
+  {
+    name: 'Digital Marketing',
+    description: 'Digital marketing support across websites, search, content, campaigns, and conversion systems.',
+  },
+  {
+    name: 'E-Commerce Setup',
+    description: 'E-commerce website setup, ordering flows, carts, product pages, and account systems.',
+  },
+  {
+    name: 'Database Management',
+    description: 'Database planning, content structure, export systems, backups, and operational data flows.',
+  },
+  {
+    name: 'Server & Maintenance',
+    description: 'Server deployment, maintenance, monitoring, updates, and post-launch technical support.',
+  },
+];
+
 export const siteSchemas = [
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': `${SITE_URL}/#organization`,
     name: SITE_NAME,
+    legalName: 'Webiqq',
+    alternateName: ['Webiqq Bahrain', 'Webiqq Middle East'],
     url: SITE_URL,
     logo: `${SITE_URL}/webiqq-logo.svg`,
     description: SITE_DESCRIPTION,
     email: 'contact@webiqq.com',
     telephone: '+97333290109',
     address: BAHRAIN_ADDRESS,
-    parentOrganization: PARENT_ORG,
+    knowsAbout: serviceNames,
     sameAs: ['https://www.instagram.com/webiqq.build/', 'https://www.linkedin.com/company/webiqq'],
   },
   {
@@ -114,8 +168,9 @@ export const siteSchemas = [
     email: 'contact@webiqq.com',
     telephone: '+97333290109',
     address: BAHRAIN_ADDRESS,
-    parentOrganization: PARENT_ORG,
+    slogan: 'Based in the Middle East. Working internationally.',
     areaServed: [
+      { '@type': 'Place', name: 'Middle East' },
       { '@type': 'Country', name: 'Bahrain' },
       { '@type': 'Country', name: 'Saudi Arabia' },
       { '@type': 'Country', name: 'United Arab Emirates' },
@@ -149,6 +204,9 @@ export const siteSchemas = [
     publisher: {
       '@id': `${SITE_URL}/#organization`,
     },
+    about: {
+      '@id': `${SITE_URL}/#professional-service`,
+    },
     inLanguage: 'en',
   },
   {
@@ -164,4 +222,19 @@ export const siteSchemas = [
       },
     })),
   },
+  ...serviceSchemaPages.map((service) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${SITE_URL}/#${service.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+    name: `${service.name} by Webiqq`,
+    provider: { '@id': `${SITE_URL}/#organization` },
+    areaServed: [
+      { '@type': 'Place', name: 'Middle East' },
+      { '@type': 'Country', name: 'Bahrain' },
+      'Worldwide',
+    ],
+    description: service.description,
+    serviceType: service.name,
+    url: SITE_URL,
+  })),
 ];

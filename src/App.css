@@ -509,6 +509,38 @@
   gap: 52px;
 }
 
+.about-section,
+.about-page {
+  display: grid;
+  gap: 28px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.about-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+  padding: 24px;
+  display: grid;
+  gap: 12px;
+}
+
+.about-card h3 {
+  color: var(--ink);
+  font-size: 1.05rem;
+}
+
+.about-card p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .value-intro {
   display: grid;
   gap: 22px;
@@ -1986,6 +2018,10 @@
 
   .value-pillars {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
   }
 
   .services-matrix {

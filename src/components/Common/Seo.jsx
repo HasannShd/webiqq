@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 
-const DEFAULT_TITLE = 'Webiqq | Website Developers, Business Software, SEO & AI Automation';
-const DEFAULT_DESCRIPTION = 'Webiqq builds business websites, custom business software, SEO systems, AI automation, e-commerce structures, databases, server setup, maintenance, and digital marketing for growing companies.';
+const DEFAULT_TITLE = 'Webiqq | Websites, SEO, Software & AI Automation';
+const DEFAULT_DESCRIPTION =
+  'Webiqq is a software and web development company based in the Middle East, serving Bahrain and clients internationally with business websites, custom software, SEO systems, AI automation, e-commerce platforms, databases, server setup, and digital marketing.';
 
 export default function Seo({
   title = DEFAULT_TITLE,
@@ -82,7 +83,7 @@ export default function Seo({
       script.textContent = JSON.stringify(schema);
       document.head.appendChild(script);
     });
-  }, [canonical, description, image, jsonLd, robots, title, type]);
+  }, [canonical, description, image, jsonLd, keywords, robots, title, type]);
 
   return null;
 }
