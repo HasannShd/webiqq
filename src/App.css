@@ -1,6 +1,6 @@
 /* =================================================================
    App.css — Webiqq UI · studio redesign
-   Warm paper, ink typography, one confident accent. Editorial layout
+   Violet-tinted paper, ink typography, purple accent. Editorial layout
    built on hairline rules, generous whitespace, and quiet motion.
    ================================================================= */
 
@@ -200,7 +200,7 @@ main {
   gap: 20px;
   padding: 0 clamp(20px, 4vw, 44px);
   height: 72px;
-  background: rgba(250, 248, 244, 0.9);
+  background: rgba(250, 249, 253, 0.9);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
@@ -497,15 +497,15 @@ main {
 }
 
 .tag--featured {
-  border-color: rgba(194, 65, 12, 0.35);
+  border-color: rgba(109, 40, 217, 0.35);
   background: var(--accent-soft);
   color: var(--accent-deep);
 }
 
 .tag--done {
-  border-color: rgba(15, 118, 110, 0.3);
-  background: var(--teal-soft);
-  color: var(--teal);
+  border-color: rgba(162, 28, 175, 0.3);
+  background: var(--accent-alt-soft);
+  color: var(--accent-alt);
 }
 
 .client-board-footer {
@@ -983,7 +983,7 @@ main {
 }
 
 .case-point--result h3 {
-  color: var(--teal);
+  color: var(--accent-alt);
 }
 
 .case-point p {
@@ -1315,7 +1315,7 @@ main {
 }
 
 .accent-rule--passion {
-  background: var(--teal);
+  background: var(--accent-alt);
 }
 
 .showcase-category-meta {
@@ -1374,11 +1374,11 @@ main {
 }
 
 .project-card--business:hover {
-  border-color: rgba(194, 65, 12, 0.4);
+  border-color: rgba(109, 40, 217, 0.4);
 }
 
 .project-card--passion:hover {
-  border-color: rgba(15, 118, 110, 0.4);
+  border-color: rgba(162, 28, 175, 0.4);
 }
 
 .project-card-top {
@@ -1403,8 +1403,8 @@ main {
 }
 
 .badge--passion {
-  background: var(--teal-soft);
-  color: var(--teal);
+  background: var(--accent-alt-soft);
+  color: var(--accent-alt);
 }
 
 .project-number {
@@ -1466,7 +1466,7 @@ main {
 }
 
 .project-cta--passion:hover {
-  color: var(--teal);
+  color: var(--accent-alt);
 }
 
 .project-cta:hover svg {
@@ -1903,7 +1903,7 @@ main {
 
 .contact-form select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath stroke='%236c6455' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.6' d='m1 1.5 5 5 5-5'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath stroke='%236b6382' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.6' d='m1 1.5 5 5 5-5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 14px center;
   padding-right: 38px;

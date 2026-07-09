@@ -14,12 +14,12 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/blog/:slug" element={
-          <Suspense fallback={<div style={{minHeight:'100svh',background:'#faf8f4'}} />}>
+          <Suspense fallback={<div style={{minHeight:'100svh',background:'#faf9fd'}} />}>
             <BlogPost />
           </Suspense>
         } />
         <Route path="/about" element={
-          <Suspense fallback={<div style={{minHeight:'100svh',background:'#faf8f4'}} />}>
+          <Suspense fallback={<div style={{minHeight:'100svh',background:'#faf9fd'}} />}>
             <AboutPage />
           </Suspense>
         } />
