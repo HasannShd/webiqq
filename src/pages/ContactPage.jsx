@@ -240,6 +240,7 @@ export default function ContactPage() {
             {isSubmitting ? 'Sending…' : 'Send Project Request'}
             <FiArrowRight aria-hidden="true" />
           </button>
+          <p className="form-note full-field">Goes straight to our inbox — no ticket queue, no autoresponder.</p>
           {formStatus.message ? (
             <p
               className={`form-status full-field ${formStatus.type === 'error' ? 'is-error' : ''}`}

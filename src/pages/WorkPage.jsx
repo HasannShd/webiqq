@@ -32,7 +32,7 @@ export default function WorkPage() {
         breadcrumbs={[{ label: 'Home', to: '/' }, { label: 'Work' }]}
         eyebrow="Work"
         title={<>Live Projects for <em>Real Businesses</em></>}
-        lead="Every project below is live and in use today — built for companies in Bahrain, Germany, and international markets. No mockups, no concepts."
+        lead="Everything below is live and in use today — built for companies in Bahrain, Germany, and international markets. And it's only the public side: the admin panels, staff portals, and internal tools we build stay behind logins, where they belong."
       />
 
       {flagship && (

@@ -30,6 +30,40 @@
   top: 12px;
 }
 
+/* ─── Hand-drawn underline under the hero accent — a human mark, not a gradient ─── */
+.hero h1 em {
+  position: relative;
+  white-space: nowrap;
+}
+
+.hero h1 em::after {
+  content: "";
+  position: absolute;
+  left: 1%;
+  right: 3%;
+  bottom: -0.06em;
+  height: 0.16em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8' preserveAspectRatio='none'%3E%3Cpath d='M2 6 Q 20 2.5 40 5 T 80 4 T 118 5.5' fill='none' stroke='%23e879f9' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+/* ─── Human microcopy ─── */
+.form-note {
+  margin-top: -6px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+.footer-handmade {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.84rem;
+  color: rgba(196, 181, 253, 0.55);
+}
+
 /* ─── Client board rows are links now ─── */
 a.client-board-row {
   text-decoration: none;

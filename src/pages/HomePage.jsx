@@ -122,8 +122,8 @@ function SelectedWork() {
     <section className="section-shell" aria-labelledby="selected-work-title">
       <SectionHeader
         eyebrow="Selected Work"
-        title={<>Real Websites. Real Businesses. <em>Live Today.</em></>}
-        text="Client projects delivered by Webiqq for companies in Bahrain, Germany, and international markets."
+        title={<>Some of our work is public. <em>The rest runs behind logins.</em></>}
+        text="A few of the client websites we can show openly — live in Bahrain, Germany, and beyond. The catalogues, dashboards, and internal tools we build stay private to the businesses running on them."
         id="selected-work-title"
       />
       <div className="work-strip reveal">
@@ -145,12 +145,6 @@ function SelectedWork() {
           </Link>
         ))}
       </div>
-      <div className="section-foot-link reveal">
-        <Link className="secondary-button" to="/work">
-          Explore all work
-          <FiArrowRight aria-hidden="true" />
-        </Link>
-      </div>
     </section>
   );
 }
@@ -160,8 +154,8 @@ function ServicesOverview() {
     <section className="section-shell" id="services" aria-labelledby="services-title">
       <SectionHeader
         eyebrow="What We Do"
-        title={<>Five Service Lines. <em>One Connected Team.</em></>}
-        text="From business website development and e-commerce to custom software, SEO, automation, and long-term support — Webiqq covers the full digital system, not just the homepage."
+        title={<>One team for the whole job</>}
+        text="Websites, e-commerce, custom software, SEO, automation, and the support that comes after — you talk directly to the people building it, not an account manager passing notes."
         id="services-title"
       />
       <div className="services-matrix services-matrix--five reveal">
@@ -437,8 +431,8 @@ function InsightsPreview() {
     <section className="section-shell" aria-labelledby="blog-title">
       <SectionHeader
         eyebrow="Insights"
-        title={<>Practical Guides on <em>Websites, SEO &amp; Growth</em></>}
-        text="Written for businesses in Bahrain and the GCC — no jargon, no fluff."
+        title={<>Things we end up explaining to every client — <em>written down properly</em></>}
+        text="Guides on websites, SEO, and growing online, written for business owners in Bahrain and the GCC."
         id="blog-title"
       />
       <div className="blog-cards reveal">

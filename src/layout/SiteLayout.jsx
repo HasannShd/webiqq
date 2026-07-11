@@ -79,6 +79,7 @@ function SiteFooter() {
         </Link>
         <p>Websites &amp; digital systems built for business growth.</p>
         <p className="footer-remote">Based in Bahrain · Working internationally</p>
+        <p className="footer-handmade">Designed and built by us — this site included.</p>
         <div className="footer-social">
           {socialLinks.map((link) => {
             const Icon = socialIconMap[link.icon];

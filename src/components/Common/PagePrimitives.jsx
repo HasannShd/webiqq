@@ -38,8 +38,8 @@ export function PageIntro({ breadcrumbs, eyebrow, title, lead, children }) {
 }
 
 export function CtaBand({
-  title = <>Ready to Start? <em>Tell Us About Your Project.</em></>,
-  text = 'Share what you want to build and we will reply within 24 hours with a clear next step — no obligation.',
+  title = <>Ready when you are. <em>Tell us about your project.</em></>,
+  text = 'Write to us the way you’d explain it to a colleague — a person reads it and replies within 24 hours with a clear next step. No obligation.',
   primaryLabel = 'Start a Project',
   primaryTo = '/contact',
   secondaryLabel = 'View Our Work',

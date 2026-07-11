@@ -32,7 +32,7 @@ export default function AboutPage() {
         breadcrumbs={[{ label: 'Home', to: '/' }, { label: 'About' }]}
         eyebrow="About Webiqq"
         title={<>A Development Company Built on <em>Real Business Systems</em></>}
-        lead="Webiqq is a web and software development company based in Bahrain, working with businesses in Bahrain and internationally. We build websites and digital systems that help businesses operate and grow."
+        lead="Webiqq is a web and software development company based in Bahrain, working with businesses here and internationally. We're the people who answer your emails, write the code, and stay around after launch — the same team, start to finish."
       />
 
       <section className="section-shell about-section" aria-labelledby="about-story-title">
