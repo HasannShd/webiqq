@@ -637,6 +637,30 @@ a.service-tile--link:hover .service-tile-more {
   color: var(--muted);
 }
 
+/* ─── Inline links inside about cards ─── */
+.about-card p a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(196, 181, 253, 0.4);
+  text-underline-offset: 3px;
+}
+
+.about-card p a:hover {
+  text-decoration-color: var(--accent);
+}
+
+/* ─── Parent company note on case studies ─── */
+.parent-note {
+  max-width: 720px;
+  padding: 14px 18px;
+  border-left: 3px solid var(--accent-mid);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: rgba(167, 139, 250, 0.07);
+  color: var(--muted-strong);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
 /* ─── Case study page ─── */
 .case-intro-grid {
   display: grid;

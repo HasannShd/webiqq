@@ -78,7 +78,7 @@ function SiteFooter() {
           Webiqq
         </Link>
         <p>Websites &amp; digital systems built for business growth.</p>
-        <p className="footer-remote">Based in Bahrain · Working internationally</p>
+        <p className="footer-remote">Operating in Bahrain · Saudi Arabia · Germany</p>
         <p className="footer-handmade">Designed and built by us — this site included.</p>
         <div className="footer-social">
           {socialLinks.map((link) => {
@@ -116,7 +116,11 @@ function SiteFooter() {
         <Link to="/contact">Start a Project</Link>
       </div>
       <p className="copyright">
-        © 2026 Webiqq. All rights reserved. · Web development company based in Bahrain, serving clients worldwide.
+        © 2026 Webiqq — a subdivision of{' '}
+        <a className="footer-legal-btn" href="https://www.lte-bh.com" target="_blank" rel="noopener noreferrer">
+          Leading Trading Est.
+        </a>
+        {' '}· All rights reserved. · Web development company based in Bahrain, serving clients worldwide.
         {' · '}
         <Link className="footer-legal-btn" to="/privacy">Privacy Policy</Link>
         {' · '}

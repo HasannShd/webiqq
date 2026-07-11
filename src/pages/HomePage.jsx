@@ -59,7 +59,7 @@ function ClientBoard() {
       <div className="client-board-footer">
         <span>
           <FiGlobe aria-hidden="true" />
-          Bahrain · Germany · Worldwide
+          Bahrain · Saudi Arabia · Germany
         </span>
         <span className="client-board-note">& more projects delivered</span>
       </div>
@@ -75,13 +75,14 @@ function HeroSection() {
           <span className="hero-available-dot" aria-hidden="true" />
           <span>Available for new projects</span>
           <span className="hero-available-sep" aria-hidden="true">·</span>
-          <span>Based in Bahrain · Working internationally</span>
+          <span>Operating in Bahrain · Saudi Arabia · Germany</span>
         </div>
         <p className="eyebrow">Web &amp; software development company</p>
         <h1>Websites and Digital Systems Built for <em>Business Growth</em></h1>
         <p className="hero-subtitle">
           Webiqq designs and develops high-performance business websites, custom software, SEO systems, and practical
-          automation for businesses in Bahrain and worldwide — built to help companies operate and grow.
+          automation for businesses in Bahrain, Saudi Arabia, Germany, and worldwide — built to help companies operate
+          and grow.
         </p>
         <div className="hero-actions">
           <Link className="primary-button" to="/contact">
@@ -250,6 +251,10 @@ function FeaturedCaseStudy() {
         <div className="case-eyebrow-row">
           <p className="eyebrow">Flagship Case Study</p>
         </div>
+        <a className="parent-org-badge" href="https://www.lte-bh.com" target="_blank" rel="noopener noreferrer">
+          <span>Our Parent Company</span>
+          <strong>Leading Trading Est.</strong>
+        </a>
         <h2 id="case-title">Leading Trading Est. — <em>Complete Business Platform</em></h2>
         <p className="section-lead">{lte.summary}</p>
         <div className="case-points">

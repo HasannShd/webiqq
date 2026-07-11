@@ -55,6 +55,7 @@ export default function CaseStudyPage() {
             <p className="eyebrow">{study.flagship ? 'Flagship Case Study' : 'Case Study'}</p>
             <h1>{study.client}</h1>
             <p className="page-lead">{study.summary}</p>
+            {study.parentNote ? <p className="parent-note">{study.parentNote}</p> : null}
             <div className="case-fact-row">
               <span className="case-fact">
                 <FiMapPin aria-hidden="true" />

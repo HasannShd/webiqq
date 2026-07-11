@@ -10,7 +10,7 @@ export const serviceLines = [
     tagline: 'High-performance business websites and product platforms built to win enquiries.',
     metaTitle: 'Website & E-commerce Development in Bahrain | Webiqq',
     metaDescription:
-      'Webiqq builds responsive business websites, corporate sites, product catalogues, and e-commerce platforms for companies in Bahrain and worldwide — fast, SEO-ready, and built to convert.',
+      'Webiqq builds responsive business websites, corporate sites, product catalogues, and e-commerce platforms for companies in Bahrain, Saudi Arabia, Germany, and worldwide — fast, SEO-ready, and built to convert.',
     summary:
       'Modern, responsive websites and e-commerce platforms — from corporate sites and service pages to product catalogues, ordering flows, and customer accounts.',
     audience: [
@@ -59,7 +59,7 @@ export const serviceLines = [
     tagline: 'Custom systems built around how your business actually operates.',
     metaTitle: 'Custom Business Software & Dashboard Development | Webiqq',
     metaDescription:
-      'Webiqq develops custom business software: admin dashboards, customer and staff portals, RFQ and quotation systems, CRMs, and database-backed internal tools for companies in Bahrain and internationally.',
+      'Webiqq develops custom business software: admin dashboards, customer and staff portals, RFQ and quotation systems, CRMs, and database-backed internal tools for companies in Bahrain, Saudi Arabia, Germany, and internationally.',
     summary:
       'Admin dashboards, customer and staff portals, RFQ and quotation workflows, CRMs, and database-backed tools that replace spreadsheets and manual follow-ups.',
     audience: [
@@ -153,7 +153,7 @@ export const serviceLines = [
     tagline: 'Practical automation that removes repetitive work — no hype.',
     metaTitle: 'AI & Workflow Automation for Business | Webiqq',
     metaDescription:
-      'Webiqq builds practical AI and workflow automation: chatbots for first response, smart forms, lead routing, and internal tools that reduce manual work for businesses in Bahrain and worldwide.',
+      'Webiqq builds practical AI and workflow automation: chatbots for first response, smart forms, lead routing, and internal tools that reduce manual work for businesses in Bahrain, Saudi Arabia, Germany, and worldwide.',
     summary:
       'Chatbots for first-response handling, smart forms, lead routing, and internal tools that cut manual admin — connected to your real business process.',
     audience: [
@@ -198,7 +198,7 @@ export const serviceLines = [
     tagline: 'Your website and systems stay fast, secure, and improving after launch.',
     metaTitle: 'Website Maintenance & Technical Support | Webiqq',
     metaDescription:
-      'Webiqq provides post-launch website and software maintenance: updates, monitoring, deployments, backups, content changes, and ongoing technical support for businesses in Bahrain and worldwide.',
+      'Webiqq provides post-launch website and software maintenance: updates, monitoring, deployments, backups, content changes, and ongoing technical support for businesses in Bahrain, Saudi Arabia, Germany, and worldwide.',
     summary:
       'Updates, monitoring, deployments, backups, content changes, and structured improvement work — so what you built keeps performing.',
     audience: [

@@ -62,7 +62,7 @@ export const processSteps = [
 export const contactDetails = [
   { label: 'Email', value: 'contact@webiqq.com' },
   { label: 'Info', value: 'info@webiqq.com' },
-  { label: 'Based in', value: 'Bahrain · Working internationally' },
+  { label: 'Operating in', value: 'Bahrain · Saudi Arabia · Germany' },
   { label: 'Response time', value: 'Within 24 hours' },
 ];
 

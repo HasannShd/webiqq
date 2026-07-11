@@ -14,6 +14,8 @@ export const caseStudies = [
     liveHost: 'lte-bh.com',
     summary:
       'A complete digital platform for a Bahrain medical and industrial supply company — public SEO website, product catalogue, RFQ lead capture, customer ordering, staff field operations, and admin office system in one connected build.',
+    parentNote:
+      'Leading Trading Est. is Webiqq’s parent company — Webiqq operates as its web and software development subdivision. This platform is the system we built and run in-house every day, which is why it is our most complete case study.',
     problem:
       'The business needed more than a website: a professional online presence, a way to capture RFQ leads from clients, support for customer ordering, and a system for managing internal team operations — all connected rather than scattered across disconnected tools.',
     objectives: [

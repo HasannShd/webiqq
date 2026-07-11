@@ -75,7 +75,7 @@ export default function BlogPost() {
           </div>
           <div className="blog-cta-box">
             <h3>Ready to grow your business online?</h3>
-            <p>Webiqq is a web and software development company based in Bahrain, serving clients internationally. Get in touch to discuss your project.</p>
+            <p>Webiqq is a web and software development company based in Bahrain, operating in Bahrain, Saudi Arabia, and Germany. Get in touch to discuss your project.</p>
             <Link className="blog-cta-btn" to="/contact">
               Start a Project
               <FiArrowRight aria-hidden="true" />

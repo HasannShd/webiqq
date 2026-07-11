@@ -1,7 +1,7 @@
 export const SITE_URL = 'https://www.webiqq.com';
 export const SITE_NAME = 'Webiqq';
 export const SITE_DESCRIPTION =
-  'Webiqq is a web and software development company based in Bahrain, serving businesses in Bahrain and clients internationally with business websites, custom website development, SEO systems, AI automation, e-commerce platforms, databases, server setup, and digital marketing.';
+  'Webiqq is a web and software development company based in Bahrain, serving businesses across Bahrain, Saudi Arabia, and Germany, with clients internationally with business websites, custom website development, SEO systems, AI automation, e-commerce platforms, databases, server setup, and digital marketing.';
 
 const BAHRAIN_ADDRESS = {
   '@type': 'PostalAddress',
@@ -81,7 +81,12 @@ export const faqItems = [
   {
     question: 'Where is Webiqq based?',
     answer:
-      'Webiqq is based in Bahrain and serves businesses across Bahrain, Saudi Arabia, UAE, Kuwait, and international markets.',
+      'Webiqq is based in Bahrain and operates across Bahrain, Saudi Arabia, and Germany, alongside clients in the UAE, Kuwait, and international markets.',
+  },
+  {
+    question: 'Is Webiqq part of a larger company?',
+    answer:
+      'Yes. Webiqq is the web and software development subdivision of Leading Trading Est., an established Bahrain medical and industrial supply company. Webiqq builds and runs the Leading Trading Est. digital platform in-house — the same team and systems behind lte-bh.com are available to Webiqq clients.',
   },
 ];
 
@@ -148,15 +153,23 @@ export const siteSchemas = [
     '@id': `${SITE_URL}/#organization`,
     name: SITE_NAME,
     legalName: 'Webiqq',
-    alternateName: ['Webiqq Bahrain', 'Webiqq Middle East'],
+    alternateName: ['WebiQQ', 'Webiqq Bahrain', 'Webiqq Middle East'],
     url: SITE_URL,
     logo: `${SITE_URL}/webiqq-logo.svg`,
     description: SITE_DESCRIPTION,
+    disambiguatingDescription:
+      'Webiqq is the web and software development subdivision of Leading Trading Est., based in Bahrain and operating in Bahrain, Saudi Arabia, and Germany.',
     email: 'contact@webiqq.com',
     telephone: '+97333290109',
     address: BAHRAIN_ADDRESS,
+    parentOrganization: {
+      '@type': 'Organization',
+      name: 'Leading Trading Est.',
+      url: 'https://www.lte-bh.com',
+      address: BAHRAIN_ADDRESS,
+    },
     knowsAbout: serviceNames,
-    sameAs: ['https://www.instagram.com/webiqq.build/', 'https://www.linkedin.com/company/webiqq'],
+    sameAs: ['https://www.instagram.com/webiqq.build/', 'https://www.linkedin.com/company/webiqq', 'https://www.lte-bh.com'],
   },
   {
     '@context': 'https://schema.org',
@@ -168,7 +181,7 @@ export const siteSchemas = [
     email: 'contact@webiqq.com',
     telephone: '+97333290109',
     address: BAHRAIN_ADDRESS,
-    slogan: 'Based in Bahrain. Working internationally.',
+    slogan: 'Operating in Bahrain, Saudi Arabia & Germany.',
     areaServed: [
       { '@type': 'Place', name: 'Middle East' },
       { '@type': 'Country', name: 'Bahrain' },

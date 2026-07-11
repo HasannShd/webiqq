@@ -15,7 +15,7 @@ export default function AboutPage() {
     <main id="main">
       <Seo
         title="About Webiqq | Web & Software Development Company in Bahrain"
-        description="Webiqq is a web and software development company based in Bahrain, serving businesses in Bahrain and internationally. Learn how we work, what clients own, and the experience behind our projects."
+        description="Webiqq is a web and software development company based in Bahrain, operating in Bahrain, Saudi Arabia, and Germany. Learn how we work, what clients own, and the experience behind our projects."
         canonical={`${SITE_URL}/about`}
         jsonLd={[
           {
@@ -32,7 +32,7 @@ export default function AboutPage() {
         breadcrumbs={[{ label: 'Home', to: '/' }, { label: 'About' }]}
         eyebrow="About Webiqq"
         title={<>A Development Company Built on <em>Real Business Systems</em></>}
-        lead="Webiqq is a web and software development company based in Bahrain, working with businesses here and internationally. We're the people who answer your emails, write the code, and stay around after launch — the same team, start to finish."
+        lead="Webiqq is a web and software development company based in Bahrain, operating across Bahrain, Saudi Arabia, and Germany. We're the people who answer your emails, write the code, and stay around after launch — the same team, start to finish."
       />
 
       <section className="section-shell about-section" aria-labelledby="about-story-title">
@@ -52,15 +52,17 @@ export default function AboutPage() {
           <article className="about-card">
             <h3>Where we work</h3>
             <p>
-              Webiqq is based in Bahrain and serves the local market directly, alongside international clients — our
-              delivered work spans Bahrain and Germany, across service industries, B2B operations, and corporate groups.
+              Webiqq is based in Bahrain and operates across Bahrain, Saudi Arabia, and Germany, alongside international
+              clients — our delivered work spans service industries, B2B operations, and corporate groups.
             </p>
           </article>
           <article className="about-card">
-            <h3>Company background</h3>
+            <h3>Part of Leading Trading Est.</h3>
             <p>
-              Webiqq is connected to Leading Trading Est., a Bahrain medical and industrial supply company whose full
-              digital platform we built and operate. Running a real business system daily shapes how we build for clients.
+              Webiqq is the web and software development subdivision of{' '}
+              <a href="https://www.lte-bh.com" target="_blank" rel="noopener noreferrer">Leading Trading Est.</a>, an
+              established Bahrain medical and industrial supply company. We built and operate LTE&rsquo;s full digital
+              platform in-house — running a real business system daily shapes how we build for clients.
             </p>
           </article>
         </div>

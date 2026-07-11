@@ -47,7 +47,7 @@ export function CtaBand({
 }) {
   return (
     <section className="section-shell final-cta" aria-label="Start a project with Webiqq">
-      <p className="eyebrow">Based in Bahrain · Working internationally</p>
+      <p className="eyebrow">Operating in Bahrain · Saudi Arabia · Germany</p>
       <h2>{title}</h2>
       <p>{text}</p>
       <div className="hero-actions">
