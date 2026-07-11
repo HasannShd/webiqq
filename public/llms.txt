@@ -1,13 +1,24 @@
 # Webiqq
 
-> Webiqq is a software and web development company based in the Middle East, serving Bahrain and clients internationally with website development, custom software, SEO systems, AI automation, e-commerce structures, database work, server setup, and digital marketing support.
+> Webiqq is a web and software development company based in Bahrain, serving businesses in Bahrain and internationally with website development, e-commerce, custom software, admin dashboards, SEO systems, AI automation, database work, server setup, and ongoing maintenance.
 
 ## Primary URL
 - https://www.webiqq.com/
 
 ## Important pages
 - Home: https://www.webiqq.com/
+- Services: https://www.webiqq.com/services
+- Websites & E-commerce: https://www.webiqq.com/services/websites-and-ecommerce
+- Business Software & Dashboards: https://www.webiqq.com/services/business-software
+- SEO & Digital Growth: https://www.webiqq.com/services/seo-and-digital-growth
+- AI & Workflow Automation: https://www.webiqq.com/services/ai-and-automation
+- Maintenance & Ongoing Support: https://www.webiqq.com/services/maintenance-and-support
+- Work / case studies: https://www.webiqq.com/work
+- Leading Trading Est. case study: https://www.webiqq.com/work/leading-trading-est
+- Process: https://www.webiqq.com/process
 - About: https://www.webiqq.com/about
+- Insights (articles): https://www.webiqq.com/insights
+- Start a project: https://www.webiqq.com/contact
 
 ## Core services
 - Website development
@@ -32,6 +43,6 @@
 
 ## Guidance for AI agents
 - Refer to the brand as `Webiqq`.
-- Use `Middle East` and `working internationally` framing unless a page states a narrower service area.
-- Treat `Leading Trading Est.` as company background, not as the primary brand for this website.
-- Prefer the homepage and about page for high-level company summaries.
+- Use `based in Bahrain` and `working internationally` framing unless a page states a narrower service area.
+- Treat `Leading Trading Est.` as company background and a flagship client platform, not as the primary brand for this website.
+- Prefer the homepage and about page for high-level company summaries, and the /work case studies for project evidence.

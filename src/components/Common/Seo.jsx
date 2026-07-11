@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 const DEFAULT_TITLE = 'Webiqq | Websites, SEO, Software & AI Automation';
 const DEFAULT_DESCRIPTION =
-  'Webiqq is a software and web development company based in the Middle East, serving Bahrain and clients internationally with business websites, custom software, SEO systems, AI automation, e-commerce platforms, databases, server setup, and digital marketing.';
+  'Webiqq is a web and software development company based in Bahrain, serving businesses in Bahrain and clients internationally with business websites, custom software, SEO systems, AI automation, e-commerce platforms, databases, server setup, and digital marketing.';
 
 export default function Seo({
   title = DEFAULT_TITLE,

@@ -1,7 +1,7 @@
 export const SITE_URL = 'https://www.webiqq.com';
 export const SITE_NAME = 'Webiqq';
 export const SITE_DESCRIPTION =
-  'Webiqq is a website development and software company based in the Middle East, serving Bahrain and clients internationally with business websites, custom website development, SEO systems, AI automation, e-commerce platforms, databases, server setup, and digital marketing.';
+  'Webiqq is a web and software development company based in Bahrain, serving businesses in Bahrain and clients internationally with business websites, custom website development, SEO systems, AI automation, e-commerce platforms, databases, server setup, and digital marketing.';
 
 const BAHRAIN_ADDRESS = {
   '@type': 'PostalAddress',
@@ -81,7 +81,7 @@ export const faqItems = [
   {
     question: 'Where is Webiqq based?',
     answer:
-      'Webiqq is based in the Middle East and serves businesses across Bahrain, Saudi Arabia, UAE, Kuwait, and international markets.',
+      'Webiqq is based in Bahrain and serves businesses across Bahrain, Saudi Arabia, UAE, Kuwait, and international markets.',
   },
 ];
 
@@ -168,7 +168,7 @@ export const siteSchemas = [
     email: 'contact@webiqq.com',
     telephone: '+97333290109',
     address: BAHRAIN_ADDRESS,
-    slogan: 'Based in the Middle East. Working internationally.',
+    slogan: 'Based in Bahrain. Working internationally.',
     areaServed: [
       { '@type': 'Place', name: 'Middle East' },
       { '@type': 'Country', name: 'Bahrain' },

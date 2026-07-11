@@ -70,6 +70,11 @@ const buildEmailHtml = (submission) => `
     <p><strong>Phone:</strong> ${escapeHtml(submission.phone || 'Not provided')}</p>
     <p><strong>Business:</strong> ${escapeHtml(submission.business || 'Not provided')}</p>
     <p><strong>Service:</strong> ${escapeHtml(submission.service)}</p>
+    <p><strong>Project type:</strong> ${escapeHtml(submission.projectType || 'Not provided')}</p>
+    <p><strong>Budget range:</strong> ${escapeHtml(submission.budget || 'Not provided')}</p>
+    <p><strong>Timeline:</strong> ${escapeHtml(submission.timeline || 'Not provided')}</p>
+    <p><strong>Existing website:</strong> ${escapeHtml(submission.existingWebsite || 'Not provided')}</p>
+    <p><strong>Preferred contact method:</strong> ${escapeHtml(submission.contactMethod || 'Not provided')}</p>
     <p><strong>Message:</strong></p>
     <p style="white-space: pre-wrap;">${escapeHtml(submission.message)}</p>
   </div>
@@ -92,6 +97,11 @@ export default async function handler(req, res) {
     phone: sanitize(body.phone),
     business: sanitize(body.business),
     service: sanitize(body.service),
+    projectType: sanitize(body.projectType),
+    budget: sanitize(body.budget),
+    timeline: sanitize(body.timeline),
+    existingWebsite: sanitize(body.existingWebsite),
+    contactMethod: sanitize(body.contactMethod),
     message: sanitize(body.message),
   };
 
@@ -126,6 +136,11 @@ export default async function handler(req, res) {
         `Phone: ${submission.phone || 'Not provided'}`,
         `Business: ${submission.business || 'Not provided'}`,
         `Service: ${submission.service}`,
+        `Project type: ${submission.projectType || 'Not provided'}`,
+        `Budget range: ${submission.budget || 'Not provided'}`,
+        `Timeline: ${submission.timeline || 'Not provided'}`,
+        `Existing website: ${submission.existingWebsite || 'Not provided'}`,
+        `Preferred contact method: ${submission.contactMethod || 'Not provided'}`,
         '',
         submission.message,
       ].join('\n'),

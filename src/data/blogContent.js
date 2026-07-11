@@ -52,7 +52,7 @@ export const blogPosts = [
       },
       {
         heading: 'Local vs. International Agencies for Bahrain Businesses',
-        body: `Working with a Bahrain-based web development agency has clear advantages. They understand the local market — Arabic and English content, WhatsApp as a primary communication channel, Bahrain's business culture, and the types of services that convert GCC visitors into enquiries.\n\nWebiqq is a web development agency based in the Middle East, serving Bahrain, the GCC, and international clients. We have built platforms for medical supply companies, facility management businesses, and international holding groups.`,
+        body: `Working with a Bahrain-based web development agency has clear advantages. They understand the local market — Arabic and English content, WhatsApp as a primary communication channel, Bahrain's business culture, and the types of services that convert GCC visitors into enquiries.\n\nWebiqq is a web development agency based in Bahrain, serving the GCC and international clients. We have built platforms for medical supply companies, facility management businesses, and international holding groups.`,
       },
       {
         heading: 'Getting Started',
