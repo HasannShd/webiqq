@@ -172,3 +172,13 @@ p {
     transition-duration: 0.01ms !important;
   }
 }
+
+html[dir='rtl'] body {
+  text-align: right;
+}
+
+html[dir='rtl'] .hero-actions,
+html[dir='rtl'] .nav-links,
+html[dir='rtl'] .contact-method-options {
+  flex-direction: row-reverse;
+}

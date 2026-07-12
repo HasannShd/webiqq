@@ -94,6 +94,14 @@ export default function ServiceDetailPage() {
             <h2>What Webiqq delivers</h2>
             <CheckList items={service.deliverables} />
           </article>
+          <article className="detail-block">
+            <h2>Optional additions</h2>
+            <CheckList items={service.optionalAdditions} />
+          </article>
+          <article className="detail-block">
+            <h2>Expected business outcomes</h2>
+            <CheckList items={service.outcomes} />
+          </article>
         </div>
       </section>
 

@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 
-const DEFAULT_TITLE = 'Webiqq | Websites, SEO, Software & AI Automation';
+const DEFAULT_TITLE = 'Webiqq | Websites, Business Software & Automation';
 const DEFAULT_DESCRIPTION =
-  'Webiqq is a web and software development company based in Bahrain, serving businesses across Bahrain, Saudi Arabia, and Germany, with clients internationally with business websites, custom software, SEO systems, AI automation, e-commerce platforms, databases, server setup, and digital marketing.';
+  'Webiqq builds high-performance websites, business software and automated systems for ambitious companies across the GCC and beyond.';
+const DEFAULT_ALTERNATES = [];
 
 export default function Seo({
   title = DEFAULT_TITLE,
@@ -13,6 +14,8 @@ export default function Seo({
   keywords,
   type = 'website',
   jsonLd = [],
+  language = 'en',
+  alternates = DEFAULT_ALTERNATES,
 }) {
   useEffect(() => {
     document.title = title;
@@ -63,6 +66,9 @@ export default function Seo({
     ensurePropertyMeta('og:title').setAttribute('content', title);
     ensurePropertyMeta('og:description').setAttribute('content', description);
     ensurePropertyMeta('og:type').setAttribute('content', type);
+    ensurePropertyMeta('og:locale').setAttribute('content', language === 'ar' ? 'ar_BH' : 'en_GB');
+    document.documentElement.lang = language;
+    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
 
     if (canonical) {
       ensureLink('canonical').setAttribute('href', canonical);
@@ -74,6 +80,16 @@ export default function Seo({
       ensurePropertyMeta('og:image').setAttribute('content', image);
     }
 
+    document.head.querySelectorAll('link[data-seo-alternate="true"]').forEach((link) => link.remove());
+    alternates.forEach(({ hrefLang, href }) => {
+      const link = document.createElement('link');
+      link.rel = 'alternate';
+      link.hreflang = hrefLang;
+      link.href = href;
+      link.dataset.seoAlternate = 'true';
+      document.head.appendChild(link);
+    });
+
     document.head.querySelectorAll('script[data-seo-json-ld="true"]').forEach((script) => script.remove());
 
     jsonLd.forEach((schema) => {
@@ -83,7 +99,7 @@ export default function Seo({
       script.textContent = JSON.stringify(schema);
       document.head.appendChild(script);
     });
-  }, [canonical, description, image, jsonLd, keywords, robots, title, type]);
+  }, [alternates, canonical, description, image, jsonLd, keywords, language, robots, title, type]);
 
   return null;
 }

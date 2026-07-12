@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { StrictMode, lazy } from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import SiteLayout from './layout/SiteLayout.jsx';
@@ -17,8 +17,10 @@ const BlogPost = lazy(() => import('./pages/BlogPost.jsx'));
 const ContactPage = lazy(() => import('./pages/ContactPage.jsx'));
 const LegalPage = lazy(() => import('./pages/LegalPage.jsx'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage.jsx'));
+const LandingPage = lazy(() => import('./pages/LandingPage.jsx'));
 
-createRoot(document.getElementById('root')).render(
+const rootElement = document.getElementById('root');
+const app = (
   <StrictMode>
     <BrowserRouter>
       <Routes>
@@ -26,6 +28,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/:slug" element={<ServiceDetailPage />} />
+          <Route path="/solutions/:slug" element={<LandingPage />} />
           <Route path="/work" element={<WorkPage />} />
           <Route path="/work/:slug" element={<CaseStudyPage />} />
           <Route path="/process" element={<ProcessPage />} />
@@ -39,5 +42,11 @@ createRoot(document.getElementById('root')).render(
         </Route>
       </Routes>
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 );
+
+if (rootElement.hasChildNodes()) {
+  hydrateRoot(rootElement, app);
+} else {
+  createRoot(rootElement).render(app);
+}

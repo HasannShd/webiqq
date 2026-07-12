@@ -5,13 +5,15 @@ import { PageIntro, CtaBand } from '../components/Common/PagePrimitives.jsx';
 import { useReveal } from '../hooks/useReveal.js';
 import { serviceLines } from '../data/services.js';
 import { SITE_URL } from '../data/seo.js';
+import { landingPages } from '../data/landingPages.js';
 
 const serviceIcons = {
   'websites-and-ecommerce': FiGlobe,
   'business-software': FiCode,
   'seo-and-digital-growth': FiSearch,
-  'ai-and-automation': FiZap,
-  'maintenance-and-support': FiTool,
+  'automation-and-integrations': FiZap,
+  'multilingual-website-systems': FiGlobe,
+  'care-hosting-and-support': FiTool,
 };
 
 export default function ServicesPage() {
@@ -21,7 +23,7 @@ export default function ServicesPage() {
     <main id="main">
       <Seo
         title="Services | Websites, Software, SEO & Automation | Webiqq"
-        description="Explore Webiqq's five service lines: websites and e-commerce, business software and dashboards, SEO and digital growth, AI and workflow automation, and maintenance with ongoing support."
+        description="Explore Webiqq's six service categories: websites, business software, SEO and digital growth, automation and integrations, multilingual systems, and ongoing care and support."
         canonical={`${SITE_URL}/services`}
         jsonLd={[
           {
@@ -38,7 +40,7 @@ export default function ServicesPage() {
         breadcrumbs={[{ label: 'Home', to: '/' }, { label: 'Services' }]}
         eyebrow="Services"
         title={<>Everything a Business Needs to <em>Operate and Grow Online</em></>}
-        lead="Five connected service lines cover the full digital system — the website that presents you, the software that runs you, the SEO that makes you discoverable, the automation that saves your team time, and the support that keeps it all healthy."
+        lead="Six connected service categories cover the complete digital system — from the website customers see to the software, search visibility, automation, multilingual architecture, and ongoing care behind it."
       />
 
       <section className="section-shell services-index" aria-label="Webiqq service lines">
@@ -64,6 +66,17 @@ export default function ServicesPage() {
               </Link>
             );
           })}
+        </div>
+      </section>
+
+      <section className="section-shell" aria-labelledby="specialist-solutions-title">
+        <div className="section-heading reveal is-visible">
+          <p className="eyebrow">Specialist solutions</p>
+          <h2 id="specialist-solutions-title">Explore by Market or <em>Business Need</em></h2>
+          <p>Distinct guidance for common industries, markets, and technical requirements.</p>
+        </div>
+        <div className="other-services reveal is-visible">
+          {landingPages.map((page) => <Link key={page.slug} to={`/solutions/${page.slug}`}>{page.title}</Link>)}
         </div>
       </section>
 

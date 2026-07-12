@@ -22,6 +22,7 @@ const projectTypes = [
 const budgetRanges = ['Under BHD 500', 'BHD 500 – 1,500', 'BHD 1,500 – 5,000', 'BHD 5,000+', 'Not sure yet'];
 
 const timelines = ['As soon as possible', 'Within 1–3 months', '3+ months', 'Just exploring'];
+const markets = ['Bahrain', 'Saudi Arabia', 'United Arab Emirates', 'Kuwait', 'Qatar', 'Oman', 'Germany', 'United Kingdom', 'Other / international'];
 
 const serviceOptions = [...serviceLines.map((s) => s.title), 'Full Digital Package', 'Not sure yet'];
 
@@ -52,6 +53,7 @@ export default function ContactPage() {
       }
 
       form.reset();
+      window.dispatchEvent(new CustomEvent('webiqq:conversion', { detail: { type: 'project_request', service: payload.service } }));
       setFormStatus({
         type: 'success',
         message: 'Your request was sent. We will reply within 24 hours.',
@@ -212,6 +214,17 @@ export default function ContactPage() {
               ))}
             </select>
           </label>
+          <label>
+            Country or market
+            <select name="market" defaultValue="">
+              <option value="">Select market</option>
+              {markets.map((option) => <option key={option} value={option}>{option}</option>)}
+            </select>
+          </label>
+          <label>
+            Preferred website language(s)
+            <input name="languages" placeholder="For example: English and Arabic" autoComplete="off" />
+          </label>
           <label className="full-field">
             Existing website (if any)
             <input type="text" name="existingWebsite" placeholder="https://…" inputMode="url" />
@@ -236,7 +249,7 @@ export default function ContactPage() {
               ))}
             </div>
           </fieldset>
-          <button className="primary-button full-field" type="submit" disabled={isSubmitting}>
+          <button className="primary-button full-field" type="submit" disabled={isSubmitting} data-event="project_request_submit">
             {isSubmitting ? 'Sending…' : 'Send Project Request'}
             <FiArrowRight aria-hidden="true" />
           </button>

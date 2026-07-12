@@ -73,6 +73,8 @@ const buildEmailHtml = (submission) => `
     <p><strong>Project type:</strong> ${escapeHtml(submission.projectType || 'Not provided')}</p>
     <p><strong>Budget range:</strong> ${escapeHtml(submission.budget || 'Not provided')}</p>
     <p><strong>Timeline:</strong> ${escapeHtml(submission.timeline || 'Not provided')}</p>
+    <p><strong>Country / market:</strong> ${escapeHtml(submission.market || 'Not provided')}</p>
+    <p><strong>Website languages:</strong> ${escapeHtml(submission.languages || 'Not provided')}</p>
     <p><strong>Existing website:</strong> ${escapeHtml(submission.existingWebsite || 'Not provided')}</p>
     <p><strong>Preferred contact method:</strong> ${escapeHtml(submission.contactMethod || 'Not provided')}</p>
     <p><strong>Message:</strong></p>
@@ -100,6 +102,8 @@ export default async function handler(req, res) {
     projectType: sanitize(body.projectType),
     budget: sanitize(body.budget),
     timeline: sanitize(body.timeline),
+    market: sanitize(body.market),
+    languages: sanitize(body.languages),
     existingWebsite: sanitize(body.existingWebsite),
     contactMethod: sanitize(body.contactMethod),
     message: sanitize(body.message),
@@ -109,6 +113,14 @@ export default async function handler(req, res) {
 
   if (missingField) {
     return res.status(400).json({ error: `Missing required field: ${missingField}` });
+  }
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(submission.email)) {
+    return res.status(400).json({ error: 'Please provide a valid email address' });
+  }
+
+  if (submission.message.length > 5000 || Object.values(submission).some((value) => value.length > 5000)) {
+    return res.status(400).json({ error: 'Submission is too long' });
   }
 
   const mailer = getTransporter();
@@ -139,6 +151,8 @@ export default async function handler(req, res) {
         `Project type: ${submission.projectType || 'Not provided'}`,
         `Budget range: ${submission.budget || 'Not provided'}`,
         `Timeline: ${submission.timeline || 'Not provided'}`,
+        `Country / market: ${submission.market || 'Not provided'}`,
+        `Website languages: ${submission.languages || 'Not provided'}`,
         `Existing website: ${submission.existingWebsite || 'Not provided'}`,
         `Preferred contact method: ${submission.contactMethod || 'Not provided'}`,
         '',

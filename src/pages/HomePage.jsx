@@ -29,8 +29,9 @@ const serviceIcons = {
   'websites-and-ecommerce': FiGlobe,
   'business-software': FiCode,
   'seo-and-digital-growth': FiSearch,
-  'ai-and-automation': FiZap,
-  'maintenance-and-support': FiTool,
+  'automation-and-integrations': FiZap,
+  'multilingual-website-systems': FiGlobe,
+  'care-hosting-and-support': FiTool,
 };
 
 function ClientBoard() {
@@ -78,11 +79,10 @@ function HeroSection() {
           <span>Operating in Bahrain · Saudi Arabia · Germany</span>
         </div>
         <p className="eyebrow">Web &amp; software development company</p>
-        <h1>Websites and Digital Systems Built for <em>Business Growth</em></h1>
+        <h1>High-Performance Websites, Software and <em>Automated Systems</em></h1>
         <p className="hero-subtitle">
-          Webiqq designs and develops high-performance business websites, custom software, SEO systems, and practical
-          automation for businesses in Bahrain, Saudi Arabia, Germany, and worldwide — built to help companies operate
-          and grow.
+          Webiqq builds high-performance websites, business software and automated systems for ambitious companies
+          across the GCC and beyond. Digital systems that generate leads and simplify business operations.
         </p>
         <div className="hero-actions">
           <Link className="primary-button" to="/contact">
@@ -159,7 +159,7 @@ function ServicesOverview() {
         text="Websites, e-commerce, custom software, SEO, automation, and the support that comes after — you talk directly to the people building it, not an account manager passing notes."
         id="services-title"
       />
-      <div className="services-matrix services-matrix--five reveal">
+      <div className="services-matrix reveal">
         {serviceLines.map((service) => {
           const Icon = serviceIcons[service.slug] ?? FiSearch;
           return (
@@ -469,7 +469,7 @@ export default function HomePage() {
   return (
     <main id="main">
       <Seo
-        title="Webiqq | Websites, SEO, Software & AI Automation"
+        title="Webiqq | Websites, Business Software & Automation"
         description={SITE_DESCRIPTION}
         canonical={`${SITE_URL}/`}
         image={`${SITE_URL}/webiqq-logo.svg`}

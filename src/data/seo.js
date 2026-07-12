@@ -1,7 +1,7 @@
 export const SITE_URL = 'https://www.webiqq.com';
 export const SITE_NAME = 'Webiqq';
 export const SITE_DESCRIPTION =
-  'Webiqq is a web and software development company based in Bahrain, serving businesses across Bahrain, Saudi Arabia, and Germany, with clients internationally with business websites, custom website development, SEO systems, AI automation, e-commerce platforms, databases, server setup, and digital marketing.';
+  'Webiqq builds high-performance websites, business software and automated systems for ambitious companies across the GCC and beyond — generating leads and simplifying business operations.';
 
 const BAHRAIN_ADDRESS = {
   '@type': 'PostalAddress',
@@ -90,22 +90,11 @@ export const faqItems = [
   },
 ];
 
-const serviceNames = [
-  'Website Development',
-  'Business Software',
-  'SEO Optimization',
-  'AI Automation',
-  'Social Media Management',
-  'Google Business Profile Setup',
-  'Digital Marketing',
-  'E-Commerce Setup',
-  'Database Management',
-  'Server & Maintenance',
-];
+const serviceNames = ['Websites', 'Business Software', 'SEO, Google and Digital Growth', 'Automation and Integrations', 'Multilingual Website Systems', 'Care, Hosting and Support'];
 
 const serviceSchemaPages = [
   {
-    name: 'Website Development',
+    name: 'Websites',
     description: 'Responsive business website development for companies in Bahrain, the Middle East, and international markets.',
   },
   {
@@ -113,36 +102,20 @@ const serviceSchemaPages = [
     description: 'Custom software development including dashboards, portals, CRMs, RFQ workflows, and internal business systems.',
   },
   {
-    name: 'SEO Optimization',
+    name: 'SEO, Google and Digital Growth',
     description: 'Technical SEO, on-page optimization, structured data, content strategy, and search visibility systems.',
   },
   {
-    name: 'AI Automation',
-    description: 'AI automation, chatbots, smart routing, workflow automation, and AI-assisted business systems.',
+    name: 'Automation and Integrations',
+    description: 'CRM, messaging, booking, payment, reporting, email marketing, lead routing, and approved third-party workflow integrations.',
   },
   {
-    name: 'Social Media Management',
-    description: 'Social media strategy, content planning, publishing systems, and brand visibility support.',
+    name: 'Multilingual Website Systems',
+    description: 'Language-aware websites with localised URLs and metadata, hreflang, translatable interfaces, and intentional RTL and LTR layouts.',
   },
   {
-    name: 'Google Business Profile Setup',
-    description: 'Google Business Profile setup and optimization for stronger local visibility and map presence.',
-  },
-  {
-    name: 'Digital Marketing',
-    description: 'Digital marketing support across websites, search, content, campaigns, and conversion systems.',
-  },
-  {
-    name: 'E-Commerce Setup',
-    description: 'E-commerce website setup, ordering flows, carts, product pages, and account systems.',
-  },
-  {
-    name: 'Database Management',
-    description: 'Database planning, content structure, export systems, backups, and operational data flows.',
-  },
-  {
-    name: 'Server & Maintenance',
-    description: 'Server deployment, maintenance, monitoring, updates, and post-launch technical support.',
+    name: 'Care, Hosting and Support',
+    description: 'Maintenance subscriptions, content updates, domains, hosting, SSL, backups, monitoring, technical updates, performance and priority support.',
   },
 ];
 

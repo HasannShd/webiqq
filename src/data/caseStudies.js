@@ -27,7 +27,7 @@ export const caseStudies = [
     ],
     solution:
       'Webiqq delivered a full-stack platform running through one API: a public SEO site with a searchable product catalogue and category pages, RFQ and quote capture, customer ordering with sign-in, a staff field-operations portal, and a complete admin office management system — with messaging, notifications, data exports, and backup infrastructure supporting daily operations.',
-    services: ['Business Software & Dashboards', 'Websites & E-commerce', 'SEO & Digital Growth', 'Maintenance & Ongoing Support'],
+    services: ['Business Software & Dashboards', 'Websites', 'SEO & Digital Growth', 'Care, Hosting & Support'],
     features: [
       'SEO product & category pages',
       'Searchable product catalogue',
@@ -68,7 +68,7 @@ export const caseStudies = [
     ],
     solution:
       'Webiqq built a responsive German website with dedicated pages for cleaning, winter service, and security, an instant quote calculator, contact and newsletter forms, SEO metadata with structured data, and optimised service imagery.',
-    services: ['Websites & E-commerce', 'SEO & Digital Growth'],
+    services: ['Websites', 'SEO & Digital Growth', 'Multilingual Website Systems'],
     features: [
       'Responsive German-language website',
       'Cleaning, winter service, and security pages',
@@ -100,7 +100,7 @@ export const caseStudies = [
     ],
     solution:
       'Webiqq built a responsive React website with dedicated service pages, a WhatsApp enquiry flow, Google Maps location integration, and SEO metadata with service-focused messaging.',
-    services: ['Websites & E-commerce', 'SEO & Digital Growth', 'Maintenance & Ongoing Support'],
+    services: ['Websites', 'SEO & Digital Growth', 'Care, Hosting & Support'],
     features: [
       'Responsive React website',
       'Cleaning and facility service pages',
@@ -132,7 +132,7 @@ export const caseStudies = [
     ],
     solution:
       'Webiqq built a multilingual React Router multi-page website (EN / AR / FR / ZH) with a corporate brand system, nine service verticals, Cloudinary media management, and structured data with full SEO metadata.',
-    services: ['Websites & E-commerce', 'SEO & Digital Growth'],
+    services: ['Websites', 'SEO & Digital Growth', 'Multilingual Website Systems'],
     features: [
       'Multilingual: EN / AR / FR / ZH',
       'Nine service verticals',
@@ -143,7 +143,7 @@ export const caseStudies = [
     ],
     outcome:
       'A live multilingual corporate presence representing the group’s verticals to local and international audiences.',
-    relatedServices: ['websites-and-ecommerce', 'seo-and-digital-growth'],
+    relatedServices: ['websites-and-ecommerce', 'multilingual-website-systems', 'seo-and-digital-growth'],
   },
 ];
 

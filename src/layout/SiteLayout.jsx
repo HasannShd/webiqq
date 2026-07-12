@@ -116,11 +116,7 @@ function SiteFooter() {
         <Link to="/contact">Start a Project</Link>
       </div>
       <p className="copyright">
-        © 2026 Webiqq — a subdivision of{' '}
-        <a className="footer-legal-btn" href="https://www.lte-bh.com" target="_blank" rel="noopener noreferrer">
-          Leading Trading Est.
-        </a>
-        {' '}· All rights reserved. · Web development company based in Bahrain, serving clients worldwide.
+        © 2026 Webiqq · All rights reserved. · Web and software development across the GCC and beyond.
         {' · '}
         <Link className="footer-legal-btn" to="/privacy">Privacy Policy</Link>
         {' · '}
