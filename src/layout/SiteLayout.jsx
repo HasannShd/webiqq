@@ -78,7 +78,7 @@ function SiteFooter() {
           Webiqq
         </Link>
         <p>Websites &amp; digital systems built for business growth.</p>
-        <p className="footer-remote">Operating in Bahrain · Saudi Arabia · Germany</p>
+        <p className="footer-remote">Operating across the GCC and worldwide</p>
         <p className="footer-handmade">Designed and built by us — this site included.</p>
         <div className="footer-social">
           {socialLinks.map((link) => {

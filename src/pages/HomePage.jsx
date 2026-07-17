@@ -76,7 +76,7 @@ function HeroSection() {
           <span className="hero-available-dot" aria-hidden="true" />
           <span>Available for new projects</span>
           <span className="hero-available-sep" aria-hidden="true">·</span>
-          <span>Operating in Bahrain · Saudi Arabia · Germany</span>
+          <span>Operating across the GCC and worldwide</span>
         </div>
         <p className="eyebrow">Web &amp; software development company</p>
         <h1>High-Performance Websites, Software and <em>Automated Systems</em></h1>

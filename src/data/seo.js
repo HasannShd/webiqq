@@ -154,7 +154,7 @@ export const siteSchemas = [
     email: 'contact@webiqq.com',
     telephone: '+97333290109',
     address: BAHRAIN_ADDRESS,
-    slogan: 'Operating in Bahrain, Saudi Arabia & Germany.',
+    slogan: 'Operating across the GCC and worldwide.',
     areaServed: [
       { '@type': 'Place', name: 'Middle East' },
       { '@type': 'Country', name: 'Bahrain' },

@@ -70,7 +70,7 @@ export default function ContactPage() {
     <main id="main">
       <Seo
         title="Start a Project | Contact Webiqq"
-        description="Start a project with Webiqq. Tell us about your website, software, SEO, or automation needs — we reply within 24 hours. Operating in Bahrain, Saudi Arabia, and Germany."
+        description="Start a project with Webiqq. Tell us about your website, software, SEO, or automation needs — we reply within 24 hours. Operating across the GCC and worldwide."
         canonical={`${SITE_URL}/contact`}
         jsonLd={[
           {
