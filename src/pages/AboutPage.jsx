@@ -138,6 +138,7 @@ export default function AboutPage() {
           <div className="about-contact-links">
             <a href="mailto:contact@webiqq.com">contact@webiqq.com</a>
             <a href="https://wa.me/97333290109" target="_blank" rel="noopener noreferrer">WhatsApp +973 3329 0109</a>
+            <a href="tel:+4917680715502">Germany +49 176 80715502</a>
             <Link to="/contact">Start a Project</Link>
           </div>
         </div>

@@ -134,6 +134,10 @@ export const siteSchemas = [
       'WebiQQ is the web and software development division of Leading Trading Est., based in Bahrain and operating across the GCC and worldwide.',
     email: 'contact@webiqq.com',
     telephone: '+97333290109',
+    contactPoint: [
+      { '@type': 'ContactPoint', telephone: '+97333290109', contactType: 'sales', areaServed: 'GCC' },
+      { '@type': 'ContactPoint', telephone: '+4917680715502', contactType: 'sales', areaServed: 'DE' },
+    ],
     address: BAHRAIN_ADDRESS,
     parentOrganization: {
       '@type': 'Organization',

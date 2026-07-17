@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { FiArrowRight, FiInstagram, FiMail, FiMessageCircle } from 'react-icons/fi';
+import { FiArrowRight, FiInstagram, FiMail, FiMessageCircle, FiPhone } from 'react-icons/fi';
 import Seo from '../components/Common/Seo.jsx';
 import { Breadcrumbs } from '../components/Common/PagePrimitives.jsx';
 import { useReveal } from '../hooks/useReveal.js';
 import { serviceLines } from '../data/services.js';
 import { SITE_URL } from '../data/seo.js';
-import { WHATSAPP_URL } from '../layout/SiteLayout.jsx';
+import { GERMANY_PHONE_DISPLAY, GERMANY_PHONE_NUMBER, WHATSAPP_URL } from '../layout/SiteLayout.jsx';
 
 const projectTypes = [
   'New website',
@@ -120,6 +120,13 @@ export default function ContactPage() {
               <div>
                 <strong>Email</strong>
                 <span>contact@webiqq.com</span>
+              </div>
+            </a>
+            <a className="contact-channel" href={`tel:${GERMANY_PHONE_NUMBER}`}>
+              <FiPhone aria-hidden="true" />
+              <div>
+                <strong>Germany</strong>
+                <span>{GERMANY_PHONE_DISPLAY}</span>
               </div>
             </a>
           </div>

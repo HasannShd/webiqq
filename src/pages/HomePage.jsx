@@ -36,7 +36,7 @@ function ClientBoard() {
       <div className="client-board-header">
         <span>Selected Work</span>
         <Link className="client-board-more" to="/work">
-          All projects <FiArrowRight aria-hidden="true" />
+          View details <FiArrowRight aria-hidden="true" />
         </Link>
       </div>
       <div className="client-board-list">
@@ -58,7 +58,7 @@ function ClientBoard() {
           <FiGlobe aria-hidden="true" />
           GCC &amp; worldwide
         </span>
-        <span className="client-board-note">& more projects delivered</span>
+        <span className="client-board-note">Websites &amp; business systems</span>
       </div>
     </div>
   );

@@ -9,6 +9,8 @@ import { serviceLines } from '../data/services.js';
 
 export const WHATSAPP_NUMBER = '97333290109';
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
+export const GERMANY_PHONE_NUMBER = '+4917680715502';
+export const GERMANY_PHONE_DISPLAY = '+49 176 80715502';
 
 const socialIconMap = { instagram: FiInstagram };
 
@@ -111,6 +113,7 @@ function SiteFooter() {
         <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
           WhatsApp us
         </a>
+        <a href={`tel:${GERMANY_PHONE_NUMBER}`}>Germany: {GERMANY_PHONE_DISPLAY}</a>
         <Link to="/contact">Start a Project</Link>
       </div>
       <p className="copyright">

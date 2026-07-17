@@ -62,6 +62,7 @@ export const processSteps = [
 export const contactDetails = [
   { label: 'Email', value: 'contact@webiqq.com' },
   { label: 'Info', value: 'info@webiqq.com' },
+  { label: 'Germany', value: '+49 176 80715502' },
   { label: 'Operating in', value: 'The GCC and worldwide' },
   { label: 'Response time', value: 'Within 24 hours' },
 ];
