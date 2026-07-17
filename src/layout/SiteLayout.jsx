@@ -2,7 +2,7 @@ import '../App.css';
 import '../pages.css';
 import { Suspense, useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
-import { FiInstagram, FiLinkedin, FiMenu, FiX } from 'react-icons/fi';
+import { FiInstagram, FiMenu, FiX } from 'react-icons/fi';
 import BackToTop from '../components/Common/BackToTop.jsx';
 import { contactDetails, socialLinks } from '../data/webiqqContent.js';
 import { serviceLines } from '../data/services.js';
@@ -10,7 +10,7 @@ import { serviceLines } from '../data/services.js';
 export const WHATSAPP_NUMBER = '97333290109';
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
-const socialIconMap = { instagram: FiInstagram, linkedin: FiLinkedin };
+const socialIconMap = { instagram: FiInstagram };
 
 const primaryNav = [
   { label: 'Services', to: '/services' },
@@ -34,9 +34,9 @@ function SiteHeader() {
   return (
     <header className="navbar">
       <div className="nav-brand">
-        <Link className="nav-logo" to="/" aria-label="Webiqq home">
+        <Link className="nav-logo" to="/" aria-label="WebiQQ home">
           <span>W</span>
-          Webiqq
+          WebiQQ
         </Link>
       </div>
 
@@ -75,11 +75,9 @@ function SiteFooter() {
       <div>
         <Link className="nav-logo" to="/">
           <span>W</span>
-          Webiqq
+          WebiQQ
         </Link>
         <p>Websites &amp; digital systems built for business growth.</p>
-        <p className="footer-remote">Operating across the GCC and worldwide</p>
-        <p className="footer-handmade">Designed and built by us — this site included.</p>
         <div className="footer-social">
           {socialLinks.map((link) => {
             const Icon = socialIconMap[link.icon];
@@ -116,11 +114,11 @@ function SiteFooter() {
         <Link to="/contact">Start a Project</Link>
       </div>
       <p className="copyright">
-        © 2026 Webiqq · All rights reserved. · Web and software development across the GCC and beyond.
-        {' · '}
-        <Link className="footer-legal-btn" to="/privacy">Privacy Policy</Link>
-        {' · '}
-        <Link className="footer-legal-btn" to="/terms">Terms &amp; Conditions</Link>
+        © 2026 WebiQQ · Web and software development across the GCC and worldwide.
+        <span className="copyright-links">
+          <Link className="footer-legal-btn" to="/privacy">Privacy Policy</Link>
+          <Link className="footer-legal-btn" to="/terms">Terms &amp; Conditions</Link>
+        </span>
       </p>
     </footer>
   );
@@ -133,7 +131,7 @@ function WhatsAppButton() {
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat with Webiqq on WhatsApp"
+      aria-label="Chat with WebiQQ on WhatsApp"
     >
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="22" height="22">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { FiArrowRight, FiInstagram, FiLinkedin, FiMail, FiMessageCircle } from 'react-icons/fi';
+import { FiArrowRight, FiInstagram, FiMail, FiMessageCircle } from 'react-icons/fi';
 import Seo from '../components/Common/Seo.jsx';
 import { Breadcrumbs } from '../components/Common/PagePrimitives.jsx';
 import { useReveal } from '../hooks/useReveal.js';
@@ -69,15 +69,15 @@ export default function ContactPage() {
   return (
     <main id="main">
       <Seo
-        title="Start a Project | Contact Webiqq"
-        description="Start a project with Webiqq. Tell us about your website, software, SEO, or automation needs — we reply within 24 hours. Operating across the GCC and worldwide."
+        title="Start a Project | Contact WebiQQ"
+        description="Start a project with WebiQQ. Tell us about your website, software, SEO, or automation needs — we reply within 24 hours. Operating across the GCC and worldwide."
         canonical={`${SITE_URL}/contact`}
         jsonLd={[
           {
             '@context': 'https://schema.org',
             '@type': 'ContactPage',
             '@id': `${SITE_URL}/contact#contact-page`,
-            name: 'Contact Webiqq',
+            name: 'Contact WebiQQ',
             url: `${SITE_URL}/contact`,
             about: { '@id': `${SITE_URL}/#organization` },
           },
@@ -102,7 +102,7 @@ export default function ContactPage() {
         </p>
       </section>
 
-      <section className="section-shell contact-section contact-section--page" aria-label="Contact Webiqq">
+      <section className="section-shell contact-section contact-section--page" aria-label="Contact WebiQQ">
         <div className="contact-copy">
           <h2>Prefer to talk first?</h2>
           <p>Skip the form — a short conversation is often the fastest way to scope a project.</p>
@@ -127,7 +127,7 @@ export default function ContactPage() {
           <div className="contact-details">
             <div>
               <span>Operating in</span>
-              <strong>Bahrain · Saudi Arabia · Germany</strong>
+              <strong>GCC &amp; worldwide</strong>
             </div>
             <div>
               <span>Response time</span>
@@ -139,10 +139,6 @@ export default function ContactPage() {
             <a href="https://www.instagram.com/webiqq.build/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <FiInstagram aria-hidden="true" />
               @webiqq.build
-            </a>
-            <a href="https://www.linkedin.com/company/webiqq" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <FiLinkedin aria-hidden="true" />
-              Webiqq
             </a>
           </div>
         </div>

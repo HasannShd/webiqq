@@ -8,9 +8,9 @@ export const serviceLines = [
     title: 'Websites',
     shortTitle: 'Websites',
     tagline: 'High-performance websites built to earn trust, generate enquiries, and support sales.',
-    metaTitle: 'Website & E-commerce Development in Bahrain | Webiqq',
+    metaTitle: 'Website & E-commerce Development in Bahrain | WebiQQ',
     metaDescription:
-      'Webiqq builds responsive business websites, corporate sites, product catalogues, and e-commerce platforms for companies in Bahrain, Saudi Arabia, Germany, and worldwide — fast, SEO-ready, and built to convert.',
+      'WebiQQ builds responsive business websites, corporate sites, product catalogues, and e-commerce platforms for companies in Bahrain, Saudi Arabia, Germany, and worldwide — fast, SEO-ready, and built to convert.',
     summary:
       'Modern, responsive websites and e-commerce platforms — from corporate sites and service pages to product catalogues, ordering flows, and customer accounts.',
     audience: [
@@ -64,9 +64,9 @@ export const serviceLines = [
     title: 'Business Software & Dashboards',
     shortTitle: 'Software',
     tagline: 'Custom systems built around how your business actually operates.',
-    metaTitle: 'Custom Business Software & Dashboard Development | Webiqq',
+    metaTitle: 'Custom Business Software & Dashboard Development | WebiQQ',
     metaDescription:
-      'Webiqq develops custom business software: admin dashboards, customer and staff portals, RFQ and quotation systems, CRMs, and database-backed internal tools for companies in Bahrain, Saudi Arabia, Germany, and internationally.',
+      'WebiQQ develops custom business software: admin dashboards, customer and staff portals, RFQ and quotation systems, CRMs, and database-backed internal tools for companies in Bahrain, Saudi Arabia, Germany, and internationally.',
     summary:
       'Admin dashboards, customer and staff portals, RFQ and quotation workflows, CRMs, and database-backed tools that replace spreadsheets and manual follow-ups.',
     audience: [
@@ -115,9 +115,9 @@ export const serviceLines = [
     title: 'SEO & Digital Growth',
     shortTitle: 'SEO & Growth',
     tagline: 'Search visibility systems that bring qualified enquiries — not just traffic.',
-    metaTitle: 'SEO & Digital Growth Services in Bahrain | Webiqq',
+    metaTitle: 'SEO & Digital Growth Services in Bahrain | WebiQQ',
     metaDescription:
-      'Technical SEO, local SEO, Google Business Profile setup, structured data, and content systems from Webiqq — built for businesses in Bahrain, the GCC, and international markets.',
+      'Technical SEO, local SEO, Google Business Profile setup, structured data, and content systems from WebiQQ — built for businesses in Bahrain, the GCC, and international markets.',
     summary:
       'Technical SEO, local search, Google Business Profile setup, structured data, and content direction — engineered into the website rather than bolted on.',
     audience: [
@@ -165,9 +165,9 @@ export const serviceLines = [
     title: 'Automation & Integrations',
     shortTitle: 'Automation',
     tagline: 'Practical automation that removes repetitive work — no hype.',
-    metaTitle: 'Business Automation & Integrations | Webiqq',
+    metaTitle: 'Business Automation & Integrations | WebiQQ',
     metaDescription:
-      'Webiqq connects business tools and builds practical automation for leads, messages, bookings, payments, reporting, and repetitive workflows across the GCC and beyond.',
+      'WebiQQ connects business tools and builds practical automation for leads, messages, bookings, payments, reporting, and repetitive workflows across the GCC and beyond.',
     summary:
       'Chatbots for first-response handling, smart forms, lead routing, and internal tools that cut manual admin — connected to your real business process.',
     audience: [
@@ -215,8 +215,8 @@ export const serviceLines = [
     title: 'Multilingual Website Systems',
     shortTitle: 'Multilingual',
     tagline: 'Language-aware websites engineered for different audiences, scripts, and markets.',
-    metaTitle: 'Multilingual Website Development | Arabic & English | Webiqq',
-    metaDescription: 'Webiqq builds multilingual website systems with language-specific URLs, metadata, navigation, forms, RTL and LTR layouts, hreflang, and translation-ready content architecture.',
+    metaTitle: 'Multilingual Website Development | Arabic & English | WebiQQ',
+    metaDescription: 'WebiQQ builds multilingual website systems with language-specific URLs, metadata, navigation, forms, RTL and LTR layouts, hreflang, and translation-ready content architecture.',
     summary: 'Proper multilingual architecture for two or more languages — including language-aware navigation, translated page structures, localised SEO, and intentional RTL and LTR experiences.',
     audience: ['GCC businesses serving Arabic- and English-speaking customers', 'International companies entering new language markets', 'E-commerce and service businesses that need language-specific journeys', 'Teams replacing ad-hoc translated pages with a maintainable system'],
     problem: 'A translated paragraph is not a multilingual website. Each language needs coherent navigation, page URLs, metadata, forms, calls to action, content management, and a layout designed for its writing direction.',
@@ -226,7 +226,7 @@ export const serviceLines = [
     process: [{ title: 'Plan languages', text: 'We define audiences, languages, URL structure, content ownership, and translation sources.' }, { title: 'Build the system', text: 'Navigation, components, forms, metadata, and content models become language-aware.' }, { title: 'Integrate content', text: 'We add client-provided or separately arranged translations and review each layout in context.' }, { title: 'Test & launch', text: 'Every language, route, form, direction, alternate link, and mobile menu is verified before release.' }],
     included: ['Central language configuration', 'Translatable UI labels and validation messages', 'RTL-aware responsive design', 'Canonical and hreflang planning'],
     clientProvides: ['Approved translated business copy or a separately arranged translation source', 'Priority languages and markets', 'A reviewer fluent in each published language'],
-    afterLaunch: 'Webiqq builds the technical multilingual system and integrates approved content. Certified or professional translation is not implied; translations may be supplied by the client or arranged as a separate service.',
+    afterLaunch: 'WebiQQ builds the technical multilingual system and integrates approved content. Certified or professional translation is not implied; translations may be supplied by the client or arranged as a separate service.',
     relatedWork: ['viel-gebaeudeservice', 'albourshaid-global'],
   },
   {
@@ -234,9 +234,9 @@ export const serviceLines = [
     title: 'Care, Hosting & Support',
     shortTitle: 'Support',
     tagline: 'Your website and systems stay fast, secure, and improving after launch.',
-    metaTitle: 'Website Maintenance & Technical Support | Webiqq',
+    metaTitle: 'Website Maintenance & Technical Support | WebiQQ',
     metaDescription:
-      'Webiqq provides post-launch website and software maintenance: updates, monitoring, deployments, backups, content changes, and ongoing technical support for businesses in Bahrain, Saudi Arabia, Germany, and worldwide.',
+      'WebiQQ provides post-launch website and software maintenance: updates, monitoring, deployments, backups, content changes, and ongoing technical support for businesses in Bahrain, Saudi Arabia, Germany, and worldwide.',
     summary:
       'Updates, monitoring, deployments, backups, content changes, and structured improvement work — so what you built keeps performing.',
     audience: [

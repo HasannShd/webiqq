@@ -22,8 +22,8 @@ export default function ServicesPage() {
   return (
     <main id="main">
       <Seo
-        title="Services | Websites, Software, SEO & Automation | Webiqq"
-        description="Explore Webiqq's six service categories: websites, business software, SEO and digital growth, automation and integrations, multilingual systems, and ongoing care and support."
+        title="Services | Websites, Software, SEO & Automation | WebiQQ"
+        description="Explore WebiQQ's six service categories: websites, business software, SEO and digital growth, automation and integrations, multilingual systems, and ongoing care and support."
         canonical={`${SITE_URL}/services`}
         jsonLd={[
           {
@@ -43,7 +43,7 @@ export default function ServicesPage() {
         lead="Six connected service categories cover the complete digital system — from the website customers see to the software, search visibility, automation, multilingual architecture, and ongoing care behind it."
       />
 
-      <section className="section-shell services-index" aria-label="Webiqq service lines">
+      <section className="section-shell services-index" aria-label="WebiQQ service lines">
         <div className="services-index-list reveal">
           {serviceLines.map((service, i) => {
             const Icon = serviceIcons[service.slug] ?? FiSearch;

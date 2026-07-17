@@ -41,7 +41,7 @@ export default function ServiceDetailPage() {
             '@context': 'https://schema.org',
             '@type': 'Service',
             '@id': `${SITE_URL}/services/${service.slug}#service`,
-            name: `${service.title} by Webiqq`,
+            name: `${service.title} by WebiQQ`,
             serviceType: service.title,
             description: service.metaDescription,
             provider: { '@id': `${SITE_URL}/#organization` },
@@ -91,7 +91,7 @@ export default function ServiceDetailPage() {
             <CheckList items={service.audience} />
           </article>
           <article className="detail-block">
-            <h2>What Webiqq delivers</h2>
+            <h2>What WebiQQ delivers</h2>
             <CheckList items={service.deliverables} />
           </article>
           <article className="detail-block">

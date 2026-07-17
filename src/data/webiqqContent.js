@@ -62,11 +62,10 @@ export const processSteps = [
 export const contactDetails = [
   { label: 'Email', value: 'contact@webiqq.com' },
   { label: 'Info', value: 'info@webiqq.com' },
-  { label: 'Operating in', value: 'Bahrain · Saudi Arabia · Germany' },
+  { label: 'Operating in', value: 'The GCC and worldwide' },
   { label: 'Response time', value: 'Within 24 hours' },
 ];
 
 export const socialLinks = [
   { label: 'Instagram', handle: '@webiqq.build', href: 'https://www.instagram.com/webiqq.build/', icon: 'instagram' },
-  { label: 'LinkedIn', handle: 'Webiqq', href: 'https://www.linkedin.com/company/webiqq', icon: 'linkedin' },
 ];

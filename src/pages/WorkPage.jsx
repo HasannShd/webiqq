@@ -14,8 +14,8 @@ export default function WorkPage() {
   return (
     <main id="main">
       <Seo
-        title="Work & Case Studies | Live Client Projects | Webiqq"
-        description="Real client projects by Webiqq: a full business platform for Leading Trading Est. in Bahrain, business websites in Germany and Bahrain, and a multilingual corporate site — all live today."
+        title="Work & Case Studies | Live Client Projects | WebiQQ"
+        description="Real client projects by WebiQQ: a full business platform for Leading Trading Est. in Bahrain, business websites in Germany and Bahrain, and a multilingual corporate site — all live today."
         canonical={`${SITE_URL}/work`}
         jsonLd={[
           {
@@ -93,7 +93,7 @@ export default function WorkPage() {
         <SectionHeader
           eyebrow="Independent Builds"
           title={<>Product Engineering, <em>In-House</em></>}
-          text="Full-stack platforms built independently by the Webiqq team — shown separately from client work, as evidence of product thinking, authentication flows, databases, and app logic."
+          text="Full-stack platforms built independently by the WebiQQ team — shown separately from client work, as evidence of product thinking, authentication flows, databases, and app logic."
           id="independent-title"
         />
         <div className="work-strip reveal">

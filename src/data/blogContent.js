@@ -94,7 +94,7 @@ export const blogPosts = [
     readTime: '6 min read',
     category: 'Website Development',
     keywords:
-      'business website development company, website development company, custom website development, corporate website development, service website design, Webiqq',
+      'business website development company, website development company, custom website development, corporate website development, service website design, WebiQQ',
     sections: [
       {
         heading: 'A Website Development Company Should Build for Business Outcomes',
@@ -109,8 +109,8 @@ export const blogPosts = [
         body: `Template sites can be enough for very simple cases, but businesses that want stronger positioning often need custom website development. That allows the site to reflect the brand more accurately, communicate services more clearly, and support real SEO and conversion goals.\n\nA custom website also gives more control over growth later instead of forcing the business into a rigid layout.`,
       },
       {
-        heading: 'How Webiqq Approaches Website Development',
-        body: `Webiqq approaches website development as part of a wider business growth system. We focus on business websites that are fast, clear, SEO-ready, and aligned with how companies generate enquiries.\n\nThat can range from corporate websites and service websites to more advanced builds that later connect with software, portals, or automation layers.`,
+        heading: 'How WebiQQ Approaches Website Development',
+        body: `WebiQQ approaches website development as part of a wider business growth system. We focus on business websites that are fast, clear, SEO-ready, and aligned with how companies generate enquiries.\n\nThat can range from corporate websites and service websites to more advanced builds that later connect with software, portals, or automation layers.`,
       },
     ],
   },
@@ -122,7 +122,7 @@ export const blogPosts = [
     date: '2026-06-01',
     readTime: '5 min read',
     category: 'Website Development',
-    keywords: 'website development Bahrain, web development agency Bahrain, business website Bahrain, professional website Bahrain, website cost Bahrain, Bahrain web developer, Webiqq',
+    keywords: 'website development Bahrain, web development agency Bahrain, business website Bahrain, professional website Bahrain, website cost Bahrain, Bahrain web developer, WebiQQ',
     sections: [
       {
         heading: 'Why Bahrain Businesses Need a Professional Website in 2026',
@@ -138,11 +138,11 @@ export const blogPosts = [
       },
       {
         heading: 'Local vs. International Agencies for Bahrain Businesses',
-        body: `Working with a Bahrain-based web development agency has clear advantages. They understand the local market — Arabic and English content, WhatsApp as a primary communication channel, Bahrain's business culture, and the types of services that convert GCC visitors into enquiries.\n\nWebiqq is a web development agency based in Bahrain, serving the GCC and international clients. We have built platforms for medical supply companies, facility management businesses, and international holding groups.`,
+        body: `Working with a Bahrain-based web development agency has clear advantages. They understand the local market — Arabic and English content, WhatsApp as a primary communication channel, Bahrain's business culture, and the types of services that convert GCC visitors into enquiries.\n\nWebiQQ is a web development agency based in Bahrain, serving the GCC and international clients. We have built platforms for medical supply companies, facility management businesses, and international holding groups.`,
       },
       {
         heading: 'Getting Started',
-        body: `If you're ready to get a professional website for your Bahrain business, the first step is a brief consultation to understand your goals, your customers, and your current digital presence. From there, we can recommend the right scope and build a platform that works for you long-term.\n\nContact Webiqq at contact@webiqq.com or send us a message on WhatsApp to discuss your project.`,
+        body: `If you're ready to get a professional website for your Bahrain business, the first step is a brief consultation to understand your goals, your customers, and your current digital presence. From there, we can recommend the right scope and build a platform that works for you long-term.\n\nContact WebiQQ at contact@webiqq.com or send us a message on WhatsApp to discuss your project.`,
       },
     ],
   },
@@ -154,7 +154,7 @@ export const blogPosts = [
     date: '2026-06-10',
     readTime: '6 min read',
     category: 'Local SEO',
-    keywords: 'Google Business Profile Bahrain, Google Maps Bahrain, local SEO Bahrain, Google Business setup Bahrain, Bahrain business listing, Google My Business Bahrain, Webiqq',
+    keywords: 'Google Business Profile Bahrain, Google Maps Bahrain, local SEO Bahrain, Google Business setup Bahrain, Bahrain business listing, Google My Business Bahrain, WebiQQ',
     sections: [
       {
         heading: 'What Is Google Business Profile and Why Does It Matter in Bahrain?',
@@ -178,7 +178,7 @@ export const blogPosts = [
       },
       {
         heading: 'Need Help Setting Up Your Google Business Profile?',
-        body: `Webiqq provides Google Business Profile setup and optimization as a standalone service for Bahrain businesses. We handle the full process — account creation, verification, category setup, description writing, photo uploads, service listings, and local SEO signals.\n\nContact us at contact@webiqq.com to get started.`,
+        body: `WebiQQ provides Google Business Profile setup and optimization as a standalone service for Bahrain businesses. We handle the full process — account creation, verification, category setup, description writing, photo uploads, service listings, and local SEO signals.\n\nContact us at contact@webiqq.com to get started.`,
       },
     ],
   },
@@ -190,7 +190,7 @@ export const blogPosts = [
     date: '2026-06-20',
     readTime: '7 min read',
     category: 'SEO',
-    keywords: 'SEO Bahrain, SEO optimization Bahrain, rank on Google Bahrain, local SEO Bahrain, Bahrain search engine optimization, website SEO Bahrain 2026, Webiqq',
+    keywords: 'SEO Bahrain, SEO optimization Bahrain, rank on Google Bahrain, local SEO Bahrain, Bahrain search engine optimization, website SEO Bahrain 2026, WebiQQ',
     sections: [
       {
         heading: 'Why SEO Matters More Than Ever for Bahrain Businesses',
@@ -210,15 +210,15 @@ export const blogPosts = [
       },
       {
         heading: 'Technical SEO Basics Every Bahrain Website Needs',
-        body: `Technical SEO is the foundation. Without it, no amount of content will help you rank. Every Bahrain business website should have:\n\n- A valid SSL certificate (https://)\n- A fast loading time (under 3 seconds on mobile)\n- A sitemap submitted to Google Search Console\n- Clean URL structure with no broken links\n- Proper heading hierarchy (one H1 per page, logical H2/H3 structure)\n- Schema markup for your business type, address, and contact info\n- Mobile-first responsive design\n\nWebiqq builds all of these into every website we deliver — they are not optional add-ons.`,
+        body: `Technical SEO is the foundation. Without it, no amount of content will help you rank. Every Bahrain business website should have:\n\n- A valid SSL certificate (https://)\n- A fast loading time (under 3 seconds on mobile)\n- A sitemap submitted to Google Search Console\n- Clean URL structure with no broken links\n- Proper heading hierarchy (one H1 per page, logical H2/H3 structure)\n- Schema markup for your business type, address, and contact info\n- Mobile-first responsive design\n\nWebiQQ builds all of these into every website we deliver — they are not optional add-ons.`,
       },
       {
         heading: 'Backlinks: The Fastest Way to Build Authority in Bahrain',
-        body: `A backlink is when another website links to yours. Google treats backlinks as votes of confidence. The more high-quality sites that link to you, the higher you rank.\n\nFor Bahrain businesses, practical backlink sources include: your clients' websites (a "built by" or "powered by" credit), local Bahrain business directories, Gulf-based industry publications, and partner companies.\n\nWebiqq places a "Built by Webiqq" credit on client websites — giving our clients a backlink from an established Bahrain web agency, and giving us broad cross-industry link coverage.`,
+        body: `A backlink is when another website links to yours. Google treats backlinks as votes of confidence. The more high-quality sites that link to you, the higher you rank.\n\nFor Bahrain businesses, practical backlink sources include: your clients' websites (a "built by" or "powered by" credit), local Bahrain business directories, Gulf-based industry publications, and partner companies.\n\nWebiQQ places a "Built by WebiQQ" credit on client websites — giving our clients a backlink from an established Bahrain web agency, and giving us broad cross-industry link coverage.`,
       },
       {
         heading: 'How Long Does SEO Take in Bahrain?',
-        body: `For competitive keywords, expect 3–6 months before significant ranking movement. For local Bahrain keywords with lower competition, 4–8 weeks is realistic. Google Business Profile optimization can show results within 2–3 weeks.\n\nSEO is not a one-time task — it is an ongoing system. Businesses that consistently publish useful content, collect reviews, and build links compound their ranking advantage over time.\n\nIf you want help building an SEO-optimized website or improving your current ranking in Bahrain, contact Webiqq at contact@webiqq.com.`,
+        body: `For competitive keywords, expect 3–6 months before significant ranking movement. For local Bahrain keywords with lower competition, 4–8 weeks is realistic. Google Business Profile optimization can show results within 2–3 weeks.\n\nSEO is not a one-time task — it is an ongoing system. Businesses that consistently publish useful content, collect reviews, and build links compound their ranking advantage over time.\n\nIf you want help building an SEO-optimized website or improving your current ranking in Bahrain, contact WebiQQ at contact@webiqq.com.`,
       },
     ],
   },
@@ -231,7 +231,7 @@ export const blogPosts = [
     readTime: '6 min read',
     category: 'Business Software',
     keywords:
-      'custom business software development, business software company, admin dashboard development, CRM development, portal development, workflow software, Webiqq',
+      'custom business software development, business software company, admin dashboard development, CRM development, portal development, workflow software, WebiQQ',
     sections: [
       {
         heading: 'Why Businesses Outgrow Generic Tools',
@@ -242,8 +242,8 @@ export const blogPosts = [
         body: `A custom software system can include admin dashboards, staff portals, CRM workflows, lead tracking, quotation systems, customer records, document flows, reporting panels, notifications, and role-based access.\n\nFor some businesses, it replaces several tools at once. For others, it connects website enquiries, operations, and internal management into one cleaner system.`,
       },
       {
-        heading: 'Why Webiqq Builds These Systems',
-        body: `Webiqq builds custom software for companies that need better control over operations, customer handling, and internal visibility. We build systems that are practical, scalable, and designed around daily usage rather than just visual presentation.\n\nThat includes full-stack architecture, database design, admin logic, user flows, and the public-facing site that feeds into the system.`,
+        heading: 'Why WebiQQ Builds These Systems',
+        body: `WebiQQ builds custom software for companies that need better control over operations, customer handling, and internal visibility. We build systems that are practical, scalable, and designed around daily usage rather than just visual presentation.\n\nThat includes full-stack architecture, database design, admin logic, user flows, and the public-facing site that feeds into the system.`,
       },
       {
         heading: 'Who This Is Best For',
@@ -260,7 +260,7 @@ export const blogPosts = [
     readTime: '5 min read',
     category: 'AI Automation',
     keywords:
-      'AI automation for business, AI chatbot development, workflow automation company, AI business systems, lead automation, Webiqq',
+      'AI automation for business, AI chatbot development, workflow automation company, AI business systems, lead automation, WebiQQ',
     sections: [
       {
         heading: 'AI Should Remove Friction, Not Add Hype',
@@ -271,8 +271,8 @@ export const blogPosts = [
         body: `Useful AI automation can include chatbots for first-response handling, smart forms that organize requests, internal tools that summarize records, workflow routing based on intent, AI-assisted content production, and data systems that reduce manual review.\n\nThese tools are most effective when they are connected to a clear business process rather than deployed in isolation.`,
       },
       {
-        heading: 'How Webiqq Approaches AI Automation',
-        body: `Webiqq builds AI automation as part of a larger business system. That means the AI layer is connected to your forms, services, database, team workflow, and reporting logic.\n\nThe goal is not to add AI for branding. The goal is to reduce delay, improve consistency, and help your team process work faster.`,
+        heading: 'How WebiQQ Approaches AI Automation',
+        body: `WebiQQ builds AI automation as part of a larger business system. That means the AI layer is connected to your forms, services, database, team workflow, and reporting logic.\n\nThe goal is not to add AI for branding. The goal is to reduce delay, improve consistency, and help your team process work faster.`,
       },
       {
         heading: 'What Businesses Gain',
@@ -289,7 +289,7 @@ export const blogPosts = [
     readTime: '6 min read',
     category: 'E-Commerce',
     keywords:
-      'ecommerce website development, B2B ecommerce development, product catalogue website, ordering system development, online store development, Webiqq',
+      'ecommerce website development, B2B ecommerce development, product catalogue website, ordering system development, online store development, WebiQQ',
     sections: [
       {
         heading: 'E-Commerce Is More Than a Storefront',
@@ -304,8 +304,8 @@ export const blogPosts = [
         body: `Product and category pages are often some of the strongest SEO assets a business can own. If each page is structured properly, they can rank for high-intent search terms and bring in qualified enquiries continuously.\n\nThat is why e-commerce development and SEO should be planned together from the beginning.`,
       },
       {
-        heading: 'How Webiqq Builds E-Commerce Systems',
-        body: `Webiqq builds e-commerce and product platforms with both operations and search visibility in mind. We focus on clean information architecture, strong browsing flow, high-intent page structure, and the business logic required behind the scenes.\n\nThat can include carts, accounts, RFQ flows, internal order management, and future-ready backend foundations.`,
+        heading: 'How WebiQQ Builds E-Commerce Systems',
+        body: `WebiQQ builds e-commerce and product platforms with both operations and search visibility in mind. We focus on clean information architecture, strong browsing flow, high-intent page structure, and the business logic required behind the scenes.\n\nThat can include carts, accounts, RFQ flows, internal order management, and future-ready backend foundations.`,
       },
     ],
   },
@@ -318,7 +318,7 @@ export const blogPosts = [
     readTime: '5 min read',
     category: 'Social Media',
     keywords:
-      'social media management company, social media management Bahrain, content planning for business, Instagram management, LinkedIn management, Webiqq',
+      'social media management company, social media management Bahrain, content planning for business, Instagram management, social media content, WebiQQ',
     sections: [
       {
         heading: 'Social Media Needs Structure',
@@ -333,8 +333,8 @@ export const blogPosts = [
         body: `Social media works best when it supports the wider brand system. Posts should strengthen the same services, proof points, and offers that appear on your website and SEO pages.\n\nThat alignment helps customers recognize the brand across search, social, and direct referrals.`,
       },
       {
-        heading: 'How Webiqq Handles It',
-        body: `Webiqq provides social media support as part of a broader digital growth system. That means social content is aligned with your site, your offers, your local visibility, and your long-term brand positioning.\n\nThe result is a cleaner digital presence instead of disconnected channels.`,
+        heading: 'How WebiQQ Handles It',
+        body: `WebiQQ provides social media support as part of a broader digital growth system. That means social content is aligned with your site, your offers, your local visibility, and your long-term brand positioning.\n\nThe result is a cleaner digital presence instead of disconnected channels.`,
       },
     ],
   },
@@ -347,7 +347,7 @@ export const blogPosts = [
     readTime: '5 min read',
     category: 'Maintenance',
     keywords:
-      'server maintenance company, website maintenance service, server deployment support, post launch website support, technical maintenance, Webiqq',
+      'server maintenance company, website maintenance service, server deployment support, post launch website support, technical maintenance, WebiQQ',
     sections: [
       {
         heading: 'Launch Is Not the End of the Work',
@@ -362,8 +362,8 @@ export const blogPosts = [
         body: `Many businesses invest in building a platform but underestimate the value of keeping it healthy. They only notice maintenance when a form stops working, pages slow down, or users start having problems.\n\nA proactive support setup reduces those failures before they become business problems.`,
       },
       {
-        heading: 'How Webiqq Supports Live Systems',
-        body: `Webiqq supports websites and software after launch through technical maintenance, deployment handling, updates, and ongoing improvement work.\n\nThat helps businesses protect the value of what they have already built while continuing to improve performance and visibility.`,
+        heading: 'How WebiQQ Supports Live Systems',
+        body: `WebiQQ supports websites and software after launch through technical maintenance, deployment handling, updates, and ongoing improvement work.\n\nThat helps businesses protect the value of what they have already built while continuing to improve performance and visibility.`,
       },
     ],
   },

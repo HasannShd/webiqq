@@ -29,17 +29,17 @@ function TermsContent() {
     <>
       <p><strong>Last updated: July 2026</strong></p>
       <h2>1. Services</h2>
-      <p>Webiqq provides website development, business software, SEO, AI automation, and digital marketing services to clients on a project or retainer basis. All work is defined by a separate project agreement or proposal agreed upon before work begins.</p>
+      <p>WebiQQ provides website development, business software, SEO, AI automation, and digital marketing services to clients on a project or retainer basis. All work is defined by a separate project agreement or proposal agreed upon before work begins.</p>
       <h2>2. Enquiries &amp; Proposals</h2>
       <p>Submitting a contact form or enquiry does not constitute a binding agreement. Work only begins after both parties have agreed to a formal proposal, scope of work, and payment terms in writing.</p>
       <h2>3. Intellectual Property</h2>
-      <p>Upon full payment, the client receives full ownership of the deliverables specified in the agreed project scope. Webiqq retains the right to display completed work in its portfolio unless otherwise agreed in writing.</p>
+      <p>Upon full payment, the client receives full ownership of the deliverables specified in the agreed project scope. WebiQQ retains the right to display completed work in its portfolio unless otherwise agreed in writing.</p>
       <h2>4. Payment</h2>
       <p>Payment terms are outlined in the project proposal. Work may be paused or terminated if payments are not made in accordance with agreed terms. Deposits are non-refundable once work has commenced.</p>
       <h2>5. Revisions</h2>
       <p>The number of revision rounds is defined in each project agreement. Requests outside the agreed scope may incur additional charges.</p>
       <h2>6. Limitation of Liability</h2>
-      <p>Webiqq is not liable for indirect, incidental, or consequential damages arising from the use of delivered work. Our total liability is limited to the amount paid for the specific service in question.</p>
+      <p>WebiQQ is not liable for indirect, incidental, or consequential damages arising from the use of delivered work. Our total liability is limited to the amount paid for the specific service in question.</p>
       <h2>7. Governing Law</h2>
       <p>These terms are governed by applicable laws. Disputes will be resolved through good-faith negotiation before any formal proceedings.</p>
       <h2>8. Contact</h2>
@@ -56,11 +56,11 @@ export default function LegalPage({ type }) {
   return (
     <main id="main" key={type}>
       <Seo
-        title={`${title} | Webiqq`}
+        title={`${title} | WebiQQ`}
         description={
           isPrivacy
-            ? 'How Webiqq collects, uses, and protects the information you share through our website.'
-            : 'The terms and conditions governing Webiqq services, proposals, payments, and intellectual property.'
+            ? 'How WebiQQ collects, uses, and protects the information you share through our website.'
+            : 'The terms and conditions governing WebiQQ services, proposals, payments, and intellectual property.'
         }
         canonical={`${SITE_URL}${path}`}
         robots="index,follow"

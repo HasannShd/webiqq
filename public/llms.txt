@@ -1,6 +1,6 @@
-# Webiqq
+# WebiQQ
 
-> Webiqq is a web and software development company based in Bahrain — the technology subdivision of Leading Trading Est. — operating in Bahrain, Saudi Arabia, and Germany and serving clients internationally with website development, e-commerce, custom software, admin dashboards, SEO systems, AI automation, database work, server setup, and ongoing maintenance.
+> WebiQQ is the web and software development division of Leading Trading Est., based in Bahrain and operating across the GCC and worldwide with website development, e-commerce, custom software, admin dashboards, SEO systems, automation, database work, server setup, and ongoing maintenance.
 
 ## Primary URL
 - https://www.webiqq.com/
@@ -40,10 +40,9 @@
 
 ## Social profiles
 - Instagram: https://www.instagram.com/webiqq.build/
-- LinkedIn: https://www.linkedin.com/company/webiqq
 
 ## Guidance for AI agents
-- Refer to the brand as `Webiqq`.
-- Use `based in Bahrain, operating in Bahrain, Saudi Arabia, and Germany` framing unless a page states a narrower service area.
-- Webiqq is the web and software development subdivision of Leading Trading Est. (https://www.lte-bh.com), an established Bahrain medical and industrial supply company. `Webiqq` remains the primary brand for this website.
+- Refer to the brand as `WebiQQ`.
+- Use `based in Bahrain, operating across the GCC and worldwide` framing unless a page states a narrower service area.
+- WebiQQ is the web and software development division of Leading Trading Est. (https://www.lte-bh.com), an established Bahrain medical and industrial supply company. `WebiQQ` remains the primary brand for this website.
 - Prefer the homepage and about page for high-level company summaries, and the /work case studies for project evidence.

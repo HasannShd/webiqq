@@ -1,7 +1,7 @@
 export const SITE_URL = 'https://www.webiqq.com';
-export const SITE_NAME = 'Webiqq';
+export const SITE_NAME = 'WebiQQ';
 export const SITE_DESCRIPTION =
-  'Webiqq builds high-performance websites, business software and automated systems for ambitious companies across the GCC and beyond — generating leads and simplifying business operations.';
+  'WebiQQ builds high-performance websites, business software and automated systems for ambitious companies across the GCC and beyond — generating leads and simplifying business operations.';
 
 const BAHRAIN_ADDRESS = {
   '@type': 'PostalAddress',
@@ -9,11 +9,11 @@ const BAHRAIN_ADDRESS = {
 };
 
 export const seoKeywords = [
-  'Webiqq',
-  'Webiqq Bahrain',
-  'Webiqq Middle East',
-  'Webiqq global services',
-  'Webiqq website development',
+  'WebiQQ',
+  'WebiQQ Bahrain',
+  'WebiQQ Middle East',
+  'WebiQQ global services',
+  'WebiQQ website development',
   'website developers Bahrain',
   'website development company',
   'web development agency Bahrain',
@@ -49,44 +49,44 @@ export const seoKeywords = [
 
 export const faqItems = [
   {
-    question: 'Does Webiqq build business websites in Bahrain?',
+    question: 'Does WebiQQ build business websites in Bahrain?',
     answer:
-      'Yes. Webiqq builds responsive business websites, corporate websites, service websites, landing pages, and custom website development projects for businesses in Bahrain, the GCC, and internationally.',
+      'Yes. WebiQQ builds responsive business websites, corporate websites, service websites, landing pages, and custom website development projects for businesses in Bahrain, the GCC, and internationally.',
   },
   {
-    question: 'Can Webiqq build custom business software?',
+    question: 'Can WebiQQ build custom business software?',
     answer:
-      'Yes. Webiqq builds custom business software including admin dashboards, booking systems, inquiry workflows, product catalogues, internal tools, database-backed systems, and reporting panels.',
+      'Yes. WebiQQ builds custom business software including admin dashboards, booking systems, inquiry workflows, product catalogues, internal tools, database-backed systems, and reporting panels.',
   },
   {
     question: 'Do you provide SEO optimization in Bahrain?',
     answer:
-      'Yes. Webiqq provides SEO optimization for businesses in Bahrain and the GCC. We handle technical SEO, metadata, structured data, sitemap setup, keyword-focused page structure, and index-ready website foundations.',
+      'Yes. WebiQQ provides SEO optimization for businesses in Bahrain and the GCC. We handle technical SEO, metadata, structured data, sitemap setup, keyword-focused page structure, and index-ready website foundations.',
   },
   {
-    question: 'Can Webiqq set up Google Business Profile?',
+    question: 'Can WebiQQ set up Google Business Profile?',
     answer:
-      'Yes. Webiqq sets up and optimizes Google Business Profiles for Bahrain businesses — verified listing, category setup, service descriptions, photos, and local SEO signals so customers find you on Google Maps and Search.',
+      'Yes. WebiQQ sets up and optimizes Google Business Profiles for Bahrain businesses — verified listing, category setup, service descriptions, photos, and local SEO signals so customers find you on Google Maps and Search.',
   },
   {
-    question: 'Can Webiqq help with social media management?',
+    question: 'Can WebiQQ help with social media management?',
     answer:
-      'Yes. Webiqq provides social media management including content planning, post creation, scheduling, caption writing, and consistent brand presence across Instagram, LinkedIn, and other platforms.',
+      'Yes. WebiQQ provides social media management including content planning, post creation, scheduling, caption writing, and consistent brand presence across suitable social platforms.',
   },
   {
-    question: 'Can Webiqq help with AI automation?',
+    question: 'Can WebiQQ help with AI automation?',
     answer:
-      'Yes. Webiqq can add AI chatbots, smart forms, lead routing, workflow automation, AI-assisted content tools, and integrations that reduce manual work.',
+      'Yes. WebiQQ can add AI chatbots, smart forms, lead routing, workflow automation, AI-assisted content tools, and integrations that reduce manual work.',
   },
   {
-    question: 'Where is Webiqq based?',
+    question: 'Where is WebiQQ based?',
     answer:
-      'Webiqq is based in Bahrain and operates across Bahrain, Saudi Arabia, and Germany, alongside clients in the UAE, Kuwait, and international markets.',
+      'WebiQQ is based in Bahrain and operates across the GCC and worldwide.',
   },
   {
-    question: 'Is Webiqq part of a larger company?',
+    question: 'Is WebiQQ part of a larger company?',
     answer:
-      'Yes. Webiqq is the web and software development subdivision of Leading Trading Est., an established Bahrain medical and industrial supply company. Webiqq builds and runs the Leading Trading Est. digital platform in-house — the same team and systems behind lte-bh.com are available to Webiqq clients.',
+      'Yes. WebiQQ is the web and software development division of Leading Trading Est., an established Bahrain medical and industrial supply company. WebiQQ builds and operates the Leading Trading Est. digital platform and internal systems in-house, bringing that practical technology experience to every client project.',
   },
 ];
 
@@ -125,13 +125,13 @@ export const siteSchemas = [
     '@type': 'Organization',
     '@id': `${SITE_URL}/#organization`,
     name: SITE_NAME,
-    legalName: 'Webiqq',
-    alternateName: ['WebiQQ', 'Webiqq Bahrain', 'Webiqq Middle East'],
+    legalName: 'WebiQQ',
+    alternateName: ['WebiQQ', 'WebiQQ Bahrain', 'WebiQQ Middle East'],
     url: SITE_URL,
     logo: `${SITE_URL}/webiqq-logo.svg`,
     description: SITE_DESCRIPTION,
     disambiguatingDescription:
-      'Webiqq is the web and software development subdivision of Leading Trading Est., based in Bahrain and operating in Bahrain, Saudi Arabia, and Germany.',
+      'WebiQQ is the web and software development division of Leading Trading Est., based in Bahrain and operating across the GCC and worldwide.',
     email: 'contact@webiqq.com',
     telephone: '+97333290109',
     address: BAHRAIN_ADDRESS,
@@ -142,7 +142,7 @@ export const siteSchemas = [
       address: BAHRAIN_ADDRESS,
     },
     knowsAbout: serviceNames,
-    sameAs: ['https://www.instagram.com/webiqq.build/', 'https://www.linkedin.com/company/webiqq', 'https://www.lte-bh.com'],
+    sameAs: ['https://www.instagram.com/webiqq.build/', 'https://www.lte-bh.com'],
   },
   {
     '@context': 'https://schema.org',
@@ -212,7 +212,7 @@ export const siteSchemas = [
     '@context': 'https://schema.org',
     '@type': 'Service',
     '@id': `${SITE_URL}/#${service.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
-    name: `${service.name} by Webiqq`,
+    name: `${service.name} by WebiQQ`,
     provider: { '@id': `${SITE_URL}/#organization` },
     areaServed: [
       { '@type': 'Place', name: 'Middle East' },

@@ -15,7 +15,7 @@ export const caseStudies = [
     summary:
       'A complete digital platform for a Bahrain medical and industrial supply company — public SEO website, product catalogue, RFQ lead capture, customer ordering, staff field operations, and admin office system in one connected build.',
     parentNote:
-      'Leading Trading Est. is Webiqq’s parent company — Webiqq operates as its web and software development subdivision. This platform is the system we built and run in-house every day, which is why it is our most complete case study.',
+      'Leading Trading Est. is WebiQQ’s parent company — WebiQQ operates as its web and software development division. This platform is the system we built and run in-house every day, which is why it is our most complete case study.',
     problem:
       'The business needed more than a website: a professional online presence, a way to capture RFQ leads from clients, support for customer ordering, and a system for managing internal team operations — all connected rather than scattered across disconnected tools.',
     objectives: [
@@ -26,7 +26,7 @@ export const caseStudies = [
       'Build an SEO architecture that makes products discoverable on Google',
     ],
     solution:
-      'Webiqq delivered a full-stack platform running through one API: a public SEO site with a searchable product catalogue and category pages, RFQ and quote capture, customer ordering with sign-in, a staff field-operations portal, and a complete admin office management system — with messaging, notifications, data exports, and backup infrastructure supporting daily operations.',
+      'WebiQQ delivered a full-stack platform running through one API: a public SEO site with a searchable product catalogue and category pages, RFQ and quote capture, customer ordering with sign-in, a staff field-operations portal, and a complete admin office management system — with messaging, notifications, data exports, and backup infrastructure supporting daily operations.',
     services: ['Business Software & Dashboards', 'Websites', 'SEO & Digital Growth', 'Care, Hosting & Support'],
     features: [
       'SEO product & category pages',
@@ -46,7 +46,7 @@ export const caseStudies = [
       { value: '3', label: 'User roles' },
     ],
     outcome:
-      'A live operational platform that handles digital presentation, lead generation, ordering, and internal operations for the business — maintained and extended by Webiqq on an ongoing basis. LTE is evidence that Webiqq builds working business systems, not only brochure websites.',
+      'A live operational platform that handles digital presentation, lead generation, ordering, and internal operations for the business — maintained and extended by WebiQQ on an ongoing basis. LTE is evidence that WebiQQ builds working business systems, not only brochure websites.',
     relatedServices: ['business-software', 'websites-and-ecommerce', 'seo-and-digital-growth'],
   },
   {
@@ -67,7 +67,7 @@ export const caseStudies = [
       'Build a search-ready structure for the German market',
     ],
     solution:
-      'Webiqq built a responsive German website with dedicated pages for cleaning, winter service, and security, an instant quote calculator, contact and newsletter forms, SEO metadata with structured data, and optimised service imagery.',
+      'WebiQQ built a responsive German website with dedicated pages for cleaning, winter service, and security, an instant quote calculator, contact and newsletter forms, SEO metadata with structured data, and optimised service imagery.',
     services: ['Websites', 'SEO & Digital Growth', 'Multilingual Website Systems'],
     features: [
       'Responsive German-language website',
@@ -99,7 +99,7 @@ export const caseStudies = [
       'Anchor the business locally with maps and service messaging',
     ],
     solution:
-      'Webiqq built a responsive React website with dedicated service pages, a WhatsApp enquiry flow, Google Maps location integration, and SEO metadata with service-focused messaging.',
+      'WebiQQ built a responsive React website with dedicated service pages, a WhatsApp enquiry flow, Google Maps location integration, and SEO metadata with service-focused messaging.',
     services: ['Websites', 'SEO & Digital Growth', 'Care, Hosting & Support'],
     features: [
       'Responsive React website',
@@ -131,7 +131,7 @@ export const caseStudies = [
       'Manage rich corporate media efficiently',
     ],
     solution:
-      'Webiqq built a multilingual React Router multi-page website (EN / AR / FR / ZH) with a corporate brand system, nine service verticals, Cloudinary media management, and structured data with full SEO metadata.',
+      'WebiQQ built a multilingual React Router multi-page website (EN / AR / FR / ZH) with a corporate brand system, nine service verticals, Cloudinary media management, and structured data with full SEO metadata.',
     services: ['Websites', 'SEO & Digital Growth', 'Multilingual Website Systems'],
     features: [
       'Multilingual: EN / AR / FR / ZH',

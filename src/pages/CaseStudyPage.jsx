@@ -20,7 +20,7 @@ export default function CaseStudyPage() {
   return (
     <main id="main" key={study.slug}>
       <Seo
-        title={`${study.client} Case Study | ${study.label} | Webiqq`}
+        title={`${study.client} Case Study | ${study.label} | WebiQQ`}
         description={study.summary}
         canonical={`${SITE_URL}/work/${study.slug}`}
         type="article"
@@ -31,7 +31,7 @@ export default function CaseStudyPage() {
             '@id': `${SITE_URL}/work/${study.slug}#case-study`,
             headline: `${study.client} — ${study.label}`,
             description: study.summary,
-            author: { '@type': 'Organization', name: 'Webiqq', url: SITE_URL },
+            author: { '@type': 'Organization', name: 'WebiQQ', url: SITE_URL },
             publisher: { '@id': `${SITE_URL}/#organization` },
             mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/work/${study.slug}` },
             url: `${SITE_URL}/work/${study.slug}`,

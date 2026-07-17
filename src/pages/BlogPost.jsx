@@ -17,7 +17,7 @@ export default function BlogPost() {
   return (
     <main id="main" key={post.slug}>
       <Seo
-        title={`${post.title} | Webiqq`}
+        title={`${post.title} | WebiQQ`}
         description={post.description}
         canonical={`${SITE_URL}/blog/${post.slug}`}
         image={`${SITE_URL}/webiqq-logo.svg`}
@@ -33,10 +33,10 @@ export default function BlogPost() {
             datePublished: post.date,
             dateModified: post.date,
             keywords: post.keywords,
-            author: { '@type': 'Organization', name: 'Webiqq', url: SITE_URL },
+            author: { '@type': 'Organization', name: 'WebiQQ', url: SITE_URL },
             publisher: {
               '@type': 'Organization',
-              name: 'Webiqq',
+              name: 'WebiQQ',
               logo: { '@type': 'ImageObject', url: `${SITE_URL}/webiqq-logo.svg` },
             },
             mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${post.slug}` },
@@ -46,7 +46,7 @@ export default function BlogPost() {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Webiqq', item: SITE_URL },
+              { '@type': 'ListItem', position: 1, name: 'WebiQQ', item: SITE_URL },
               { '@type': 'ListItem', position: 2, name: 'Insights', item: `${SITE_URL}/insights` },
               { '@type': 'ListItem', position: 3, name: post.title, item: `${SITE_URL}/blog/${post.slug}` },
             ],
@@ -75,7 +75,7 @@ export default function BlogPost() {
           </div>
           <div className="blog-cta-box">
             <h3>Ready to grow your business online?</h3>
-            <p>Webiqq is a web and software development company based in Bahrain, operating in Bahrain, Saudi Arabia, and Germany. Get in touch to discuss your project.</p>
+            <p>WebiQQ is the web and software development division of Leading Trading Est., based in Bahrain and operating across the GCC and worldwide. Get in touch to discuss your project.</p>
             <Link className="blog-cta-btn" to="/contact">
               Start a Project
               <FiArrowRight aria-hidden="true" />
@@ -85,7 +85,7 @@ export default function BlogPost() {
 
         {others.length > 0 && (
           <aside className="blog-related">
-            <h2>More from Webiqq</h2>
+            <h2>More from WebiQQ</h2>
             <div className="blog-related-grid">
               {others.map((p) => (
                 <Link key={p.slug} className="blog-related-card" to={`/blog/${p.slug}`}>

@@ -16,8 +16,8 @@ export default function InsightsPage() {
   return (
     <main id="main">
       <Seo
-        title="Insights | Website, SEO & Growth Guides for Businesses | Webiqq"
-        description="Practical guides from Webiqq on website development, SEO, Google Business Profile, e-commerce, automation, and maintenance — written for businesses in Bahrain and the GCC."
+        title="Insights | Website, SEO & Growth Guides for Businesses | WebiQQ"
+        description="Practical guides from WebiQQ on website development, SEO, Google Business Profile, e-commerce, automation, and maintenance — written for businesses in Bahrain and the GCC."
         canonical={`${SITE_URL}/insights`}
         jsonLd={[
           {
@@ -32,7 +32,7 @@ export default function InsightsPage() {
             '@context': 'https://schema.org',
             '@type': 'Blog',
             '@id': `${SITE_URL}/insights#blog`,
-            name: 'Webiqq Insights',
+            name: 'WebiQQ Insights',
             url: `${SITE_URL}/insights`,
             publisher: { '@id': `${SITE_URL}/#organization` },
             blogPost: posts.map((post) => ({

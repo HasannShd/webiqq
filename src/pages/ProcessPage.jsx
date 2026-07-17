@@ -37,8 +37,8 @@ export default function ProcessPage() {
   return (
     <main id="main">
       <Seo
-        title="Our Process | How Webiqq Delivers Projects"
-        description="How Webiqq works: discover, plan, build, optimise, grow. A milestone-based development process with full client ownership of domain, code, and hosting."
+        title="Our Process | How WebiQQ Delivers Projects"
+        description="How WebiQQ works: discover, plan, build, optimise, grow. A milestone-based development process with full client ownership of domain, code, and hosting."
         canonical={`${SITE_URL}/process`}
         jsonLd={[
           {

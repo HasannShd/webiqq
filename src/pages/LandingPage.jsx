@@ -16,13 +16,13 @@ export default function LandingPage() {
   const canonical = `${SITE_URL}/solutions/${page.slug}`;
 
   return <main id="main">
-    <Seo title={`${page.title} | Webiqq`} description={`${page.solution} Suitable for ${page.audience.toLowerCase()}`} canonical={canonical} jsonLd={[{ '@context': 'https://schema.org', '@type': 'Service', name: page.title, description: page.solution, provider: { '@id': `${SITE_URL}/#organization` }, areaServed: 'Worldwide', url: canonical }, { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL }, { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` }, { '@type': 'ListItem', position: 3, name: page.title, item: canonical }] }]} />
+    <Seo title={`${page.title} | WebiQQ`} description={`${page.solution} Suitable for ${page.audience.toLowerCase()}`} canonical={canonical} jsonLd={[{ '@context': 'https://schema.org', '@type': 'Service', name: page.title, description: page.solution, provider: { '@id': `${SITE_URL}/#organization` }, areaServed: 'Worldwide', url: canonical }, { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL }, { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` }, { '@type': 'ListItem', position: 3, name: page.title, item: canonical }] }]} />
     <PageIntro breadcrumbs={[{ label: 'Home', to: '/' }, { label: 'Services', to: '/services' }, { label: page.title }]} eyebrow="Specialist solution" title={page.title} lead={page.audience}>
       <div className="hero-actions"><Link className="primary-button" to="/contact" state={{ service: page.title }}>Start a Project <FiArrowRight aria-hidden="true" /></Link><Link className="secondary-button" to={`/services/${service.slug}`}>Explore {service.shortTitle}</Link></div>
     </PageIntro>
     <section className="section-shell service-detail"><div className="service-detail-grid reveal is-visible">
       <article className="detail-block detail-block--wide"><h2>The common problem</h2><p>{page.problem}</p></article>
-      <article className="detail-block detail-block--wide detail-block--accent"><h2>Webiqq&rsquo;s approach</h2><p>{page.solution}</p></article>
+      <article className="detail-block detail-block--wide detail-block--accent"><h2>WebiQQ&rsquo;s approach</h2><p>{page.solution}</p></article>
       <article className="detail-block"><h2>Main deliverables</h2><List items={page.deliverables} /></article>
       <article className="detail-block"><h2>Expected outcomes</h2><List items={page.outcomes} /></article>
     </div></section>

@@ -46,7 +46,7 @@ export function CtaBand({
   secondaryTo = '/work',
 }) {
   return (
-    <section className="section-shell final-cta" aria-label="Start a project with Webiqq">
+    <section className="section-shell final-cta" aria-label="Start a project with WebiQQ">
       <p className="eyebrow">Operating across the GCC and worldwide</p>
       <h2>{title}</h2>
       <p>{text}</p>

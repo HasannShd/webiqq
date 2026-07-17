@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 
-const DEFAULT_TITLE = 'Webiqq | Websites, Business Software & Automation';
+const DEFAULT_TITLE = 'WebiQQ | Websites, Business Software & Automation';
 const DEFAULT_DESCRIPTION =
-  'Webiqq builds high-performance websites, business software and automated systems for ambitious companies across the GCC and beyond.';
+  'WebiQQ builds high-performance websites, business software and automated systems for ambitious companies across the GCC and beyond.';
 const DEFAULT_ALTERNATES = [];
 
 export default function Seo({

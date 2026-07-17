@@ -5,11 +5,7 @@ import {
   FiArrowUpRight,
   FiCheckCircle,
   FiCode,
-  FiDatabase,
-  FiExternalLink,
   FiGlobe,
-  FiGrid,
-  FiLayers,
   FiMapPin,
   FiSearch,
   FiTool,
@@ -19,7 +15,7 @@ import Seo from '../components/Common/Seo.jsx';
 import { SectionHeader, CtaBand } from '../components/Common/PagePrimitives.jsx';
 import { useReveal } from '../hooks/useReveal.js';
 import { serviceLines } from '../data/services.js';
-import { caseStudies, getCaseStudy } from '../data/caseStudies.js';
+import { caseStudies } from '../data/caseStudies.js';
 import { valueCards, processSteps } from '../data/webiqqContent.js';
 import { SITE_DESCRIPTION, SITE_URL, faqItems, seoKeywords, siteSchemas } from '../data/seo.js';
 import { blogPosts } from '../data/blogContent.js';
@@ -36,7 +32,7 @@ const serviceIcons = {
 
 function ClientBoard() {
   return (
-    <div className="client-board" aria-label="Selected client work by Webiqq">
+    <div className="client-board" aria-label="Selected client work by WebiQQ">
       <div className="client-board-header">
         <span>Selected Work</span>
         <Link className="client-board-more" to="/work">
@@ -60,7 +56,7 @@ function ClientBoard() {
       <div className="client-board-footer">
         <span>
           <FiGlobe aria-hidden="true" />
-          Bahrain · Saudi Arabia · Germany
+          GCC &amp; worldwide
         </span>
         <span className="client-board-note">& more projects delivered</span>
       </div>
@@ -81,7 +77,7 @@ function HeroSection() {
         <p className="eyebrow">Web &amp; software development company</p>
         <h1>High-Performance Websites, Software and <em>Automated Systems</em></h1>
         <p className="hero-subtitle">
-          Webiqq builds high-performance websites, business software and automated systems for ambitious companies
+          WebiQQ builds high-performance websites, business software and automated systems for ambitious companies
           across the GCC and beyond. Digital systems that generate leads and simplify business operations.
         </p>
         <div className="hero-actions">
@@ -193,7 +189,7 @@ function OutcomesSection() {
         <p className="eyebrow">Business outcomes</p>
         <h2 id="value-title">Built to Do a Job — <em>Not Just to Look Good.</em></h2>
         <p>
-          Every Webiqq build is designed around a business outcome: presenting the company professionally, being found
+          Every WebiQQ build is designed around a business outcome: presenting the company professionally, being found
           on Google, converting attention into enquiries, and reducing manual work inside the business.
         </p>
       </div>
@@ -242,113 +238,32 @@ function ProcessPreview() {
   );
 }
 
-function FeaturedCaseStudy() {
-  const lte = getCaseStudy('leading-trading-est');
-
+function LeadingConnection() {
   return (
-    <section className="section-shell case-study" id="showcase" aria-labelledby="case-title">
-      <div className="case-copy">
-        <div className="case-eyebrow-row">
-          <p className="eyebrow">Flagship Case Study</p>
-        </div>
-        <a className="parent-org-badge" href="https://www.lte-bh.com" target="_blank" rel="noopener noreferrer">
-          <span>Our Parent Company</span>
-          <strong>Leading Trading Est.</strong>
-        </a>
-        <h2 id="case-title">Leading Trading Est. — <em>Complete Business Platform</em></h2>
-        <p className="section-lead">{lte.summary}</p>
-        <div className="case-points">
-          <article className="case-point case-point--problem">
-            <h3>Challenge</h3>
-            <p>{lte.problem}</p>
-          </article>
-          <article className="case-point case-point--solution">
-            <h3>Build</h3>
-            <p>{lte.solution}</p>
-          </article>
-          <article className="case-point case-point--result">
-            <h3>Outcome</h3>
-            <p>{lte.outcome}</p>
-          </article>
-        </div>
-        <div className="hero-actions">
-          <Link className="primary-button" to="/work/leading-trading-est">
-            Read the Case Study
-            <FiArrowRight aria-hidden="true" />
-          </Link>
-          <a
-            className="secondary-button"
-            href={lte.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="View the live Leading Trading Est. website"
-          >
-            View Live Site
-            <FiExternalLink aria-hidden="true" />
+    <section className="section-shell parent-connection reveal" aria-labelledby="parent-connection-title">
+      <div className="parent-connection-copy">
+        <p className="eyebrow">Built within a real Bahrain business</p>
+        <h2 id="parent-connection-title">
+          WebiQQ is the web and software development division of{' '}
+          <a href="https://www.lte-bh.com" target="_blank" rel="noopener noreferrer">
+            Leading Trading Est.
           </a>
-        </div>
+        </h2>
+        <p>
+          Leading Trading Est. is our parent company—not simply a client or partner. WebiQQ was built from inside the
+          business to create and operate its websites, catalogue, quotation workflows, staff tools, and internal
+          systems. That daily operational responsibility shapes how we build dependable systems for every client.
+        </p>
       </div>
-
-      <div className="case-visual" aria-label="Leading Trading Est. platform overview">
-        <div className="case-browser-wrap">
-          <div className="case-browser">
-            <div className="case-browser-bar">
-              <div className="window-dots"><span /><span /><span /></div>
-              <div className="case-url-bar">
-                <FiGlobe aria-hidden="true" />
-                <span>{lte.liveHost}</span>
-                <span className="case-url-live">Live</span>
-              </div>
-            </div>
-            <div className="case-screen">
-              <div className="case-mini-hero">
-                <div className="case-mini-nav">
-                  <span /><span /><span />
-                  <div className="case-mini-nav-cta" />
-                </div>
-                <div className="case-mini-copy">
-                  <div className="case-skel case-skel--tag" />
-                  <div className="case-skel case-skel--h1" />
-                  <div className="case-skel case-skel--p" />
-                  <div className="case-skel case-skel--p case-skel--short" />
-                </div>
-              </div>
-              <div className="case-mini-cats">
-                {['Medical', 'Dental', 'Lab', 'Safety', 'Industrial', 'PPE'].map((cat) => (
-                  <span key={cat}>{cat}</span>
-                ))}
-              </div>
-              <div className="case-mini-products">
-                {[1, 2, 3].map((i) => (
-                  <div className="case-mini-product" key={i}>
-                    <div className="case-mini-product-img" />
-                    <div className="case-skel case-skel--line" />
-                    <div className="case-skel case-skel--line case-skel--short" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="case-stat case-stat--products" aria-hidden="true">
-            <FiDatabase aria-hidden="true" />
-            <div><strong>200+</strong><span>Products</span></div>
-          </div>
-          <div className="case-stat case-stat--cats" aria-hidden="true">
-            <FiGrid aria-hidden="true" />
-            <div><strong>12+</strong><span>Categories</span></div>
-          </div>
-          <div className="case-stat case-stat--admin" aria-hidden="true">
-            <FiLayers aria-hidden="true" />
-            <div><strong>3</strong><span>Auth Roles</span></div>
-          </div>
-        </div>
-
-        <ul className="feature-list">
-          {lte.features.map((feature) => (
-            <li key={feature}>{feature}</li>
-          ))}
-        </ul>
+      <div className="parent-connection-actions">
+        <Link className="primary-button" to="/about">
+          About WebiQQ
+          <FiArrowRight aria-hidden="true" />
+        </Link>
+        <Link className="text-arrow-link" to="/work/leading-trading-est">
+          View the Leading Trading Est. case study
+          <FiArrowRight aria-hidden="true" />
+        </Link>
       </div>
     </section>
   );
@@ -361,7 +276,7 @@ const trustPoints = [
   },
   {
     title: 'Real operational systems',
-    text: 'Webiqq runs live business platforms — catalogues, ordering, portals — not just landing pages.',
+    text: 'WebiQQ runs live business platforms — catalogues, ordering, portals — not just landing pages.',
   },
   {
     title: 'SEO built in from day one',
@@ -377,7 +292,7 @@ function TrustSection() {
   return (
     <section className="section-shell" aria-labelledby="trust-title">
       <SectionHeader
-        eyebrow="Why Webiqq"
+        eyebrow="Why WebiQQ"
         title={<>A Development Partner, <em>Not a Template Seller</em></>}
         id="trust-title"
       />
@@ -469,7 +384,7 @@ export default function HomePage() {
   return (
     <main id="main">
       <Seo
-        title="Webiqq | Websites, Business Software & Automation"
+        title="WebiQQ | Websites, Business Software & Automation"
         description={SITE_DESCRIPTION}
         canonical={`${SITE_URL}/`}
         image={`${SITE_URL}/webiqq-logo.svg`}
@@ -482,7 +397,7 @@ export default function HomePage() {
       <ServicesOverview />
       <OutcomesSection />
       <ProcessPreview />
-      <FeaturedCaseStudy />
+      <LeadingConnection />
       <TrustSection />
       <FaqSection />
       <InsightsPreview />

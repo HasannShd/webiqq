@@ -13,22 +13,22 @@ const { render } = await import(ssr);
 const site = 'https://www.webiqq.com';
 
 const base = [
-  ['/', 'Webiqq | Websites, Business Software & Automation', 'Webiqq builds high-performance websites, business software and automated systems for ambitious companies across the GCC and beyond.'],
-  ['/services', 'Services | Websites, Software, SEO & Automation | Webiqq', 'Explore Webiqq services for websites, business software, SEO and Google growth, automation, multilingual systems, hosting and ongoing support.'],
-  ['/work', 'Selected Web Development & Software Work | Webiqq', 'Explore verified Webiqq website and software projects for businesses in Bahrain, Germany, and international markets.'],
-  ['/process', 'How Webiqq Projects Work | Webiqq', 'A clear project process from discovery and scope through design, development, launch, training, and ongoing improvement.'],
-  ['/about', 'About Webiqq | Web & Software Development Company', 'Webiqq is a Bahrain-based web and software development company serving ambitious businesses across the GCC and beyond.'],
-  ['/insights', 'Web Development, SEO & Software Insights | Webiqq', 'Practical guidance about websites, software, SEO, automation, e-commerce, Google visibility, and digital operations.'],
-  ['/contact', 'Start a Project | Contact Webiqq', 'Tell Webiqq about your website, software, SEO, multilingual, automation, or support project.'],
-  ['/privacy', 'Privacy Policy | Webiqq', 'How Webiqq handles information submitted through this website.'],
-  ['/terms', 'Terms and Conditions | Webiqq', 'Terms governing use of the Webiqq website and project enquiries.'],
+  ['/', 'WebiQQ | Websites, Business Software & Automation', 'WebiQQ builds high-performance websites, business software and automated systems for ambitious companies across the GCC and beyond.'],
+  ['/services', 'Services | Websites, Software, SEO & Automation | WebiQQ', 'Explore WebiQQ services for websites, business software, SEO and Google growth, automation, multilingual systems, hosting and ongoing support.'],
+  ['/work', 'Selected Web Development & Software Work | WebiQQ', 'Explore verified WebiQQ website and software projects for businesses in Bahrain, Germany, and international markets.'],
+  ['/process', 'How WebiQQ Projects Work | WebiQQ', 'A clear project process from discovery and scope through design, development, launch, training, and ongoing improvement.'],
+  ['/about', 'About WebiQQ | Technology Division of Leading Trading Est.', 'WebiQQ is the web and software development division of Leading Trading Est., based in Bahrain and operating across the GCC and worldwide.'],
+  ['/insights', 'Web Development, SEO & Software Insights | WebiQQ', 'Practical guidance about websites, software, SEO, automation, e-commerce, Google visibility, and digital operations.'],
+  ['/contact', 'Start a Project | Contact WebiQQ', 'Tell WebiQQ about your website, software, SEO, multilingual, automation, or support project.'],
+  ['/privacy', 'Privacy Policy | WebiQQ', 'How WebiQQ handles information submitted through this website.'],
+  ['/terms', 'Terms and Conditions | WebiQQ', 'Terms governing use of the WebiQQ website and project enquiries.'],
 ];
 
 const routes = [
   ...base,
   ...serviceLines.map((item) => [`/services/${item.slug}`, item.metaTitle, item.metaDescription]),
-  ...caseStudies.map((item) => [`/work/${item.slug}`, `${item.client} Case Study | Webiqq`, item.summary]),
-  ...landingPages.map((item) => [`/solutions/${item.slug}`, `${item.title} | Webiqq`, item.solution]),
+  ...caseStudies.map((item) => [`/work/${item.slug}`, `${item.client} Case Study | WebiQQ`, item.summary]),
+  ...landingPages.map((item) => [`/solutions/${item.slug}`, `${item.title} | WebiQQ`, item.solution]),
   ...blogPosts.map((item) => [`/blog/${item.slug}`, item.title, item.description]),
 ];
 

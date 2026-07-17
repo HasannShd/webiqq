@@ -14,8 +14,8 @@ export default function AboutPage() {
   return (
     <main id="main">
       <Seo
-        title="About Webiqq | Web & Software Development Company in Bahrain"
-        description="Webiqq is a web and software development company based in Bahrain, operating in Bahrain, Saudi Arabia, and Germany. Learn how we work, what clients own, and the experience behind our projects."
+        title="About WebiQQ | Technology Division of Leading Trading Est."
+        description="WebiQQ is the web and software development division of Leading Trading Est., building and operating websites, software, and digital systems from Bahrain for the GCC and worldwide."
         canonical={`${SITE_URL}/about`}
         jsonLd={[
           {
@@ -30,9 +30,9 @@ export default function AboutPage() {
       />
       <PageIntro
         breadcrumbs={[{ label: 'Home', to: '/' }, { label: 'About' }]}
-        eyebrow="About Webiqq"
-        title={<>A Development Company Built on <em>Real Business Systems</em></>}
-        lead="Webiqq is a web and software development company based in Bahrain, operating across Bahrain, Saudi Arabia, and Germany. We're the people who answer your emails, write the code, and stay around after launch — the same team, start to finish."
+        eyebrow="About WebiQQ"
+        title={<>The Web &amp; Software Development Division of <em>Leading Trading Est.</em></>}
+        lead="WebiQQ was built inside Leading Trading Est. to develop and operate the company’s digital platform and internal systems. Today, that same hands-on technology team builds websites, software, and automated systems for companies across the GCC and worldwide."
       />
 
       <section className="section-shell about-section" aria-labelledby="about-story-title">
@@ -43,7 +43,7 @@ export default function AboutPage() {
         />
         <div className="about-grid reveal">
           <article className="about-card">
-            <h3>What Webiqq does</h3>
+            <h3>What WebiQQ does</h3>
             <p>
               We build business websites, e-commerce platforms, custom software, admin dashboards, SEO systems, and
               practical automation — plus the backend infrastructure that keeps those systems running after launch.
@@ -52,14 +52,14 @@ export default function AboutPage() {
           <article className="about-card">
             <h3>Where we work</h3>
             <p>
-              Webiqq is based in Bahrain and operates across Bahrain, Saudi Arabia, and Germany, alongside international
-              clients — our delivered work spans service industries, B2B operations, and corporate groups.
+              WebiQQ is based in Bahrain and operates across the GCC and worldwide. Our delivered work spans service
+              industries, B2B operations, and international corporate groups.
             </p>
           </article>
           <article className="about-card">
-            <h3>Part of Leading Trading Est.</h3>
+            <h3>Built within Leading Trading Est.</h3>
             <p>
-              Webiqq is the web and software development subdivision of{' '}
+              WebiQQ is the web and software development division of{' '}
               <a href="https://www.lte-bh.com" target="_blank" rel="noopener noreferrer">Leading Trading Est.</a>, an
               established Bahrain medical and industrial supply company. We built and operate LTE&rsquo;s full digital
               platform in-house — running a real business system daily shapes how we build for clients.
@@ -96,7 +96,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-shell service-detail" aria-label="How Webiqq works">
+      <section className="section-shell service-detail" aria-label="How WebiQQ works">
         <div className="service-detail-grid reveal">
           <article className="detail-block">
             <h2>How we work</h2>
