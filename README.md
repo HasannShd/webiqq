@@ -1,16 +1,23 @@
-# React + Vite
+# WebiQQ Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Production marketing website for [WebiQQ](https://www.webiqq.com/), a Bahrain-based web and software development company serving the GCC and international clients.
 
-Currently, two official plugins are available:
+## Development and release
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+npm run qa
+```
 
-## React Compiler
+The production build creates the client bundle, an SSR bundle, and prerendered HTML for public routes. Generated route HTML, metadata, structured data, sitemap, and robots directives are part of the release contract.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key content
 
-## Expanding the ESLint configuration
+- Services: `src/data/services.js`
+- Case studies: `src/data/caseStudies.js`
+- Insights: `src/data/blogContent.js`
+- SEO landing pages: `src/data/landingPages.js`
+- Authority and outreach program: `docs/authority/`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Do not add unverified clients, results, testimonials, technologies, or business claims. External outreach and third-party listings require business approval before submission.

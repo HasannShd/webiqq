@@ -1,5 +1,91 @@
 export const blogPosts = [
   {
+    slug: 'gcc-multilingual-website-readiness-checklist',
+    title: 'GCC Multilingual Website Readiness Checklist',
+    description: 'A practical checklist for planning Arabic, English, and multilingual websites with correct URLs, SEO, content workflows, forms, and intentional RTL and LTR experiences.',
+    date: '2026-07-17',
+    readTime: '8 min read',
+    category: 'Multilingual Websites',
+    keywords: 'multilingual website checklist, Arabic English website, GCC multilingual website, RTL website development, hreflang implementation, multilingual SEO',
+    sections: [
+      {
+        heading: 'Multilingual Development Is More Than Translation',
+        body: `Translating a page changes its words. Building a multilingual website changes the system that stores, serves, navigates, indexes, and maintains those words. A reliable multilingual site needs a clear language model before design or development begins.\n\nThis checklist is designed for GCC businesses planning Arabic and English websites, while keeping the architecture ready for additional languages later.`,
+      },
+      {
+        heading: '1. Define Languages, Markets, and Content Ownership',
+        body: `List the languages required at launch and the markets each version serves. Decide whether every page will exist in every language, who supplies or approves translated content, and how future updates will stay aligned.\n\nDo not assume that one Arabic version suits every market or that machine translation is ready to publish without review. WebiQQ can build and integrate the multilingual system; client-provided or separately arranged translation should have a named reviewer.`,
+      },
+      {
+        heading: '2. Give Each Language a Stable URL',
+        body: `Use crawlable, language-specific URLs such as /en/ and /ar/ when the project requires separate language versions. Each translated page should have its own canonical URL and link to its genuine equivalents through hreflang.\n\nAvoid changing visible text without changing the URL. That makes sharing, analytics, indexing, and returning to a selected language less reliable. The language choice should remain active as visitors navigate.`,
+      },
+      {
+        heading: '3. Design RTL and LTR Intentionally',
+        body: `Arabic interfaces need more than a mirrored layout. Check reading order, alignment, icon direction, navigation, number display, mixed Arabic and Latin text, tables, carousels, and form fields.\n\nChoose typefaces with strong Arabic and Latin coverage, test real content at mobile widths, and change direction-sensitive controls only when their meaning requires it.`,
+      },
+      {
+        heading: '4. Localise the Entire Customer Journey',
+        body: `Translate navigation, buttons, validation messages, confirmation states, cookie notices, image alternatives, emails, and error pages—not only headings and paragraphs. Forms may need language-specific options, telephone formats, market fields, and calls to action.\n\nFor e-commerce, include product information, categories, filters, checkout guidance, policies, currency presentation, and transactional messages in the content plan.`,
+      },
+      {
+        heading: '5. Build a Maintainable Content Workflow',
+        body: `Store interface copy and page content in structured language resources or a multilingual content-management system. Avoid scattering visible copy through components. Editors should be able to see which translations are complete, outdated, or awaiting approval.\n\nPlan fallbacks carefully. Showing approved English content is often safer than silently publishing an unreviewed translation, but the expected behaviour should be agreed before launch.`,
+      },
+      {
+        heading: '6. Validate Multilingual SEO',
+        body: `Give every language version a useful title and description written for that audience. Confirm canonical and hreflang relationships, include language URLs in the sitemap, and keep structured data consistent with what visitors can see.\n\nBefore launch, crawl each language separately and check status codes, internal links, heading order, indexability, and duplicate pages. Hreflang helps search engines understand equivalent pages; it does not replace clear content or correct canonicals.`,
+      },
+      {
+        heading: '7. Test With Real Devices and Reviewers',
+        body: `Test desktop and mobile navigation, keyboard access, screen-reader labels, form submission, language persistence, long translations, mixed-direction text, and slow connections. Ask a fluent reviewer to check clarity and cultural fit, not just spelling.\n\nA multilingual launch is ready when each supported language provides a complete, usable journey and the team has a process for keeping it current.`,
+      },
+    ],
+  },
+  {
+    slug: 'gcc-website-performance-readiness-guide',
+    title: 'GCC Website Performance Readiness Guide',
+    description: 'A practical, evidence-led framework for auditing mobile speed, stability, interaction responsiveness, assets, forms, and measurement before a GCC website launch.',
+    date: '2026-07-17',
+    readTime: '7 min read',
+    category: 'Website Performance',
+    keywords: 'GCC website performance, website performance audit, Core Web Vitals, mobile website speed, Bahrain website audit, Saudi website performance',
+    sections: [
+      {
+        heading: 'Performance Should Be Measured, Not Assumed',
+        body: `A website can feel fast on a developer's laptop and still be difficult to use on a mobile connection. Performance work should start with repeatable measurements and finish with checks on real pages, devices, and journeys.\n\nThis guide is a readiness framework rather than a claim that every GCC user has the same device or network. Record the test conditions whenever results are compared.`,
+      },
+      {
+        heading: '1. Choose Representative Pages and Journeys',
+        body: `Test the homepage, a service or product page, a content-heavy page, and the main enquiry or checkout journey. Include the pages receiving advertising or search traffic.\n\nMeasure both a first visit with an empty cache and a returning visit. Use mobile conditions as the baseline, then check larger screens for layout and asset differences.`,
+      },
+      {
+        heading: '2. Review Core Web Vitals and Supporting Signals',
+        body: `Largest Contentful Paint helps assess loading, Interaction to Next Paint helps assess responsiveness, and Cumulative Layout Shift helps assess visual stability. Use field data when enough real-user data exists and controlled lab tests to diagnose specific problems.\n\nAlso inspect server response time, render-blocking resources, total JavaScript, image weight, font loading, third-party scripts, and failed network requests. One score alone does not explain the customer experience.`,
+      },
+      {
+        heading: '3. Control Images, Fonts, and Layout Movement',
+        body: `Serve images at suitable dimensions and formats, provide width and height information, prioritise the main above-the-fold image, and defer non-critical media. Avoid downloading large desktop images for small screens.\n\nLimit font families and weights, use sensible fallbacks, and prevent late-loading banners, embeds, or images from moving content after it appears.`,
+      },
+      {
+        heading: '4. Keep JavaScript and Third Parties Accountable',
+        body: `Ship only the code needed for the current page and delay non-essential widgets. Analytics, chat, advertising, maps, and social embeds should each have a clear business purpose and an owner.\n\nCheck whether consent tools, tracking tags, and integrations block interaction or create errors. Removing an unused script is often safer and more maintainable than trying to optimise it indefinitely.`,
+      },
+      {
+        heading: '5. Test Conversion Paths Under Real Conditions',
+        body: `A fast hero section is not enough if the contact form stalls. Test validation, file uploads, WhatsApp and telephone links, payment or booking hand-offs, confirmation messages, and error recovery on mobile.\n\nConfirm that repeated taps do not create duplicate submissions and that users receive a clear outcome when a network request fails.`,
+      },
+      {
+        heading: '6. Record a Baseline and Recheck After Changes',
+        body: `For each page, record the URL, date, device profile, connection profile, test location, tool version, key measurements, notable failures, and screenshots. Keep raw evidence so later comparisons are credible.\n\nRe-test after deployments and major content, analytics, or integration changes. A performance budget for images, scripts, and layout stability helps prevent gradual regression.`,
+      },
+      {
+        heading: 'Turning the Framework Into GCC Research',
+        body: `A publishable regional benchmark should use a disclosed sample, consistent conditions, repeat tests, and transparent limitations. Businesses should be grouped carefully rather than ranked from a single run.\n\nWebiQQ is using this framework as the foundation for future GCC website-performance research. Any published findings should link to the methodology and include only measurements that can be reproduced.`,
+      },
+    ],
+  },
+  {
     slug: 'business-website-development-company',
     title: 'Choosing a Business Website Development Company for Long-Term Growth',
     description:

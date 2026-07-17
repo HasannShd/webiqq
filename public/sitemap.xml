@@ -102,8 +102,20 @@
   </url>
   <url>
     <loc>https://www.webiqq.com/insights</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.webiqq.com/blog/gcc-multilingual-website-readiness-checklist</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.webiqq.com/blog/gcc-website-performance-readiness-guide</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>

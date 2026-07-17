@@ -1,0 +1,8 @@
+id,target,contact,asset_or_pitch,target_url,status,first_contact,follow_up,published_url,indexed,referral_sessions,enquiries,notes
+OUT-001,StartUp Bahrain,help@startupbahrain.com,GCC multilingual website readiness checklist,https://startupbahrain.com/contact,Awaiting approval,,,,No,0,0,
+OUT-002,Bizpreneur Middle East,editor@bizpreneurme.com,Multilingual website launch failures,https://www.bizpreneurme.com/magazine/contribute/,Awaiting approval,,,,No,0,0,
+OUT-003,BTECH / BITEX,info@btechbh.org,Website performance checklist,https://www.bitexbh.com/contact-us,Researching fit,,,,No,0,0,
+OUT-004,Leading Trading Est.,Client relationship,Verified WebiQQ attribution,https://www.webiqq.com/work/leading-trading-est,Live in JS bundle,,,https://www.lte-bh.com,Unknown,0,0,Needs initial-HTML rendering
+OUT-005,VIEL Gebäudeservice,Client relationship,Verified WebiQQ attribution,https://www.webiqq.com/work/viel-gebaeudeservice,Live in JS bundle,,,https://www.viel-gs.de,Unknown,0,0,Needs initial-HTML rendering
+OUT-006,Peak Elite,Client relationship,Verified WebiQQ attribution,https://www.webiqq.com/work/peak-elite,Live in JS bundle,,,https://www.peakelitebh.com,Unknown,0,0,Needs initial-HTML rendering
+OUT-007,AlBourshaid,Client relationship,Verified WebiQQ attribution,https://www.webiqq.com/work/albourshaid-global,Live in JS bundle,,,https://www.albourshaid.com,Unknown,0,0,Needs initial-HTML rendering
