@@ -4,6 +4,7 @@ import { serviceLines } from '../src/data/services.js';
 import { caseStudies } from '../src/data/caseStudies.js';
 import { landingPages } from '../src/data/landingPages.js';
 import { blogPosts } from '../src/data/blogContent.js';
+import { siteSchemas } from '../src/data/seo.js';
 
 const root = resolve(import.meta.dirname, '..');
 const dist = resolve(root, 'dist');
@@ -50,6 +51,16 @@ for (const [path, title, description] of routes) {
     ...(type === 'Service' ? { provider: { '@id': `${site}/#organization` }, areaServed: [{ '@type': 'Place', name: 'GCC' }, 'Worldwide'] } : {}),
     ...(type === 'Article' ? { publisher: { '@id': `${site}/#organization` }, mainEntityOfPage: canonical } : {}),
   };
+  const homepageSchemaMarkup = path === '/'
+    ? siteSchemas
+      .filter((schema) => schema['@type'] !== 'ProfessionalService')
+      .map((schema) => `    <script type="application/ld+json">${JSON.stringify(schema).replaceAll('<', '\\u003c')}</script>`)
+      .join('\n')
+    : '';
+  const structuredDataMarkup = [
+    homepageSchemaMarkup,
+    `    <script type="application/ld+json">${JSON.stringify(pageSchema).replaceAll('<', '\\u003c')}</script>`,
+  ].filter(Boolean).join('\n');
   let html = template
     .replace(/\s*<noscript>[\s\S]*?<\/noscript>/, '')
     .replace(/<title>.*?<\/title>/s, `<title>${escape(title)}</title>`)
@@ -60,7 +71,7 @@ for (const [path, title, description] of routes) {
     .replace(/<meta property="og:url"[\s\S]*?\/>/, `<meta property="og:url" content="${canonical}" />`)
     .replace(/<meta\s+name="twitter:title"[\s\S]*?\/>/, `<meta name="twitter:title" content="${escape(title)}" />`)
     .replace(/<meta\s+name="twitter:description"[\s\S]*?\/>/, `<meta name="twitter:description" content="${escape(description)}" />`)
-    .replace('</head>', `    <script type="application/ld+json">${JSON.stringify(pageSchema).replaceAll('<', '\\u003c')}</script>\n  </head>`)
+    .replace('</head>', `${structuredDataMarkup}\n  </head>`)
     .replace('<div id="root"></div>', `<div id="root">${render(path)}</div>`);
 
   if (path === '/') {

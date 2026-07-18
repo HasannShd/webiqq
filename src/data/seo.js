@@ -146,7 +146,7 @@ export const siteSchemas = [
       address: BAHRAIN_ADDRESS,
     },
     knowsAbout: serviceNames,
-    sameAs: ['https://www.instagram.com/webiqq.build/', 'https://www.lte-bh.com'],
+    sameAs: ['https://www.instagram.com/webiqq.build/'],
   },
   {
     '@context': 'https://schema.org',
@@ -189,6 +189,7 @@ export const siteSchemas = [
     '@type': 'WebSite',
     '@id': `${SITE_URL}/#website`,
     name: SITE_NAME,
+    alternateName: 'webiqq.com',
     url: SITE_URL,
     description: SITE_DESCRIPTION,
     publisher: {
