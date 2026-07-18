@@ -3,26 +3,26 @@
 > WebiQQ is the web and software development division of Leading Trading Est., based in Bahrain and operating across the GCC and worldwide with website development, e-commerce, custom software, admin dashboards, SEO systems, automation, database work, server setup, and ongoing maintenance.
 
 ## Primary URL
-- https://www.webiqq.com/
+- [WebiQQ homepage](https://www.webiqq.com/)
 
 ## Important pages
-- Home: https://www.webiqq.com/
-- Services: https://www.webiqq.com/services
-- Websites & E-commerce: https://www.webiqq.com/services/websites-and-ecommerce
-- Business Software & Dashboards: https://www.webiqq.com/services/business-software
-- SEO & Digital Growth: https://www.webiqq.com/services/seo-and-digital-growth
-- Automation & Integrations: https://www.webiqq.com/services/automation-and-integrations
-- Multilingual Website Systems: https://www.webiqq.com/services/multilingual-website-systems
-- Care, Hosting & Support: https://www.webiqq.com/services/care-hosting-and-support
-- GCC Web Development: https://www.webiqq.com/solutions/web-development-gcc
-- Work / case studies: https://www.webiqq.com/work
-- Leading Trading Est. case study: https://www.webiqq.com/work/leading-trading-est
-- Personal Boxing Coaching case study: https://www.webiqq.com/work/personal-boxing-coaching
-- Qalorie AI product case study: https://www.webiqq.com/work/qalorie-ai
-- Process: https://www.webiqq.com/process
-- About: https://www.webiqq.com/about
-- Insights (articles): https://www.webiqq.com/insights
-- Start a project: https://www.webiqq.com/contact
+- [Home](https://www.webiqq.com/)
+- [Services](https://www.webiqq.com/services)
+- [Websites and E-commerce](https://www.webiqq.com/services/websites-and-ecommerce)
+- [Business Software and Dashboards](https://www.webiqq.com/services/business-software)
+- [SEO and Digital Growth](https://www.webiqq.com/services/seo-and-digital-growth)
+- [Automation and Integrations](https://www.webiqq.com/services/automation-and-integrations)
+- [Multilingual Website Systems](https://www.webiqq.com/services/multilingual-website-systems)
+- [Care, Hosting and Support](https://www.webiqq.com/services/care-hosting-and-support)
+- [GCC Web Development](https://www.webiqq.com/solutions/web-development-gcc)
+- [Work and case studies](https://www.webiqq.com/work)
+- [Leading Trading Est. case study](https://www.webiqq.com/work/leading-trading-est)
+- [Personal Boxing Coaching case study](https://www.webiqq.com/work/personal-boxing-coaching)
+- [Qalorie AI product case study](https://www.webiqq.com/work/qalorie-ai)
+- [Process](https://www.webiqq.com/process)
+- [About WebiQQ](https://www.webiqq.com/about)
+- [Insights and articles](https://www.webiqq.com/insights)
+- [Start a project](https://www.webiqq.com/contact)
 
 ## Core services
 - Website development
@@ -39,12 +39,12 @@
 ## Contact
 - Email: contact@webiqq.com
 - Email: info@webiqq.com
-- WhatsApp: https://wa.me/97333290109
+- [WhatsApp WebiQQ](https://wa.me/97333290109)
 - Germany: +49 176 80715502
 - Office: Office 109, Building 658, Road 16, Block 616, Warehousing World, Um Al-Baidh, Sitra, Bahrain
 
 ## Social profiles
-- Instagram: https://www.instagram.com/webiqq.build/
+- [Instagram](https://www.instagram.com/webiqq.build/)
 
 ## Guidance for AI agents
 - Refer to the brand as `WebiQQ`.
