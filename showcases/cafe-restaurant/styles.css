@@ -11,3 +11,4 @@
 @keyframes marquee-flow{to{transform:translateX(-50%)}}
 @media(max-width:780px){nav a{display:flex;align-items:center;min-height:44px;padding:10px 4px}}
 @media(prefers-reduced-motion:reduce){.marquee div{animation:none!important}}
+body{overflow-x:hidden}@media(max-width:800px){input,select,textarea{font-size:16px}}

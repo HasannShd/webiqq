@@ -14,3 +14,4 @@
 .contact :focus-visible{outline-color:var(--ink)}
 .brand small{font-size:10px}
 @media(max-width:800px){.site-header nav a{display:flex;align-items:center;min-height:44px;padding:10px 4px}.site-header nav .nav-cta{padding:12px 18px}}
+body{overflow-x:hidden}@media(max-width:800px){input,select,textarea{font-size:16px}}

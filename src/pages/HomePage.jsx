@@ -14,7 +14,7 @@ import Seo from '../components/Common/Seo.jsx';
 import { SectionHeader, CtaBand } from '../components/Common/PagePrimitives.jsx';
 import { useReveal } from '../hooks/useReveal.js';
 import { serviceLines } from '../data/services.js';
-import { caseStudies, industryShowcases } from '../data/caseStudies.js';
+import { industryShowcases } from '../data/caseStudies.js';
 import { valueCards, processSteps } from '../data/webiqqContent.js';
 import { SITE_DESCRIPTION, SITE_URL, faqItems, seoKeywords, siteSchemas } from '../data/seo.js';
 import { blogPosts } from '../data/blogContent.js';
@@ -29,35 +29,25 @@ const serviceIcons = {
   'care-hosting-and-support': FiTool,
 };
 
-/* ─── Hero: positioning + live production proof ─── */
+const nicheNames = ['Construction', 'Real estate', 'Cafés & restaurants', 'Design studios', 'Beauty salons'];
 
-function LivePlatformsPanel() {
-  const livePlatforms = caseStudies.filter((project) => project.liveHost).slice(0, 4);
-
+function NichePanel() {
   return (
-    <aside className="nv-panel" aria-label="Client platforms currently live in production">
-      <div className="nv-panel-head">
-        <strong>In production</strong>
-        <small>Live client platforms</small>
+    <aside className="nv-niche-panel" aria-labelledby="niche-panel-title">
+      <div className="nv-niche-panel-head">
+        <span>Industry-focused design</span>
+        <h2 id="niche-panel-title">Built around how your customers choose.</h2>
+        <p>One development standard, with a different experience for every business model.</p>
       </div>
-      <div>
-        {livePlatforms.map((project) => (
-          <Link className="nv-panel-row" to={`/work/${project.slug}`} key={project.slug}>
-            <i aria-hidden="true" />
-            <div>
-              <strong>{project.client}</strong>
-              <small>
-                {project.industry} · {project.location}
-              </small>
-            </div>
-            <span className="nv-panel-host">{project.liveHost}</span>
-          </Link>
+      <div className="nv-niche-list">
+        {nicheNames.map((niche, index) => (
+          <a href="#niches" key={niche}>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <strong>{niche}</strong>
+            <FiArrowRight aria-hidden="true" />
+          </a>
         ))}
       </div>
-      <Link className="nv-panel-foot" to="/work">
-        All case studies
-        <FiArrowRight aria-hidden="true" />
-      </Link>
     </aside>
   );
 }
@@ -66,10 +56,6 @@ function HeroSection() {
   return (
     <section className="nv-hero section-shell" id="home">
       <div>
-        <p className="nv-hero-status">
-          <i aria-hidden="true" />
-          Accepting new projects · replies within 24h
-        </p>
         <p className="eyebrow">Web development company in Bahrain</p>
         <h1>
           Websites, software and automation — <em>built as one system.</em>
@@ -84,8 +70,8 @@ function HeroSection() {
             Start a Project
             <FiArrowRight aria-hidden="true" />
           </Link>
-          <Link className="secondary-button" to="/work">
-            See Live Work
+          <Link className="secondary-button" to="/services">
+            Explore Services
           </Link>
         </div>
         <a className="hero-consult-link" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
@@ -103,7 +89,7 @@ function HeroSection() {
           </span>
         </div>
       </div>
-      <LivePlatformsPanel />
+      <NichePanel />
     </section>
   );
 }
@@ -175,42 +161,18 @@ function ServicesSection() {
   );
 }
 
-/* ─── Work index — ink band ─── */
-
-function WorkIndex() {
+function WorkCta() {
   return (
     <div className="nv-band nv-band--ink">
-      <section className="section-shell" aria-labelledby="work-title">
-        <SectionHeader
-          eyebrow="02 — Selected work"
-          title={
-            <>
-              Public work, <em>proven in production.</em>
-            </>
-          }
-          text="A few of the platforms we can show openly. The catalogues, dashboards, and internal tools we build stay private to the businesses running on them."
-          id="work-title"
-        />
-        <div className="nv-work-list reveal">
-          {caseStudies.map((project, i) => (
-            <Link className="nv-work-row" to={`/work/${project.slug}`} key={project.slug}>
-              <span className="nv-work-num">/{String(i + 1).padStart(2, '0')}</span>
-              <div className="nv-work-main">
-                <h3>{project.client}</h3>
-                <small>
-                  {project.industry} · {project.location}
-                </small>
-              </div>
-              <div className="nv-work-meta">
-                <span className="nv-work-tag">{project.label}</span>
-                {project.liveHost ? <span className="nv-work-host">{project.liveHost}</span> : null}
-              </div>
-              <span className="nv-work-arrow" aria-hidden="true">
-                <FiArrowRight />
-              </span>
-            </Link>
-          ))}
+      <section className="section-shell nv-work-cta reveal" aria-labelledby="work-title">
+        <div>
+          <p className="eyebrow">03 — Live work</p>
+          <h2 id="work-title">Want the proof? <em>See what is already live.</em></h2>
+          <p>Explore public client platforms, case studies and the systems we are able to show openly.</p>
         </div>
+        <Link className="primary-button" to="/work">
+          View live work <FiArrowRight aria-hidden="true" />
+        </Link>
       </section>
     </div>
   );
@@ -221,15 +183,15 @@ function WorkIndex() {
 function ShowcaseRail() {
   return (
     <div className="nv-band nv-band--sand">
-      <section className="section-shell" aria-labelledby="showcase-title">
+      <section className="section-shell" id="niches" aria-labelledby="showcase-title">
         <SectionHeader
-          eyebrow="03 — Concept collection"
+          eyebrow="02 — Industry showcases"
           title={
             <>
-              Five industries. <em>Five identities.</em>
+              Five business niches. <em>Designed differently.</em>
             </>
           }
-          text="Fictional concept brands we designed and built end-to-end to show how differently each industry deserves to be treated — never presented as client work."
+          text="Construction, property, hospitality, design and beauty each need a different customer journey. These fictional concept brands show the direction clearly without being presented as client work."
           id="showcase-title"
         />
         <p className="nv-rail-note">Concept demos · fictional brands · open in a new tab</p>
@@ -266,26 +228,24 @@ function ShowcaseRail() {
 
 function OutcomesSection() {
   return (
-    <section className="section-shell" aria-labelledby="value-title">
-      <SectionHeader
-        eyebrow="04 — What it adds up to"
-        title={
-          <>
-            Built to do a job — <em>not just to look good.</em>
-          </>
-        }
-        id="value-title"
-      />
-      <div className="nv-values reveal">
-        {valueCards.map((card, i) => (
-          <div className="nv-value" key={card.title}>
-            <i aria-hidden="true">0{i + 1}</i>
-            <h3>{card.title}</h3>
-            <p>{card.text}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+    <div className="nv-band nv-band--ink">
+      <section className="section-shell nv-outcomes" aria-labelledby="value-title">
+        <div className="nv-outcomes-intro">
+          <p className="eyebrow">04 — What you gain</p>
+          <h2 id="value-title">A digital system that <em>earns its place</em> in the business.</h2>
+          <p>Every layer is connected to a practical outcome: better trust, stronger visibility, less repetitive work and room to grow.</p>
+        </div>
+        <div className="nv-values reveal">
+          {valueCards.map((card, i) => (
+            <div className="nv-value" key={card.title}>
+              <i aria-hidden="true">0{i + 1}</i>
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }
 
@@ -347,8 +307,8 @@ function ParentSection() {
             About WebiQQ
             <FiArrowRight aria-hidden="true" />
           </Link>
-          <Link className="text-arrow-link" to="/work/leading-trading-est">
-            View the Leading Trading Est. case study
+          <Link className="text-arrow-link" to="/process">
+            See how WebiQQ projects work
             <FiArrowRight aria-hidden="true" />
           </Link>
         </div>
@@ -448,8 +408,8 @@ export default function HomePage() {
       <HeroSection />
       <CapabilityStrip />
       <ServicesSection />
-      <WorkIndex />
       <ShowcaseRail />
+      <WorkCta />
       <OutcomesSection />
       <ProcessSection />
       <ParentSection />

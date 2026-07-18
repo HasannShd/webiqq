@@ -9,3 +9,4 @@
 :focus-visible{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 5px var(--forest)}
 .logo small,.property-grid figure span{font-size:10px}
 @media(max-width:780px){nav a{display:flex;align-items:center;min-height:44px;padding:10px 4px}nav .inquire{padding:13px 19px}}
+body{overflow-x:hidden}@media(max-width:800px){input,select,textarea{font-size:16px}}

@@ -40,6 +40,10 @@ for (const [path, title, description] of routes) {
   const landingPage = path.startsWith('/solutions/')
     ? landingPages.find((item) => path === `/solutions/${item.slug}`)
     : null;
+  const serviceLine = path.startsWith('/services/')
+    ? serviceLines.find((item) => path === `/services/${item.slug}`)
+    : null;
+  const detailPage = landingPage ?? serviceLine;
   const type = path.startsWith('/services/') || path.startsWith('/solutions/')
     ? 'Service'
     : path.startsWith('/blog/') || path.startsWith('/work/')
@@ -48,8 +52,8 @@ for (const [path, title, description] of routes) {
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': type,
-    name: landingPage?.title ?? title,
-    description: landingPage?.metaDescription ?? description,
+    name: detailPage?.title ?? title,
+    description: detailPage?.metaDescription ?? description,
     url: canonical,
     ...(type === 'Service' ? {
       provider: { '@id': `${site}/#organization` },
@@ -65,7 +69,7 @@ for (const [path, title, description] of routes) {
       .map((schema) => `    <script type="application/ld+json" data-prerender-json-ld="true">${JSON.stringify(schema).replaceAll('<', '\\u003c')}</script>`)
       .join('\n')
     : '';
-  const landingSchemaMarkup = landingPage
+  const detailSchemaMarkup = detailPage
     ? [
       {
         '@context': 'https://schema.org',
@@ -73,14 +77,14 @@ for (const [path, title, description] of routes) {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: site },
           { '@type': 'ListItem', position: 2, name: 'Services', item: `${site}/services` },
-          { '@type': 'ListItem', position: 3, name: landingPage.title, item: canonical },
+          { '@type': 'ListItem', position: 3, name: detailPage.title, item: canonical },
         ],
       },
-      ...(landingPage.faq?.length ? [{
+      ...(detailPage.faq?.length ? [{
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         '@id': `${canonical}#faq`,
-        mainEntity: landingPage.faq.map((item) => ({
+        mainEntity: detailPage.faq.map((item) => ({
           '@type': 'Question',
           name: item.question,
           acceptedAnswer: { '@type': 'Answer', text: item.answer },
@@ -91,7 +95,7 @@ for (const [path, title, description] of routes) {
   const structuredDataMarkup = [
     homepageSchemaMarkup,
     `    <script type="application/ld+json" data-prerender-json-ld="true">${JSON.stringify(pageSchema).replaceAll('<', '\\u003c')}</script>`,
-    landingSchemaMarkup,
+    detailSchemaMarkup,
   ].filter(Boolean).join('\n');
   let html = template
     .replace(/\s*<noscript>[\s\S]*?<\/noscript>/, '')

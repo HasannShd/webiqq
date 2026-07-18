@@ -13,3 +13,4 @@ dialog{width:min(600px,calc(100% - 32px));border:1px solid var(--ink);background
 .contact :focus-visible{outline-color:#fff;box-shadow:0 0 0 5px var(--ink)}
 @media(max-width:780px){nav a{display:flex;align-items:center;min-height:44px;padding:10px 4px}.hero figure.two{display:block}.hero figure.two img{height:360px}}
 @media(prefers-reduced-motion:reduce){.ticker p{animation:none!important}}
+body{overflow-x:hidden}@media(max-width:800px){input,select,textarea{font-size:16px}}

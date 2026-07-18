@@ -10,7 +10,7 @@ export const serviceLines = [
     tagline: 'High-performance websites built to earn trust, generate enquiries, and support sales.',
     metaTitle: 'Website & E-commerce Development in Bahrain | WebiQQ',
     metaDescription:
-      'WebiQQ builds responsive business websites, corporate sites, product catalogues, and e-commerce platforms for companies in Bahrain, Saudi Arabia, Germany, and worldwide — fast, SEO-ready, and built to convert.',
+      'WebiQQ builds fast, SEO-ready business websites, product catalogues and e-commerce platforms for companies in Bahrain, the GCC and worldwide.',
     summary:
       'Modern, responsive websites and e-commerce platforms — from corporate sites and service pages to product catalogues, ordering flows, and customer accounts.',
     audience: [
@@ -57,6 +57,11 @@ export const serviceLines = [
     ],
     afterLaunch:
       'Your website is delivered ready to run, with the domain, code, and hosting in your ownership. Most clients continue with our maintenance and SEO support so the site keeps improving after launch.',
+    faq: [
+      { question: 'How much does a business website cost in Bahrain?', answer: 'Website cost depends on page count, content, languages, e-commerce, integrations and custom functionality. WebiQQ scopes each build after a short conversation and provides a clear project quotation.' },
+      { question: 'Will the website be mobile-friendly and SEO-ready?', answer: 'Yes. Responsive layouts, performance, accessible navigation, metadata, structured data, clean URLs and sitemap foundations are included in the development process.' },
+      { question: 'Can WebiQQ build e-commerce and product catalogue websites?', answer: 'Yes. We build product catalogues, quotation-request systems, online stores, customer accounts and payment or ordering journeys based on the business model.' },
+    ],
     relatedWork: ['viel-gebaeudeservice', 'peak-elite', 'albourshaid-global'],
   },
   {
@@ -66,7 +71,7 @@ export const serviceLines = [
     tagline: 'Custom systems built around how your business actually operates.',
     metaTitle: 'Custom Business Software & Dashboard Development | WebiQQ',
     metaDescription:
-      'WebiQQ develops custom business software: admin dashboards, customer and staff portals, RFQ and quotation systems, CRMs, and database-backed internal tools for companies in Bahrain, Saudi Arabia, Germany, and internationally.',
+      'Custom business software in Bahrain: dashboards, staff and customer portals, quotation systems, CRMs and database-backed operational tools.',
     summary:
       'Admin dashboards, customer and staff portals, RFQ and quotation workflows, CRMs, and database-backed tools that replace spreadsheets and manual follow-ups.',
     audience: [
@@ -108,6 +113,11 @@ export const serviceLines = [
     ],
     afterLaunch:
       'Custom software is quoted per project after a scoping conversation — no generic pricing. After launch we support the system with maintenance, monitoring, and staged improvements as your operation evolves.',
+    faq: [
+      { question: 'What types of custom business software does WebiQQ build?', answer: 'We build admin dashboards, staff and customer portals, quotation workflows, inventory tools, CRMs, reporting systems and database-backed applications shaped around real operations.' },
+      { question: 'Can custom software replace our spreadsheets and manual processes?', answer: 'Often, yes. We first map the existing workflow, then design records, roles, approvals and reports that reduce duplicated entry and disconnected follow-up.' },
+      { question: 'Who owns the software and business data?', answer: 'The agreed project code, deployment and business data remain under the client’s ownership. Access, hosting and handover expectations are defined before development begins.' },
+    ],
     relatedWork: ['leading-trading-est'],
   },
   {
@@ -117,7 +127,7 @@ export const serviceLines = [
     tagline: 'Search visibility systems that bring qualified enquiries — not just traffic.',
     metaTitle: 'SEO & Digital Growth Services in Bahrain | WebiQQ',
     metaDescription:
-      'Technical SEO, local SEO, Google Business Profile setup, structured data, and content systems from WebiQQ — built for businesses in Bahrain, the GCC, and international markets.',
+      'SEO services in Bahrain covering technical SEO, local search, Google Business Profile, structured data, content and conversion measurement.',
     summary:
       'Technical SEO, local search, Google Business Profile setup, structured data, and content direction — engineered into the website rather than bolted on.',
     audience: [
@@ -158,6 +168,11 @@ export const serviceLines = [
     ],
     afterLaunch:
       'SEO compounds. After the foundations are in place, ongoing work focuses on content, reviews, and links — we set a realistic cadence with you rather than promising overnight rankings.',
+    faq: [
+      { question: 'How long does SEO take to show results in Bahrain?', answer: 'Technical fixes can be discovered quickly, but meaningful ranking and enquiry growth usually develops over months. Timing depends on competition, site history, content quality and local prominence.' },
+      { question: 'Does WebiQQ provide local SEO and Google Business Profile support?', answer: 'Yes. We help with accurate business information, profile setup or optimisation, local landing-page relevance, structured data, review processes and measurement.' },
+      { question: 'Can you guarantee first position on Google?', answer: 'No legitimate provider can guarantee a specific organic or Maps position. We improve the technical, content and local signals that make stronger visibility possible and report progress honestly.' },
+    ],
     relatedWork: ['leading-trading-est', 'viel-gebaeudeservice'],
   },
   {
@@ -167,7 +182,7 @@ export const serviceLines = [
     tagline: 'Practical automation that removes repetitive work — no hype.',
     metaTitle: 'Business Automation & Integrations | WebiQQ',
     metaDescription:
-      'WebiQQ connects business tools and builds practical automation for leads, messages, bookings, payments, reporting, and repetitive workflows across the GCC and beyond.',
+      'Business automation in Bahrain for lead routing, messages, bookings, reporting, payments and integrations—built around practical workflows.',
     summary:
       'Chatbots for first-response handling, smart forms, lead routing, and internal tools that cut manual admin — connected to your real business process.',
     audience: [
@@ -208,6 +223,11 @@ export const serviceLines = [
     ],
     afterLaunch:
       'Automation is quoted per project based on scope. After launch we monitor behaviour, tune responses, and extend the workflow as your team finds new uses.',
+    faq: [
+      { question: 'What business tasks can WebiQQ automate?', answer: 'Common opportunities include enquiry routing, email and WhatsApp notifications, appointment reminders, reporting, form processing, customer support triage and moving structured data between approved tools.' },
+      { question: 'Will automation replace our staff?', answer: 'The goal is to remove repetitive handling and improve consistency, while keeping people in control of decisions, exceptions and customer relationships.' },
+      { question: 'Can WebiQQ integrate with our existing systems?', answer: 'Where reliable APIs or approved integration methods exist, we can connect websites, CRMs, booking tools, payment services and reporting systems after a technical assessment.' },
+    ],
     relatedWork: ['leading-trading-est'],
   },
   {
@@ -216,7 +236,7 @@ export const serviceLines = [
     shortTitle: 'Multilingual',
     tagline: 'Language-aware websites engineered for different audiences, scripts, and markets.',
     metaTitle: 'Multilingual Website Development | Arabic & English | WebiQQ',
-    metaDescription: 'WebiQQ builds multilingual website systems with language-specific URLs, metadata, navigation, forms, RTL and LTR layouts, hreflang, and translation-ready content architecture.',
+    metaDescription: 'Multilingual website development for Arabic, English and other markets with RTL layouts, localised URLs, metadata, forms and hreflang.',
     summary: 'Proper multilingual architecture for two or more languages — including language-aware navigation, translated page structures, localised SEO, and intentional RTL and LTR experiences.',
     audience: ['GCC businesses serving Arabic- and English-speaking customers', 'International companies entering new language markets', 'E-commerce and service businesses that need language-specific journeys', 'Teams replacing ad-hoc translated pages with a maintainable system'],
     problem: 'A translated paragraph is not a multilingual website. Each language needs coherent navigation, page URLs, metadata, forms, calls to action, content management, and a layout designed for its writing direction.',
@@ -227,6 +247,11 @@ export const serviceLines = [
     included: ['Central language configuration', 'Translatable UI labels and validation messages', 'RTL-aware responsive design', 'Canonical and hreflang planning'],
     clientProvides: ['Approved translated business copy or a separately arranged translation source', 'Priority languages and markets', 'A reviewer fluent in each published language'],
     afterLaunch: 'WebiQQ builds the technical multilingual system and integrates approved content. Certified or professional translation is not implied; translations may be supplied by the client or arranged as a separate service.',
+    faq: [
+      { question: 'Can WebiQQ build Arabic and English websites?', answer: 'Yes. We build language-aware navigation, page structures, forms, metadata and responsive RTL and LTR layouts for Arabic and English experiences.' },
+      { question: 'Does multilingual development include professional translation?', answer: 'The technical multilingual system is included in scope. Approved translations may be provided by the client or arranged separately; professional translation is not implied automatically.' },
+      { question: 'How does multilingual SEO work?', answer: 'Each published language needs indexable URLs, localised metadata, correct canonical and hreflang signals, internal navigation and useful content written for that audience.' },
+    ],
     relatedWork: ['viel-gebaeudeservice', 'albourshaid-global'],
   },
   {
@@ -236,7 +261,7 @@ export const serviceLines = [
     tagline: 'Your website and systems stay fast, secure, and improving after launch.',
     metaTitle: 'Website Maintenance & Technical Support | WebiQQ',
     metaDescription:
-      'WebiQQ provides post-launch website and software maintenance: updates, monitoring, deployments, backups, content changes, and ongoing technical support for businesses in Bahrain, Saudi Arabia, Germany, and worldwide.',
+      'Website maintenance in Bahrain with monitoring, updates, backups, deployments, content changes, performance work and technical support.',
     summary:
       'Updates, monitoring, deployments, backups, content changes, and structured improvement work — so what you built keeps performing.',
     audience: [
@@ -274,6 +299,11 @@ export const serviceLines = [
     ],
     afterLaunch:
       'Support is arranged as a simple ongoing agreement scoped to your platform. You always retain ownership of your domain, code, and hosting — our job is keeping it healthy, not locking you in.',
+    faq: [
+      { question: 'Can WebiQQ maintain a website built by another company?', answer: 'Usually, yes. We first assess the code, hosting, domain access, dependencies and current risks before recommending a maintenance scope.' },
+      { question: 'What is included in website maintenance?', answer: 'Depending on the agreement, maintenance can include monitoring, backups, updates, deployment support, content changes, performance checks, form-delivery testing and technical issue response.' },
+      { question: 'Do clients keep ownership of their domain and hosting?', answer: 'Yes. WebiQQ supports infrastructure without using ownership as a lock-in mechanism. Client access and handover expectations are kept clear.' },
+    ],
     relatedWork: ['leading-trading-est', 'peak-elite'],
   },
 ];

@@ -3,7 +3,7 @@ import '../pages.css';
 import '../nova.css';
 import { Suspense, useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
-import { FiInstagram, FiMenu, FiX } from 'react-icons/fi';
+import { FiArrowRight, FiInstagram, FiMail, FiMapPin, FiMenu, FiMessageCircle, FiX } from 'react-icons/fi';
 import BackToTop from '../components/Common/BackToTop.jsx';
 import { contactDetails, socialLinks } from '../data/webiqqContent.js';
 import { serviceLines } from '../data/services.js';
@@ -75,50 +75,55 @@ function SiteHeader() {
 function SiteFooter() {
   return (
     <footer className="footer">
-      <div>
-        <Link className="nav-logo" to="/">
-          <span>W</span>
-          WebiQQ
-        </Link>
-        <p>Websites &amp; digital systems built for business growth.</p>
-        <div className="footer-social">
-          {socialLinks.map((link) => {
-            const Icon = socialIconMap[link.icon];
-            return (
-              <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.label}>
-                <Icon aria-hidden="true" />
-              </a>
-            );
-          })}
-        </div>
-      </div>
-      <div>
-        <h3>Company</h3>
-        <Link to="/work">Work</Link>
-        <Link to="/process">Process</Link>
-        <Link to="/about">About</Link>
-        <Link to="/insights">Insights</Link>
-        <Link to="/contact">Contact</Link>
-      </div>
-      <div>
-        <h3>Services</h3>
-        {serviceLines.map((service) => (
-          <Link key={service.slug} to={`/services/${service.slug}`}>
-            {service.title}
+      <div className="footer-main">
+        <div className="footer-brand">
+          <Link className="nav-logo" to="/">
+            <span>W</span>
+            WebiQQ
           </Link>
-        ))}
-        <Link to="/solutions/web-development-bahrain">Web Development Bahrain</Link>
-        <Link to="/solutions/seo-services-bahrain">SEO Services Bahrain</Link>
-      </div>
-      <div>
-        <h3>Contact</h3>
-        <a href={`mailto:${contactDetails[0].value}`}>{contactDetails[0].value}</a>
-        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-          WhatsApp us
-        </a>
-        <a href={`tel:${GERMANY_PHONE_NUMBER}`}>Germany: {GERMANY_PHONE_DISPLAY}</a>
-        <Link to="/contact#office">Sitra, Bahrain office</Link>
-        <Link to="/contact">Start a Project</Link>
+          <p className="footer-brand-line">Websites, software and growth systems built for serious businesses.</p>
+          <span className="footer-base">Bahrain · Germany · Worldwide</span>
+          <div className="footer-social">
+            {socialLinks.map((link) => {
+              const Icon = socialIconMap[link.icon];
+              return (
+                <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.label}>
+                  <Icon aria-hidden="true" />
+                </a>
+              );
+            })}
+          </div>
+        </div>
+        <div className="footer-links">
+          <h3>Company</h3>
+          <Link to="/work">Live work</Link>
+          <Link to="/process">Process</Link>
+          <Link to="/about">About</Link>
+          <Link to="/insights">Insights</Link>
+          <Link to="/contact">Contact</Link>
+        </div>
+        <div className="footer-links footer-services">
+          <h3>Services</h3>
+          {serviceLines.slice(0, 4).map((service) => (
+            <Link key={service.slug} to={`/services/${service.slug}`}>
+              {service.title}
+            </Link>
+          ))}
+          <Link to="/services">View all services</Link>
+          <Link to="/solutions/web-development-bahrain">Web development Bahrain</Link>
+          <Link to="/solutions/seo-services-bahrain">SEO services Bahrain</Link>
+        </div>
+        <div className="footer-contact-card">
+          <span className="footer-contact-kicker">Have a project in mind?</span>
+          <h2>Get a clear recommendation.</h2>
+          <p>Tell us what the business needs. We reply within 24 hours with a practical next step.</p>
+          <a className="footer-contact-primary" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            <FiMessageCircle aria-hidden="true" /> WhatsApp WebiQQ <FiArrowRight aria-hidden="true" />
+          </a>
+          <a href={`mailto:${contactDetails[0].value}`}><FiMail aria-hidden="true" /> {contactDetails[0].value}</a>
+          <Link to="/contact#office"><FiMapPin aria-hidden="true" /> Sitra, Bahrain office</Link>
+          <a href={`tel:${GERMANY_PHONE_NUMBER}`}>Germany · {GERMANY_PHONE_DISPLAY}</a>
+        </div>
       </div>
       <p className="copyright">
         © 2026 WebiQQ · Web and software development across the GCC and worldwide.
@@ -152,6 +157,27 @@ export default function SiteLayout() {
   const location = useLocation();
 
   useEffect(() => {
+    if (!window.matchMedia('(pointer: fine)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return undefined;
+    }
+
+    let frame;
+    const moveGlow = (event) => {
+      window.cancelAnimationFrame(frame);
+      frame = window.requestAnimationFrame(() => {
+        document.documentElement.style.setProperty('--cursor-x', `${event.clientX}px`);
+        document.documentElement.style.setProperty('--cursor-y', `${event.clientY}px`);
+      });
+    };
+
+    window.addEventListener('pointermove', moveGlow, { passive: true });
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener('pointermove', moveGlow);
+    };
+  }, []);
+
+  useEffect(() => {
     if (!location.hash) {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }
@@ -159,6 +185,7 @@ export default function SiteLayout() {
 
   return (
     <div className="app">
+      <div className="cursor-glow" aria-hidden="true" />
       <a className="skip-link" href="#main">
         Skip to content
       </a>

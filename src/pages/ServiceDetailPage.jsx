@@ -61,6 +61,16 @@ export default function ServiceDetailPage() {
               { '@type': 'ListItem', position: 3, name: service.title, item: `${SITE_URL}/services/${service.slug}` },
             ],
           },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            '@id': `${SITE_URL}/services/${service.slug}#faq`,
+            mainEntity: service.faq.map((item) => ({
+              '@type': 'Question',
+              name: item.question,
+              acceptedAnswer: { '@type': 'Answer', text: item.answer },
+            })),
+          },
         ]}
       />
       <PageIntro
@@ -160,6 +170,23 @@ export default function ServiceDetailPage() {
           </div>
         </section>
       )}
+
+      <section className="section-shell" aria-labelledby={`faq-${service.slug}`}>
+        <SectionHeader
+          eyebrow="Service FAQ"
+          title={<>Questions About <em>{service.shortTitle}</em></>}
+          text={`Straight answers about WebiQQ's ${service.title.toLowerCase()} service for businesses in Bahrain and international markets.`}
+          id={`faq-${service.slug}`}
+        />
+        <div className="solution-faq reveal">
+          {service.faq.map((item) => (
+            <details className="solution-faq-item" key={item.question}>
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
+          ))}
+        </div>
+      </section>
 
       <section className="section-shell" aria-label="Other services">
         <div className="other-services reveal">
