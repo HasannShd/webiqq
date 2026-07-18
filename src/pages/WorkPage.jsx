@@ -3,7 +3,7 @@ import { FiArrowRight, FiMapPin } from 'react-icons/fi';
 import Seo from '../components/Common/Seo.jsx';
 import { PageIntro, SectionHeader, CtaBand } from '../components/Common/PagePrimitives.jsx';
 import { useReveal } from '../hooks/useReveal.js';
-import { caseStudies, independentBuilds } from '../data/caseStudies.js';
+import { caseStudies, independentBuilds, industryShowcases } from '../data/caseStudies.js';
 import { SITE_URL } from '../data/seo.js';
 
 export default function WorkPage() {
@@ -85,6 +85,48 @@ export default function WorkPage() {
                 View case study <FiArrowRight aria-hidden="true" />
               </span>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-shell" aria-labelledby="concept-showcases-title">
+        <SectionHeader
+          eyebrow="Industry Concept Showcases"
+          title={<>Five Industries, <em>Five Distinct Directions</em></>}
+          text="Fictional brands created by WebiQQ to demonstrate how strategy, visual identity, and customer journeys change by industry. These are live concept builds, presented separately from client work."
+          id="concept-showcases-title"
+        />
+        <div className="showcase-project-grid reveal">
+          {industryShowcases.map((showcase, index) => (
+            <article className="project-card project-card--business" key={showcase.title}>
+              <div className="project-card-top">
+                <span className="project-type-badge badge--business">{showcase.label}</span>
+                <span className="project-number" aria-hidden="true">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+              </div>
+              <h3 className="project-card-title">{showcase.title}</h3>
+              <p className="work-card-meta">
+                <FiMapPin aria-hidden="true" />
+                {showcase.market}
+              </p>
+              <p className="project-card-desc">{showcase.summary}</p>
+              <div className="project-highlights">
+                {showcase.features.map((feature) => (
+                  <span key={feature}>{feature}</span>
+                ))}
+              </div>
+              <a
+                className="project-cta project-cta--business"
+                href={showcase.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={'Open the live ' + showcase.title + ' concept showcase'}
+              >
+                Open live showcase <FiArrowRight aria-hidden="true" />
+              </a>
+              <span className="concept-showcase-host">{showcase.liveHost}</span>
+            </article>
           ))}
         </div>
       </section>

@@ -1719,6 +1719,7 @@
   align-items: center;
   gap: 7px;
   margin-top: auto;
+  min-height: 44px;
   padding: 10px 17px;
   border-radius: 10px;
   width: fit-content;
@@ -1766,6 +1767,16 @@
   border: 1px solid var(--line);
   background: rgba(196, 181, 253, 0.03);
   cursor: default;
+}
+
+.concept-showcase-host {
+  display: block;
+  margin-top: 14px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 
 /* ─── Team ─── */
