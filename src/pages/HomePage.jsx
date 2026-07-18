@@ -74,7 +74,7 @@ function HeroSection() {
           <span className="hero-available-sep" aria-hidden="true">·</span>
           <span>Operating across the GCC and worldwide</span>
         </div>
-        <p className="eyebrow">Web &amp; software development company</p>
+        <p className="eyebrow">Web development company in Bahrain</p>
         <h1>High-Performance Websites, Software and <em>Automated Systems</em></h1>
         <p className="hero-subtitle">
           WebiQQ builds high-performance websites, business software and automated systems for ambitious companies
@@ -384,7 +384,7 @@ export default function HomePage() {
   return (
     <main id="main">
       <Seo
-        title="WebiQQ | Websites, Business Software & Automation"
+        title="Web Development Company Bahrain | Websites & Software | WebiQQ"
         description={SITE_DESCRIPTION}
         canonical={`${SITE_URL}/`}
         image={`${SITE_URL}/webiqq-logo.svg`}

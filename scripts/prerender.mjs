@@ -14,7 +14,7 @@ const { render } = await import(ssr);
 const site = 'https://www.webiqq.com';
 
 const base = [
-  ['/', 'WebiQQ | Websites, Business Software & Automation', 'WebiQQ builds high-performance websites, business software and automated systems for ambitious companies across the GCC and beyond.'],
+  ['/', 'Web Development Company Bahrain | Websites & Software | WebiQQ', 'WebiQQ is a Bahrain web development company building high-performance websites, business software, SEO systems and automation for companies across the GCC and worldwide.'],
   ['/services', 'Services | Websites, Software, SEO & Automation | WebiQQ', 'Explore WebiQQ services for websites, business software, SEO and Google growth, automation, multilingual systems, hosting and ongoing support.'],
   ['/work', 'Selected Web Development & Software Work | WebiQQ', 'Explore verified WebiQQ website and software projects for businesses in Bahrain, Germany, and international markets.'],
   ['/process', 'How WebiQQ Projects Work | WebiQQ', 'A clear project process from discovery and scope through design, development, launch, training, and ongoing improvement.'],
@@ -29,7 +29,7 @@ const routes = [
   ...base,
   ...serviceLines.map((item) => [`/services/${item.slug}`, item.metaTitle, item.metaDescription]),
   ...caseStudies.map((item) => [`/work/${item.slug}`, `${item.client} Case Study | WebiQQ`, item.summary]),
-  ...landingPages.map((item) => [`/solutions/${item.slug}`, `${item.title} | WebiQQ`, item.solution]),
+  ...landingPages.map((item) => [`/solutions/${item.slug}`, item.metaTitle ?? `${item.title} | WebiQQ`, item.metaDescription ?? item.solution]),
   ...blogPosts.map((item) => [`/blog/${item.slug}`, item.title, item.description]),
 ];
 
@@ -37,6 +37,9 @@ const escape = (value) => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;
 
 for (const [path, title, description] of routes) {
   const canonical = `${site}${path === '/' ? '/' : path}`;
+  const landingPage = path.startsWith('/solutions/')
+    ? landingPages.find((item) => path === `/solutions/${item.slug}`)
+    : null;
   const type = path.startsWith('/services/') || path.startsWith('/solutions/')
     ? 'Service'
     : path.startsWith('/blog/') || path.startsWith('/work/')
@@ -45,21 +48,50 @@ for (const [path, title, description] of routes) {
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': type,
-    name: title,
-    description,
+    name: landingPage?.title ?? title,
+    description: landingPage?.metaDescription ?? description,
     url: canonical,
-    ...(type === 'Service' ? { provider: { '@id': `${site}/#organization` }, areaServed: [{ '@type': 'Place', name: 'GCC' }, 'Worldwide'] } : {}),
+    ...(type === 'Service' ? {
+      provider: { '@id': `${site}/#organization` },
+      areaServed: path.includes('bahrain')
+        ? [{ '@type': 'Country', name: 'Bahrain' }]
+        : [{ '@type': 'Place', name: 'GCC' }, 'Worldwide'],
+    } : {}),
     ...(type === 'Article' ? { publisher: { '@id': `${site}/#organization` }, mainEntityOfPage: canonical } : {}),
   };
   const homepageSchemaMarkup = path === '/'
     ? siteSchemas
       .filter((schema) => schema['@type'] !== 'ProfessionalService')
-      .map((schema) => `    <script type="application/ld+json">${JSON.stringify(schema).replaceAll('<', '\\u003c')}</script>`)
+      .map((schema) => `    <script type="application/ld+json" data-prerender-json-ld="true">${JSON.stringify(schema).replaceAll('<', '\\u003c')}</script>`)
       .join('\n')
+    : '';
+  const landingSchemaMarkup = landingPage
+    ? [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: site },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: `${site}/services` },
+          { '@type': 'ListItem', position: 3, name: landingPage.title, item: canonical },
+        ],
+      },
+      ...(landingPage.faq?.length ? [{
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': `${canonical}#faq`,
+        mainEntity: landingPage.faq.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: { '@type': 'Answer', text: item.answer },
+        })),
+      }] : []),
+    ].map((schema) => `    <script type="application/ld+json" data-prerender-json-ld="true">${JSON.stringify(schema).replaceAll('<', '\\u003c')}</script>`).join('\n')
     : '';
   const structuredDataMarkup = [
     homepageSchemaMarkup,
-    `    <script type="application/ld+json">${JSON.stringify(pageSchema).replaceAll('<', '\\u003c')}</script>`,
+    `    <script type="application/ld+json" data-prerender-json-ld="true">${JSON.stringify(pageSchema).replaceAll('<', '\\u003c')}</script>`,
+    landingSchemaMarkup,
   ].filter(Boolean).join('\n');
   let html = template
     .replace(/\s*<noscript>[\s\S]*?<\/noscript>/, '')

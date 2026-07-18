@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { FiArrowRight, FiInstagram, FiMail, FiMessageCircle, FiPhone } from 'react-icons/fi';
+import { FiArrowRight, FiInstagram, FiMail, FiMapPin, FiMessageCircle, FiPhone } from 'react-icons/fi';
 import Seo from '../components/Common/Seo.jsx';
 import { Breadcrumbs } from '../components/Common/PagePrimitives.jsx';
 import { useReveal } from '../hooks/useReveal.js';
@@ -25,6 +25,9 @@ const timelines = ['As soon as possible', 'Within 1–3 months', '3+ months', 'J
 const markets = ['Bahrain', 'Saudi Arabia', 'United Arab Emirates', 'Kuwait', 'Qatar', 'Oman', 'Germany', 'United Kingdom', 'Other / international'];
 
 const serviceOptions = [...serviceLines.map((s) => s.title), 'Full Digital Package', 'Not sure yet'];
+const OFFICE_ADDRESS = 'Office 109, Building 658, Road 16, Block 616, Warehousing World, Um Al-Baidh, Sitra, Bahrain';
+const OFFICE_MAP_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(OFFICE_ADDRESS)}`;
+const OFFICE_MAP_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(OFFICE_ADDRESS)}&z=16&output=embed`;
 
 export default function ContactPage() {
   useReveal();
@@ -89,6 +92,19 @@ export default function ContactPage() {
               { '@type': 'ListItem', position: 2, name: 'Contact', item: `${SITE_URL}/contact` },
             ],
           },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Place',
+            '@id': `${SITE_URL}/contact#office`,
+            name: 'WebiQQ at Leading Trading Est.',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'Office 109, Building 658, Road 16, Block 616, Warehousing World, Um Al-Baidh',
+              addressLocality: 'Sitra',
+              addressCountry: 'BH',
+            },
+            hasMap: OFFICE_MAP_URL,
+          },
         ]}
       />
 
@@ -140,6 +156,27 @@ export default function ContactPage() {
               <span>Response time</span>
               <strong>Within 24 hours</strong>
             </div>
+          </div>
+
+          <div className="office-location" id="office">
+            <div className="office-location-heading">
+              <FiMapPin aria-hidden="true" />
+              <div>
+                <span>WebiQQ at Leading Trading Est.</span>
+                <strong>Sitra, Bahrain office</strong>
+              </div>
+            </div>
+            <address>{OFFICE_ADDRESS}</address>
+            <a href={OFFICE_MAP_URL} target="_blank" rel="noopener noreferrer">
+              Open office location in Google Maps <FiArrowRight aria-hidden="true" />
+            </a>
+            <iframe
+              className="office-map"
+              src={OFFICE_MAP_EMBED_URL}
+              title="WebiQQ office at Leading Trading Est. in Sitra, Bahrain"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
 
           <div className="contact-socials">

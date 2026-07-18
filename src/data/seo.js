@@ -1,10 +1,12 @@
 export const SITE_URL = 'https://www.webiqq.com';
 export const SITE_NAME = 'WebiQQ';
 export const SITE_DESCRIPTION =
-  'WebiQQ builds high-performance websites, business software and automated systems for ambitious companies across the GCC and beyond — generating leads and simplifying business operations.';
+  'WebiQQ is a Bahrain web development company building high-performance websites, business software, SEO systems and automation for companies across the GCC and worldwide.';
 
 const BAHRAIN_ADDRESS = {
   '@type': 'PostalAddress',
+  streetAddress: 'Office 109, Building 658, Road 16, Block 616, Warehousing World, Um Al-Baidh',
+  addressLocality: 'Sitra',
   addressCountry: 'BH',
 };
 
@@ -158,6 +160,7 @@ export const siteSchemas = [
     email: 'contact@webiqq.com',
     telephone: '+97333290109',
     address: BAHRAIN_ADDRESS,
+    hasMap: 'https://www.google.com/maps/search/?api=1&query=Office%20109%2C%20Building%20658%2C%20Road%2016%2C%20Block%20616%2C%20Warehousing%20World%2C%20Sitra%2C%20Bahrain',
     slogan: 'Operating across the GCC and worldwide.',
     areaServed: [
       { '@type': 'Place', name: 'Middle East' },

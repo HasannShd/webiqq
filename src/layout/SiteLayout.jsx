@@ -106,6 +106,8 @@ function SiteFooter() {
             {service.title}
           </Link>
         ))}
+        <Link to="/solutions/web-development-bahrain">Web Development Bahrain</Link>
+        <Link to="/solutions/seo-services-bahrain">SEO Services Bahrain</Link>
       </div>
       <div>
         <h3>Contact</h3>
@@ -114,6 +116,7 @@ function SiteFooter() {
           WhatsApp us
         </a>
         <a href={`tel:${GERMANY_PHONE_NUMBER}`}>Germany: {GERMANY_PHONE_DISPLAY}</a>
+        <Link to="/contact#office">Sitra, Bahrain office</Link>
         <Link to="/contact">Start a Project</Link>
       </div>
       <p className="copyright">

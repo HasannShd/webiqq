@@ -90,7 +90,9 @@ export default function Seo({
       document.head.appendChild(link);
     });
 
-    document.head.querySelectorAll('script[data-seo-json-ld="true"]').forEach((script) => script.remove());
+    document.head
+      .querySelectorAll('script[data-seo-json-ld="true"], script[data-prerender-json-ld="true"]')
+      .forEach((script) => script.remove());
 
     jsonLd.forEach((schema) => {
       const script = document.createElement('script');
