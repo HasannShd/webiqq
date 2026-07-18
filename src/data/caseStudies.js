@@ -145,6 +145,75 @@ export const caseStudies = [
       'A live multilingual corporate presence representing the group’s verticals to local and international audiences.',
     relatedServices: ['websites-and-ecommerce', 'multilingual-website-systems', 'seo-and-digital-growth'],
   },
+  {
+    slug: 'personal-boxing-coaching',
+    client: 'Personal Boxing Coaching',
+    industry: 'Sports & personal training',
+    location: 'Berlin, Germany',
+    label: 'Coaching & Booking Website',
+    liveUrl: 'https://www.personalboxingcoaching.de',
+    liveHost: 'personalboxingcoaching.de',
+    summary:
+      'A German-market website for a Berlin boxing champion, combining personal-brand credibility, coaching services, client reviews, and a direct session-booking journey.',
+    problem:
+      'A championship-level coach needed a focused digital presence that communicated real sporting credentials, explained training options clearly, and converted local visitors into qualified booking requests.',
+    objectives: [
+      'Build trust around the coach’s competition history and training expertise',
+      'Present personal boxing and performance coaching clearly',
+      'Turn mobile visitors into direct session enquiries',
+    ],
+    solution:
+      'WebiQQ created a responsive personal-brand website with German-first messaging, coach biography and credentials, service positioning, a visible 5.0 client rating, location information, and a streamlined booking interaction.',
+    services: ['Websites', 'SEO & Digital Growth', 'Care, Hosting & Support'],
+    features: [
+      'German-market personal brand',
+      'Coach biography and credentials',
+      'Personal boxing service pages',
+      '5.0 client rating presentation',
+      'Mobile session-booking journey',
+      'Berlin location integration',
+    ],
+    outcome:
+      'A live coaching website that presents championship experience professionally and gives Berlin clients a direct path from discovery to session request.',
+    relatedServices: ['websites-and-ecommerce', 'seo-and-digital-growth', 'care-hosting-and-support'],
+  },
+  {
+    slug: 'qalorie-ai',
+    client: 'Qalorie AI',
+    industry: 'AI mobile app & SaaS',
+    location: 'GCC & global',
+    label: 'Co-founded Product',
+    liveUrl: 'https://qalorieai.app',
+    liveHost: 'qalorieai.app',
+    summary:
+      'A live AI-powered calorie and nutrition tracking product, co-founded and built by WebiQQ, with photo-based meal analysis and a public product website for GCC and global users.',
+    problem:
+      'Manual food logging is slow and poorly suited to mixed dishes and regional meals. The product needed a fast mobile experience that could turn a meal photo into useful calorie, ingredient, and macro information.',
+    objectives: [
+      'Make nutrition tracking as simple as taking a meal photo',
+      'Support real dishes and ingredient-level analysis',
+      'Launch a credible consumer product for GCC and global audiences',
+    ],
+    solution:
+      'WebiQQ co-founded and built Qalorie AI as a mobile-first nutrition product with photo-based meal analysis, ingredient recognition, calorie and macro tracking, progress experiences, and a responsive public product website.',
+    services: ['Business Software & Dashboards', 'Websites', 'Automation & Integrations', 'Care, Hosting & Support'],
+    features: [
+      'AI meal photo analysis',
+      'Ingredient recognition up to 95% confidence',
+      'Calorie and macro tracking',
+      'Mobile-first product experience',
+      'Public SaaS marketing website',
+      'Apple App Store launch',
+    ],
+    stats: [
+      { value: 'iOS', label: 'Live product' },
+      { value: '95%', label: 'Recognition confidence' },
+      { value: 'GCC', label: 'Built for the region' },
+    ],
+    outcome:
+      'A live consumer AI product with a public website and App Store presence, moving beyond a prototype into a product designed for real nutrition-tracking users.',
+    relatedServices: ['business-software', 'websites-and-ecommerce', 'automation-and-integrations', 'care-hosting-and-support'],
+  },
 ];
 
 // Independent product builds — shown on /work in their own section to keep

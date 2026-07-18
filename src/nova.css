@@ -1910,6 +1910,27 @@ a.work-card:hover,
   background: #f8f5ff;
 }
 
+.work-card-identity {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.work-card-index {
+  flex: 0 0 auto;
+  color: var(--brand-purple);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.work-card-host {
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
 .project-number,
 .service-row-num {
   color: rgba(109, 40, 217, 0.26);
@@ -2008,5 +2029,14 @@ a.work-card:hover,
 
   .flagship-card-stats {
     grid-template-columns: 1fr;
+  }
+
+  .work-card-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .work-card-host {
+    text-align: left;
   }
 }

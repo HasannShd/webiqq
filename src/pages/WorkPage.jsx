@@ -14,8 +14,8 @@ export default function WorkPage() {
   return (
     <main id="main">
       <Seo
-        title="Work & Case Studies | Live Client Projects | WebiQQ"
-        description="Real client projects by WebiQQ: a full business platform for Leading Trading Est. in Bahrain, business websites in Germany and Bahrain, and a multilingual corporate site — all live today."
+        title="Work & Case Studies | Live Websites, Software & AI | WebiQQ"
+        description="Explore live WebiQQ work across business platforms, websites, multilingual systems, booking journeys, and an AI nutrition product serving Bahrain, the GCC, Germany, and global users."
         canonical={`${SITE_URL}/work`}
         jsonLd={[
           {
@@ -32,7 +32,7 @@ export default function WorkPage() {
         breadcrumbs={[{ label: 'Home', to: '/' }, { label: 'Work' }]}
         eyebrow="Work"
         title={<>Live Projects for <em>Real Businesses</em></>}
-        lead="Everything below is live and in use today — built for companies in Bahrain, Germany, and international markets. And it's only the public side: the admin panels, staff portals, and internal tools we build stay behind logins, where they belong."
+        lead="Everything below is live and in use today — from business websites in Bahrain and Germany to operational software and a global AI product. And it is only the public side: admin panels, staff portals, and internal tools stay behind logins, where they belong."
       />
 
       {flagship && (
@@ -64,15 +64,19 @@ export default function WorkPage() {
 
       <section className="section-shell" aria-labelledby="client-work-title">
         <SectionHeader
-          eyebrow="Client Websites"
-          title={<>Business Websites, <em>Delivered and Live</em></>}
+          eyebrow="Live Websites & Products"
+          title={<>Real Projects, <em>Delivered and Live</em></>}
+          text="Client websites and WebiQQ-built products with real public destinations. Open each case study to see the business problem, delivered functionality, and live result."
           id="client-work-title"
         />
         <div className="work-strip reveal">
-          {clientWork.map((project) => (
+          {clientWork.map((project, index) => (
             <Link className="work-card" to={`/work/${project.slug}`} key={project.slug}>
               <div className="work-card-top">
-                <span className="work-card-label">{project.label}</span>
+                <div className="work-card-identity">
+                  <span className="work-card-index">P{String(index + 2).padStart(2, '0')}</span>
+                  <span className="work-card-label">{project.label}</span>
+                </div>
                 <span className="work-card-host">{project.liveHost}</span>
               </div>
               <h3>{project.client}</h3>
