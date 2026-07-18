@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
-import { FiActivity, FiArrowRight, FiBriefcase, FiCpu, FiLayers, FiTrendingUp } from 'react-icons/fi';
+import { FiActivity, FiArrowRight, FiBriefcase, FiCpu, FiLayers, FiMail, FiMapPin, FiMessageCircle, FiPhone, FiTrendingUp } from 'react-icons/fi';
 import Seo from '../components/Common/Seo.jsx';
 import { PageIntro, SectionHeader, CtaBand } from '../components/Common/PagePrimitives.jsx';
 import { useReveal } from '../hooks/useReveal.js';
 import { team } from '../data/webiqqContent.js';
 import { SITE_URL } from '../data/seo.js';
+import { OFFICE_MAP_URL } from '../data/contact.js';
 
 const teamIcons = [FiLayers, FiCpu, FiBriefcase, FiActivity, FiTrendingUp];
 
@@ -132,14 +133,16 @@ export default function AboutPage() {
       <section className="section-shell" aria-label="Contact details">
         <div className="about-contact-strip reveal">
           <div>
+            <p className="eyebrow">Direct contact</p>
             <h2>Talk to us directly</h2>
             <p>Email, WhatsApp, or the project form — whichever suits you. We reply within 24 hours.</p>
           </div>
           <div className="about-contact-links">
-            <a href="mailto:contact@webiqq.com">contact@webiqq.com</a>
-            <a href="https://wa.me/97333290109" target="_blank" rel="noopener noreferrer">WhatsApp +973 3329 0109</a>
-            <a href="tel:+4917680715502">Germany +49 176 80715502</a>
-            <Link to="/contact">Start a Project</Link>
+            <a href="mailto:contact@webiqq.com"><FiMail aria-hidden="true" /> contact@webiqq.com</a>
+            <a href="https://wa.me/97333290109" target="_blank" rel="noopener noreferrer"><FiMessageCircle aria-hidden="true" /> WhatsApp +973 3329 0109</a>
+            <a href="tel:+4917680715502"><FiPhone aria-hidden="true" /> Germany +49 176 80715502</a>
+            <a href={OFFICE_MAP_URL} target="_blank" rel="noopener noreferrer"><FiMapPin aria-hidden="true" /> Open Sitra office in Google Maps</a>
+            <Link className="about-contact-primary" to="/contact">Start a Project <FiArrowRight aria-hidden="true" /></Link>
           </div>
         </div>
       </section>

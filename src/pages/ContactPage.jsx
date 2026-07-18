@@ -6,6 +6,7 @@ import { Breadcrumbs } from '../components/Common/PagePrimitives.jsx';
 import { useReveal } from '../hooks/useReveal.js';
 import { serviceLines } from '../data/services.js';
 import { SITE_URL } from '../data/seo.js';
+import { OFFICE_ADDRESS, OFFICE_MAP_EMBED_URL, OFFICE_MAP_URL } from '../data/contact.js';
 import { GERMANY_PHONE_DISPLAY, GERMANY_PHONE_NUMBER, WHATSAPP_URL } from '../layout/SiteLayout.jsx';
 
 const projectTypes = [
@@ -25,10 +26,6 @@ const timelines = ['As soon as possible', 'Within 1–3 months', '3+ months', 'J
 const markets = ['Bahrain', 'Saudi Arabia', 'United Arab Emirates', 'Kuwait', 'Qatar', 'Oman', 'Germany', 'United Kingdom', 'Other / international'];
 
 const serviceOptions = [...serviceLines.map((s) => s.title), 'Full Digital Package', 'Not sure yet'];
-const OFFICE_ADDRESS = 'Office 109, Building 658, Road 16, Block 616, Warehousing World, Um Al-Baidh, Sitra, Bahrain';
-const OFFICE_MAP_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(OFFICE_ADDRESS)}`;
-const OFFICE_MAP_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(OFFICE_ADDRESS)}&z=16&output=embed`;
-
 export default function ContactPage() {
   useReveal();
   const location = useLocation();
@@ -174,6 +171,8 @@ export default function ContactPage() {
               className="office-map"
               src={OFFICE_MAP_EMBED_URL}
               title="WebiQQ office at Leading Trading Est. in Sitra, Bahrain"
+              width="640"
+              height="360"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />

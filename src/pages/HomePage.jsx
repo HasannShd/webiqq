@@ -29,24 +29,21 @@ const serviceIcons = {
   'care-hosting-and-support': FiTool,
 };
 
-const nicheNames = ['Construction', 'Real estate', 'Cafés & restaurants', 'Design studios', 'Beauty salons'];
-
-function NichePanel() {
+function SystemVisual() {
   return (
-    <aside className="nv-niche-panel" aria-labelledby="niche-panel-title">
-      <div className="nv-niche-panel-head">
-        <span>Industry-focused design</span>
-        <h2 id="niche-panel-title">Built around how your customers choose.</h2>
-        <p>One development standard, with a different experience for every business model.</p>
+    <aside className="nv-system-visual" aria-label="WebiQQ connects strategy, development, operations and growth">
+      <div className="nv-system-canvas" aria-hidden="true">
+        <span className="nv-orbit nv-orbit--one" />
+        <span className="nv-orbit nv-orbit--two" />
+        <span className="nv-system-node nv-system-node--one">Strategy</span>
+        <span className="nv-system-node nv-system-node--two">Build</span>
+        <span className="nv-system-node nv-system-node--three">Operate</span>
+        <span className="nv-system-node nv-system-node--four">Grow</span>
+        <strong className="nv-system-core">W</strong>
       </div>
-      <div className="nv-niche-list">
-        {nicheNames.map((niche, index) => (
-          <a href="#niches" key={niche}>
-            <span>{String(index + 1).padStart(2, '0')}</span>
-            <strong>{niche}</strong>
-            <FiArrowRight aria-hidden="true" />
-          </a>
-        ))}
+      <div className="nv-system-caption">
+        <span>One connected partner</span>
+        <strong>From first idea to a system that keeps improving.</strong>
       </div>
     </aside>
   );
@@ -89,7 +86,7 @@ function HeroSection() {
           </span>
         </div>
       </div>
-      <NichePanel />
+      <SystemVisual />
     </section>
   );
 }

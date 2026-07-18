@@ -14,9 +14,15 @@ export default function LandingPage() {
   if (!page) return <Navigate to="/services" replace />;
   const service = getService(page.service);
   const canonical = `${SITE_URL}/solutions/${page.slug}`;
-  const areaServed = page.market
-    ? { '@type': 'Country', name: page.market }
-    : [{ '@type': 'Place', name: 'GCC' }, 'Worldwide'];
+  const areaServed = page.market === 'GCC'
+    ? [
+        { '@type': 'Place', name: 'Gulf Cooperation Council' },
+        ...['Bahrain', 'Saudi Arabia', 'United Arab Emirates', 'Qatar', 'Kuwait', 'Oman']
+          .map((name) => ({ '@type': 'Country', name })),
+      ]
+    : page.market
+      ? { '@type': 'Country', name: page.market }
+      : [{ '@type': 'Place', name: 'GCC' }, 'Worldwide'];
   const jsonLd = [
     {
       '@context': 'https://schema.org',

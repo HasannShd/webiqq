@@ -3,10 +3,11 @@ import '../pages.css';
 import '../nova.css';
 import { Suspense, useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
-import { FiArrowRight, FiInstagram, FiMail, FiMapPin, FiMenu, FiMessageCircle, FiX } from 'react-icons/fi';
+import { FiArrowRight, FiInstagram, FiMenu, FiX } from 'react-icons/fi';
 import BackToTop from '../components/Common/BackToTop.jsx';
-import { contactDetails, socialLinks } from '../data/webiqqContent.js';
+import { socialLinks } from '../data/webiqqContent.js';
 import { serviceLines } from '../data/services.js';
+import { OFFICE_ADDRESS, OFFICE_MAP_EMBED_URL, OFFICE_MAP_URL } from '../data/contact.js';
 
 export const WHATSAPP_NUMBER = '97333290109';
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
@@ -112,17 +113,26 @@ function SiteFooter() {
           <Link to="/services">View all services</Link>
           <Link to="/solutions/web-development-bahrain">Web development Bahrain</Link>
           <Link to="/solutions/seo-services-bahrain">SEO services Bahrain</Link>
+          <Link to="/solutions/web-development-gcc">Web development GCC</Link>
         </div>
-        <div className="footer-contact-card">
-          <span className="footer-contact-kicker">Have a project in mind?</span>
-          <h2>Get a clear recommendation.</h2>
-          <p>Tell us what the business needs. We reply within 24 hours with a practical next step.</p>
-          <a className="footer-contact-primary" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-            <FiMessageCircle aria-hidden="true" /> WhatsApp WebiQQ <FiArrowRight aria-hidden="true" />
-          </a>
-          <a href={`mailto:${contactDetails[0].value}`}><FiMail aria-hidden="true" /> {contactDetails[0].value}</a>
-          <Link to="/contact#office"><FiMapPin aria-hidden="true" /> Sitra, Bahrain office</Link>
-          <a href={`tel:${GERMANY_PHONE_NUMBER}`}>Germany · {GERMANY_PHONE_DISPLAY}</a>
+        <div className="footer-map-card">
+          <iframe
+            src={OFFICE_MAP_EMBED_URL}
+            title="WebiQQ office location in Sitra, Bahrain"
+            width="600"
+            height="180"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+          <div className="footer-map-copy">
+            <div>
+              <span>WebiQQ office</span>
+              <strong>Sitra, Bahrain</strong>
+            </div>
+            <a href={OFFICE_MAP_URL} target="_blank" rel="noopener noreferrer" aria-label={`Open ${OFFICE_ADDRESS} in Google Maps`}>
+              Open in Google Maps <FiArrowRight aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </div>
       <p className="copyright">
