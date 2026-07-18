@@ -1,5 +1,6 @@
 import '../App.css';
 import '../pages.css';
+import '../nova.css';
 import { Suspense, useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { FiInstagram, FiMenu, FiX } from 'react-icons/fi';
