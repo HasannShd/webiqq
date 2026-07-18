@@ -164,6 +164,61 @@ export const independentBuilds = [
   },
 ];
 
+// Fictional concept brands built to demonstrate industry-specific art direction
+// and customer journeys. Keep these separate from verified client case studies.
+export const industryShowcases = [
+  {
+    title: 'Northline Contracting',
+    label: 'Construction Concept',
+    market: 'Riyadh & the Gulf',
+    liveUrl: 'https://webiqq-northline.vercel.app',
+    liveHost: 'webiqq-northline.vercel.app',
+    summary:
+      'An industrial editorial direction for a Gulf contractor, combining corporate credibility, project storytelling, technical expertise, and a clear enquiry path.',
+    features: ['Construction', 'Project portfolio', 'B2B enquiries'],
+  },
+  {
+    title: 'Serein Properties',
+    label: 'Real Estate Concept',
+    market: 'Bahrain',
+    liveUrl: 'https://webiqq-serein.vercel.app',
+    liveHost: 'webiqq-serein.vercel.app',
+    summary:
+      'A quiet-luxury property experience with curated residences, accessible filtering, featured development storytelling, and discreet lead capture.',
+    features: ['Property discovery', 'Listing filters', 'Private enquiries'],
+  },
+  {
+    title: 'Ember & Grain',
+    label: 'Restaurant Concept',
+    market: 'Berlin, Germany',
+    liveUrl: 'https://webiqq-embergrain.vercel.app',
+    liveHost: 'webiqq-embergrain.vercel.app',
+    summary:
+      'A warm hospitality concept with an interactive seasonal menu, restaurant story, visit information, and a complete reservation-request journey.',
+    features: ['Interactive menu', 'Reservations', 'Hospitality brand'],
+  },
+  {
+    title: 'Atelier Nūr',
+    label: 'Design Studio Concept',
+    market: 'Dubai & Berlin',
+    liveUrl: 'https://webiqq-ateliernur.vercel.app',
+    liveHost: 'webiqq-ateliernur.vercel.app',
+    summary:
+      'An expressive editorial portfolio for an interior architecture studio, designed around distinctive project imagery and consultation positioning.',
+    features: ['Editorial portfolio', 'Project stories', 'Creative direction'],
+  },
+  {
+    title: 'Maison Luma',
+    label: 'Beauty Salon Concept',
+    market: 'Doha, Qatar',
+    liveUrl: 'https://webiqq-maisonluma.vercel.app',
+    liveHost: 'webiqq-maisonluma.vercel.app',
+    summary:
+      'A refined beauty atelier experience where service discovery flows directly into an accessible, prefilled appointment-request interaction.',
+    features: ['Service catalogue', 'Appointment flow', 'Beauty brand'],
+  },
+];
+
 export const getCaseStudy = (slug) => caseStudies.find((c) => c.slug === slug);
 
 export const nextCaseStudy = (slug) => {
