@@ -1,6 +1,6 @@
 # WebiQQ Industry Showcases
 
-Five isolated, independently deployable concept websites for the WebiQQ portfolio. These directories do not import from or modify the main WebiQQ application.
+Six isolated, independently deployable concept websites for the WebiQQ portfolio. These directories do not import from or modify the main WebiQQ application.
 
 | Directory | Concept brand | Suggested domain |
 | --- | --- | --- |
@@ -9,6 +9,7 @@ Five isolated, independently deployable concept websites for the WebiQQ portfoli
 | `cafe-restaurant/` | Ember & Grain | `embergrain.webiqq.com` |
 | `design-studio/` | Atelier Nūr | `ateliernur.webiqq.com` |
 | `beauty-salon/` | Maison Luma | `maisonluma.webiqq.com` |
+| `wedding-venue/` | Lulwa Hall | `lulwahall.webiqq.com` |
 
 Each concept is intentionally labeled as a fictional WebiQQ showcase in its footer. Replace the suggested canonical URL only after its matching deployment exists.
 
@@ -20,9 +21,9 @@ Run a static server from this directory:
 python3 -m http.server 4173
 ```
 
-Then open `/construction/`, `/real-estate/`, `/cafe-restaurant/`, `/design-studio/`, or `/beauty-salon/`.
+Then open `/construction/`, `/real-estate/`, `/cafe-restaurant/`, `/design-studio/`, `/beauty-salon/`, or `/wedding-venue/`.
 
-Open `/` for the shareable WebiQQ Concept Collection homepage linking all five showcases.
+Open `/` for the shareable WebiQQ Concept Collection homepage linking all six showcases.
 
 ## Deployment
 

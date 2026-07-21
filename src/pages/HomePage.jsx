@@ -185,10 +185,10 @@ function ShowcaseRail() {
           eyebrow="02 — Industry showcases"
           title={
             <>
-              Five business niches. <em>Designed differently.</em>
+              Six business niches. <em>Designed differently.</em>
             </>
           }
-          text="Construction, property, hospitality, design and beauty each need a different customer journey. These fictional concept brands show the direction clearly without being presented as client work."
+          text="Construction, property, hospitality, design, beauty and weddings each need a different customer journey. These fictional concept brands show the direction clearly without being presented as client work."
           id="showcase-title"
         />
         <p className="nv-rail-note">Concept demos · fictional brands · open in a new tab</p>

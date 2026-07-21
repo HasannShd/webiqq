@@ -96,7 +96,7 @@ export default function WorkPage() {
       <section className="section-shell" aria-labelledby="concept-showcases-title">
         <SectionHeader
           eyebrow="Industry Concept Showcases"
-          title={<>Five Industries, <em>Five Distinct Directions</em></>}
+          title={<>Six Industries, <em>Six Distinct Directions</em></>}
           text="Fictional brands created by WebiQQ to demonstrate how strategy, visual identity, and customer journeys change by industry. These are live concept builds, presented separately from client work."
           id="concept-showcases-title"
         />
