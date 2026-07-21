@@ -286,6 +286,16 @@ export const industryShowcases = [
       'A refined beauty atelier experience where service discovery flows directly into an accessible, prefilled appointment-request interaction.',
     features: ['Service catalogue', 'Appointment flow', 'Beauty brand'],
   },
+  {
+    title: 'Lulwa Hall',
+    label: 'Wedding Venue Concept',
+    market: 'Manama, Bahrain',
+    liveUrl: 'https://webiqq-lulwa.vercel.app',
+    liveHost: 'webiqq-lulwa.vercel.app',
+    summary:
+      'A seafront Bahrain wedding and events estate with three venue tiers, capacity-led pricing, a planning-journey story, and a private-viewing request flow.',
+    features: ['Venue discovery', 'Viewing requests', 'Events brand'],
+  },
 ];
 
 export const getCaseStudy = (slug) => caseStudies.find((c) => c.slug === slug);
