@@ -1,0 +1,2 @@
+const menu=document.querySelector('.menu'),nav=document.querySelector('nav');menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',open);nav.classList.toggle('open',open)});
+document.querySelector('form')?.addEventListener('submit',event=>{event.preventDefault();const status=document.querySelector('.status');if(status)status.textContent='Message received — this concept build doesn’t send real enquiries. On the live site this reaches the firm instantly and in confidence.'});
