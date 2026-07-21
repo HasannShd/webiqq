@@ -290,8 +290,8 @@ export const industryShowcases = [
     title: 'Lulwa Hall',
     label: 'Wedding Venue Concept',
     market: 'Manama, Bahrain',
-    liveUrl: 'https://webiqq-lulwa.vercel.app',
-    liveHost: 'webiqq-lulwa.vercel.app',
+    liveUrl: 'https://webiqq-w75m.vercel.app',
+    liveHost: 'webiqq-w75m.vercel.app',
     summary:
       'A seafront Bahrain wedding and events estate with three venue tiers, capacity-led pricing, a planning-journey story, and a private-viewing request flow.',
     features: ['Venue discovery', 'Viewing requests', 'Events brand'],
