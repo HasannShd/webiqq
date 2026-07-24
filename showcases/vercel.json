@@ -38,6 +38,12 @@
       ]
     },
     {
+      "source": "/abu-shehab/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, follow" }
+      ]
+    },
+    {
       "source": "/law-firm/(.*)",
       "headers": [
         { "key": "X-Robots-Tag", "value": "noindex, follow" }

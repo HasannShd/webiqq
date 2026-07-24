@@ -1,0 +1,25 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="مطعم أبو شهاب — أكلات شعبية بأيدٍ بحرينية في توبلي. منيو رقمي وطلب أونلاين. عرض تجريبي من WebiQQ."><meta name="theme-color" content="#9e2b25"><title>مطعم أبو شهاب — أكلات شعبية بأيدٍ بحرينية · اطلب أونلاين</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
+<body><a class="skip" href="#menu">تخطَّ إلى المنيو</a>
+<header><a class="logo" href="#" aria-label="مطعم أبو شهاب"><span class="mark">ش</span><span><b>مطعم أبو شهاب</b><small>أكلات شعبية بأيدٍ بحرينية · توبلي</small></span></a><div class="head-actions"><a class="btn ghost" href="admin.html">لوحة التحكم</a><button class="cart-btn">السلة 🛒<em>0</em></button></div></header>
+<section class="hero"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1600&q=80" alt="" onerror="this.remove()"><div><span class="badge">🇧🇭 نكهة البيت البحريني الأصيلة</span><h1>مطعم أبو شهاب</h1><p>أكلات شعبية بأيدٍ بحرينية — من الباجلا والنخي إلى المجبوس والهريس. اطلب أونلاين ويوصلك حار وطازج.</p><div class="actions"><a class="btn gold" href="#menu">شاهد المنيو 🍽️</a><a class="btn ghost" href="#menu">اطلب الآن</a></div></div></section>
+<p class="ticker">🚗 التوصيل خلال ٣٥ دقيقة داخل توبلي وما حولها · الحد الأدنى للطلب ١٫٥ د.ب · ☎️ ٣٨١٦٠٠٠٦</p>
+<main>
+<section class="specials" id="specials"><div class="sec-head"><span class="eyebrow">لا تفوّتك</span><h2>طبق اليوم والعروض</h2></div><div class="spec-grid" id="spec-grid"></div></section>
+<section id="menu"><div class="sec-head"><span class="eyebrow">المنيو الرقمي</span><h2>وش تشتهي اليوم؟</h2></div><div class="tabs" role="tablist"></div><div class="menu-grid" id="menu-grid"></div></section>
+<section class="about"><div class="ph2"><span aria-hidden="true">🍛</span><img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=1200&q=80" alt="تحضير الأكل الشعبي في المطبخ" onerror="this.remove()"></div><div><h2>ليش أبو شهاب؟</h2><p>مطعم عائلي في قلب توبلي، نطبخ الأكل الشعبي البحريني مثل ما تعوّدت عليه من بيت أمك — بأيدٍ بحرينية ومكونات طازجة كل يوم.</p><ul><li>وصفات بحرينية أصيلة من التراث</li><li>طبخ يومي طازج — ما نخزّن</li><li>أسعار شعبية تناسب الجميع</li><li>توصيل سريع أو استلام من المطعم</li></ul></div></section>
+</main>
+<footer><div class="logo"><span class="mark">ش</span><b>مطعم أبو شهاب</b></div><p>توبلي، مملكة البحرين · ☎️ ٣٨١٦٠٠٠٦ · يومياً ٦ صباحاً – ١٠ مساءً</p><p>عرض تجريبي (Concept Demo) من تصميم <a href="https://webiqq.com">WebiQQ</a> — الطلبات هنا غير حقيقية.</p></footer>
+
+<div class="drawer-veil" data-close-cart></div>
+<aside class="drawer" aria-label="سلة الطلبات"><header><b>سلتك 🛒</b><button data-close-cart aria-label="إغلاق">✕</button></header><div class="cart-items"></div><div class="cart-foot"><div class="total"><span>الإجمالي</span><span id="cart-total">0.000 د.ب</span></div><button class="btn" id="checkout-btn">إتمام الطلب ←</button></div></aside>
+
+<div class="modal-veil"><div class="modal"><h3>إتمام الطلب</h3>
+<form id="order-form"><label>الاسم<input name="cname" required></label><label>رقم الهاتف<input name="phone" type="tel" placeholder="+973" required></label>
+<div class="seg"><label><input type="radio" name="mode" value="delivery" checked><span>🚗 توصيل</span></label><label><input type="radio" name="mode" value="pickup"><span>🏪 استلام</span></label></div>
+<label id="addr-wrap">العنوان<input name="addr" placeholder="المنطقة، الشارع، المنزل"></label>
+<span style="font:700 12.5px var(--sans)">طريقة الدفع</span>
+<div class="seg pay"><label><input type="radio" name="pay" value="cash" checked><span>💵 كاش</span></label><label><input type="radio" name="pay" value="benefit"><span>🟥 بنفت</span></label><label><input type="radio" name="pay" value="card"><span>💳 بطاقة</span></label></div>
+<button class="btn" type="submit">أكّد الطلب ✓</button></form>
+<div class="done" style="display:none"><span class="big">🎉</span><h3>تم استلام طلبك!</h3><b class="num">AS-0000</b><p>هذا عرض تجريبي — في الموقع الفعلي يصل الطلب للمطعم فوراً برسالة واتساب أو على شاشة المطبخ.</p><button class="btn gold" onclick="document.body.classList.remove('modal-open');location.reload()">رجوع للمنيو</button></div>
+</div></div>
+</body></html>
